@@ -1,7 +1,13 @@
 import "@/styles/globals.css";
-import 'antd/dist/antd'; // Import Ant Design CSS
+import "antd/dist/antd"; // Import Ant Design CSS
+// import { ThemeProvider } from "@material-tailwind/react";
+
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    // <ThemeProvider>
+      <Component {...pageProps} />
+    // </ThemeProvider>
+  );
 }
