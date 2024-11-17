@@ -74,7 +74,7 @@ const Header = () => {
     <div
       className={`${
         !isOpen ? "" : ""
-      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.2rem] `}
+      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.3rem] `}
       onClick={toggleMenu}
       onKeyDown={(e) => {
         if (e.key === "Esc" || e.key === " ") {
@@ -90,14 +90,14 @@ const Header = () => {
   const headerBottom = () => {
     if (isOpen || !isScreen) return null;
     return (
-      <div className="header_bottom flex h-[52px] justify-center border-t border-b border-solid border-[#F2F2F2]">
-        <div className="flex h-full w-[70%] lg:w-[57%] justify-center items-center ">
+      <div className="header_bottom flex w-[100%] h-full">
+        <div className="flex h-full w-full">
           <div id="wrapper" className="w-full h-full">
             <div id="header" className="h-full">
               <nav className="h-full">
                 <ul
                   id="main-menu"
-                  className="flex w-full justify-between h-full pt-3"
+                  className="flex w-full justify-evenly h-full pt-[47px] text-xl font-semibold"
                 >
                   {/* <li className="text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.DashBoard}>
@@ -105,53 +105,46 @@ const Header = () => {
                     </Link>
                   </li> */}
                   <li className="relative group h-full text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.Products}>
-                      <p className="cursor-pointer ">Danh mục</p>
+                    <Link href={routerName.Team}>
+                      <p className="cursor-pointer ">Giới thiệu</p>
                     </Link>
 
                     {/* Dropdown menu */}
-                    <ul className=" z-50 absolute left-0 top-[1.9rem] hidden mt-2 w-40 bg-white shadow-lg group-hover:flex flex-col ">
+                    <ul className=" w-60 z-50 absolute left-[-1.5rem] text-black top-[2.7rem] hidden mt-2 w-40 bg-white shadow-lg group-hover:flex flex-col ">
                       <li>
-                        <Link href="/product1">
-                          <p className="block px-4 py-2 hover:text-[#014E37]">
-                            Cây xanh
+                        <Link href={routerName.History}>
+                          <p className="block px-4 py-2 text-lg font-light hover:text-[#014E37]">
+                            <p>Lịch sử hình thành</p>
                           </p>
                         </Link>
                       </li>
                       <li>
-                        <Link href="/product2">
-                          <p className="block px-4 py-2 hover:bg-gray-200">
-                            Cây cảnh
-                          </p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/product3">
-                          <p className="block px-4 py-2 hover:bg-gray-200">
-                            Phân bón
+                        <Link href={routerName.Team}>
+                          <p className="block px-4 py-2 text-lg font-light hover:text-[#014E37]">
+                            <p>Cơ cấu tổ chức</p>
                           </p>
                         </Link>
                       </li>
                     </ul>
                   </li>
-                  <li className="text-[#090909] hover:text-[#014E37]">
+                  {/* <li className="text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.Team}>
                       <p>Cơ cấu tổ chức</p>
                     </Link>
-                  </li>
-                  <li className="text-[#090909] hover:text-[#014E37]">
+                  </li> */}
+                  {/* <li className="text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.History}>
                       <p>Lịch sử hình thành</p>
+                    </Link>
+                  </li> */}
+                  <li className="text-[#090909] hover:text-[#014E37]">
+                    <Link href={routerName.Products}>
+                      <p>Sản phẩm</p>
                     </Link>
                   </li>
                   <li className="text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.Careers}>
                       <p>Tuyển dụng</p>
-                    </Link>
-                  </li>
-                  <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.About}>
-                      <p>Giới thiệu</p>
                     </Link>
                   </li>
                   <li className="text-[#090909] hover:text-[#014E37]">
@@ -292,7 +285,7 @@ const Header = () => {
               </List>
             </AccordionBody>
           </Accordion> */}
-            <ListItem>
+          <ListItem>
             <ListItemPrefix>
               <UserCircleIcon className="h-5 w-5" />
             </ListItemPrefix>
@@ -334,14 +327,14 @@ const Header = () => {
   );
   return (
     <header id="header" className="">
-      <div className="header_top_sale bg-[#f5f5f5] h-[41px]  justify-center hidden md:flex border-t border-b border-solid border-[#F2F2F2]">
+      {/* <div className="header_top_sale bg-[#f5f5f5] h-[41px]  justify-center hidden md:flex border-t border-b border-solid border-[#F2F2F2]">
         <div className="w-[90%] flex justify-start items-center">
           <p>Hot Sale 30% Today</p>
         </div>
-      </div>
-      <div className="header_main flex h-[90px] md:h-[82px]  justify-center border-t border-solid border-[#F2F2F2]">
+      </div> */}
+      <div className="header_main flex h-[90px] md:h-[100px] justify-center border-t border-solid border-[#F2F2F2] ">
         <div className="header-top h-full w-[93%] ">
-          <div className="header_container h-full items-center justify-between md:flex">
+          <div className="header_container h-full items-center justify-between flex">
             <div className="header_left w-[16%]">
               <div className="Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
                 {!isScreen && renderMenuIcon()}
@@ -354,151 +347,13 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <div className="header_right w-[84%]">
-              <div className="header_cart flex justify-end">
-                <div className="header-search inline-block h-full max-h-[45px] w-full px-1 md:w-[75%] ">
-                  {/* <input
-                    type="text"
-                    className="w-[120%] mt-2 md:mt-0 md:w-[90%] border border-[#F2F2F2] outline-none h-[40px] rounded-lg"
-                  /> */}
-                  <div className=" w-[120%] md:w-full min-w-[100px]">
-                    <div className="relative">
-                      <input
-                        className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-28 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-                        placeholder="UI Kits, Dashboards..."
-                      />
-                      <button
-                        className="absolute top-1 right-1 flex items-center rounded bg-slate-800 py-1 px-2.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                        type="button"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="w-4 h-4 mr-2"
-                          color="#000000"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="acount-cart absolute right-[24px] top-1 inline-block whitespace-nowrap md:static md:w-[25%]">
-                  <div className="flex h-full items-center justify-end  gap-2 md:gap-5 lg:gap-0 lg:justify-evenly">
-                    <div className="Account lg:mr-2 inline-block ">
-                      <div className="flex gap-1">
-                        <Menu>
-                          <MenuHandler>
-                            <IconButton className="bg-[#014E37] w-[30px] h-[30px] md:w-[2.5rem] md:h-[2.5rem]">
-                              <svg
-                                className="inline-block w-[20px] h-[20px] md:w-[25px] md:h-[25px] "
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                color="#ffffff"
-                                fill="none"
-                              >
-                                <path
-                                  d="M14 8.99988H18"
-                                  stroke="currentColor"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                />
-                                <path
-                                  d="M14 12.4999H17"
-                                  stroke="currentColor"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                />
-                                <rect
-                                  x="2"
-                                  y="2.99988"
-                                  width="20"
-                                  height="18"
-                                  rx="5"
-                                  stroke="currentColor"
-                                  stroke-width="1.5"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M5 15.9999C6.20831 13.4188 10.7122 13.249 12 15.9999"
-                                  stroke="currentColor"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                />
-                                <path
-                                  d="M10.5 8.99988C10.5 10.1044 9.60457 10.9999 8.5 10.9999C7.39543 10.9999 6.5 10.1044 6.5 8.99988C6.5 7.89531 7.39543 6.99988 8.5 6.99988C9.60457 6.99988 10.5 7.89531 10.5 8.99988Z"
-                                  stroke="currentColor"
-                                  stroke-width="1.5"
-                                />
-                              </svg>
-                            </IconButton>
-                          </MenuHandler>
-                          <MenuList>
-                            <MenuItem>Menu Item 1</MenuItem>
-                            <MenuItem>Menu Item 2</MenuItem>
-                            <MenuItem>Menu Item 3</MenuItem>
-                          </MenuList>
-                        </Menu>
-
-                        <p className=" hidden lg:inline-block text-black">
-                          My Account
-                        </p>
-                      </div>
-                    </div>
-                    <div className="Cart inline-block">
-                      {/* <img className="inline-block" src={shoppingCart} alt="" /> */}
-                      <div className="flex gap-1">
-                        <IconButton className="bg-[#014E37] w-[30px] h-[30px] md:w-[2.5rem] md:h-[2.5rem]">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            height="24"
-                            color="#ffffff"
-                            fill="none"
-                            className="inline-block w-[20px] h-[20px] md:w-[25px] md:h-[25px] "
-                          >
-                            <path
-                              d="M4.34085 16.8781L3.17786 9.93557C2.98869 8.8063 2.89411 8.24167 3.18537 7.87083C3.47662 7.5 4.01468 7.5 5.09079 7.5H18.9092C19.9853 7.5 20.5234 7.5 20.8146 7.87083C21.1059 8.24167 21.0113 8.8063 20.8221 9.93557L19.6591 16.8781C19.249 19.3264 19.044 20.5505 18.2319 21.2752C17.4199 22 16.2534 22 13.9204 22H10.0796C7.74664 22 6.58014 22 5.76809 21.2752C4.95603 20.5505 4.75097 19.3264 4.34085 16.8781Z"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                            />
-                            <path
-                              d="M7 7.5V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V7.5"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                            />
-                            <path
-                              d="M4.5 17.5H19.5"
-                              stroke="currentColor"
-                              stroke-width="1.5"
-                            />
-                          </svg>
-                        </IconButton>
-
-                        <p className="hidden lg:inline-block text-black">
-                          Cart
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="header_right w-[84%] h-full">{headerBottom()}</div>
           </div>
         </div>
       </div>
       {/* <div className="header_bottom flex h-[52px] justify-center border-t border-b border-solid border-[#F2F2F2]"> */}
       {/* {isOpen ? sideBar() : headerBottom()} */}
-      {headerBottom()}
+
       {/* </div> */}
       {sideBar()}
     </header>
