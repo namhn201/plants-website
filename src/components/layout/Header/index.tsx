@@ -72,7 +72,9 @@ const Header = () => {
 
   const renderMenuIcon = () => (
     <div
-      className={`${!isOpen ? "" : ""} my-2 cursor-pointer w-[30px] h-[30px] text-[1.2rem] `}
+      className={`${
+        !isOpen ? "" : ""
+      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.2rem] `}
       onClick={toggleMenu}
       onKeyDown={(e) => {
         if (e.key === "Esc" || e.key === " ") {
@@ -89,7 +91,7 @@ const Header = () => {
     if (isOpen || !isScreen) return null;
     return (
       <div className="header_bottom flex h-[52px] justify-center border-t border-b border-solid border-[#F2F2F2]">
-        <div className="flex h-full w-[50%] justify-center items-center ">
+        <div className="flex h-full w-[70%] lg:w-[57%] justify-center items-center ">
           <div id="wrapper" className="w-full h-full">
             <div id="header" className="h-full">
               <nav className="h-full">
@@ -97,14 +99,14 @@ const Header = () => {
                   id="main-menu"
                   className="flex w-full justify-between h-full pt-3"
                 >
-                  <li className="text-[#090909] hover:text-[#014E37]">
+                  {/* <li className="text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.DashBoard}>
                       <p>Trang chủ</p>
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="relative group h-full text-[#090909] hover:text-[#014E37]">
                     <Link href={routerName.Products}>
-                      <p className="cursor-pointer ">Cây cảnh</p>
+                      <p className="cursor-pointer ">Danh mục</p>
                     </Link>
 
                     {/* Dropdown menu */}
@@ -112,30 +114,34 @@ const Header = () => {
                       <li>
                         <Link href="/product1">
                           <p className="block px-4 py-2 hover:text-[#014E37]">
-                            Cây cảnh 1
+                            Cây xanh
                           </p>
                         </Link>
                       </li>
                       <li>
                         <Link href="/product2">
                           <p className="block px-4 py-2 hover:bg-gray-200">
-                            Cây cảnh 2
+                            Cây cảnh
                           </p>
                         </Link>
                       </li>
                       <li>
                         <Link href="/product3">
                           <p className="block px-4 py-2 hover:bg-gray-200">
-                            Cây cảnh 3
+                            Phân bón
                           </p>
                         </Link>
                       </li>
                     </ul>
                   </li>
-
                   <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.Products}>
-                      <p>Phụ kiện</p>
+                    <Link href={routerName.Team}>
+                      <p>Cơ cấu tổ chức</p>
+                    </Link>
+                  </li>
+                  <li className="text-[#090909] hover:text-[#014E37]">
+                    <Link href={routerName.History}>
+                      <p>Lịch sử hình thành</p>
                     </Link>
                   </li>
                   <li className="text-[#090909] hover:text-[#014E37]">
@@ -144,8 +150,13 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.Contact}>
+                    <Link href={routerName.About}>
                       <p>Giới thiệu</p>
+                    </Link>
+                  </li>
+                  <li className="text-[#090909] hover:text-[#014E37]">
+                    <Link href={routerName.Contact}>
+                      <p>Liên hệ</p>
                     </Link>
                   </li>
                 </ul>
@@ -158,51 +169,6 @@ const Header = () => {
   };
 
   const sideBar = () => (
-    // <div className="flex h-full w-[50%] md:hidden">
-    //   <div
-    //     id="wrapper"
-    //     className={`fixed left-0 top-0 z-20 flex h-[450px] max-h-[100vh] w-[75%] max-w-[1170px] transform flex-col rounded-[20px] bg-white px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
-    //       ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-    //   >
-    //     <div id="header" className="flex justify-between p-8">
-    //       <nav>
-    //         <ul
-    //           id="main-menu"
-    //           className={`${isOpen}flex w-full justify-between`}
-    //         >
-    //           <li>
-    //             <Link href={routerName.DashBoard}>
-    //               <p>Trang chủ</p>
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link href={routerName.Products}>
-    //               <p>Cây cảnh</p>
-    //             </Link>{" "}
-    //           </li>
-    //           <li>
-    //             <Link href={routerName.Products}>
-    //               <p>Phụ kiện</p>
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link href={routerName.Careers}>
-    //               <p>Tuyển dụng</p>
-    //             </Link>
-    //           </li>
-    //           <li>
-    //             <Link href={routerName.Contact}>
-    //               <p>Giới thiệu</p>
-    //             </Link>
-    //           </li>
-    //         </ul>
-    //       </nav>
-    //       <div className="cancel cursor-pointer" onClick={oncancel}>
-    //         X
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div
       id="wrapper"
       className={` md:hidden fixed left-0 top-0 z-20 flex h-full max-h-[100vh] w-[75%] max-w-[300px] transform flex-col rounded-[20px] bg-white px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
@@ -242,7 +208,7 @@ const Header = () => {
                   <PresentationChartBarIcon className="h-5 w-5" />
                 </ListItemPrefix>
                 <Typography color="blue-gray" className="mr-auto font-normal">
-                  Product
+                  Danh mục
                 </Typography>
               </AccordionHeader>
             </ListItem>
@@ -252,19 +218,19 @@ const Header = () => {
                   <ListItemPrefix>
                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                   </ListItemPrefix>
-                  Analytics
+                  Cây xanh
                 </ListItem>
                 <ListItem>
                   <ListItemPrefix>
                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                   </ListItemPrefix>
-                  Reporting
+                  Cây cảnh
                 </ListItem>
                 <ListItem>
                   <ListItemPrefix>
                     <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                   </ListItemPrefix>
-                  Projects
+                  Thuốc bảo vệ thực vật
                 </ListItem>
               </List>
             </AccordionBody>
@@ -274,7 +240,7 @@ const Header = () => {
             <ListItemPrefix>
               <InboxIcon className="h-5 w-5" />
             </ListItemPrefix>
-            Contact
+            Liên hệ
             <ListItemSuffix>
               <Chip
                 value="14"
@@ -285,7 +251,7 @@ const Header = () => {
               />
             </ListItemSuffix>
           </ListItem>
-          <Accordion
+          {/* <Accordion
             open={open === 2}
             icon={
               <ChevronDownIcon
@@ -325,19 +291,37 @@ const Header = () => {
                 </ListItem>
               </List>
             </AccordionBody>
-          </Accordion>
+          </Accordion> */}
+            <ListItem>
+            <ListItemPrefix>
+              <UserCircleIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            Cơ cấu tổ chức
+          </ListItem>
+          <ListItem>
+            <ListItemPrefix>
+              <UserCircleIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            Lịch sử hình thành
+          </ListItem>
+          <ListItem>
+            <ListItemPrefix>
+              <UserCircleIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            Tuyển dụng
+          </ListItem>
           <ListItem>
             <ListItemPrefix>
               <UserCircleIcon className="h-5 w-5" />
             </ListItemPrefix>
             Profile
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <ListItemPrefix>
               <Cog6ToothIcon className="h-5 w-5" />
             </ListItemPrefix>
             Settings
-          </ListItem>
+          </ListItem> */}
           <ListItem>
             <ListItemPrefix>
               <PowerIcon className="h-5 w-5" />
@@ -361,11 +345,13 @@ const Header = () => {
             <div className="header_left w-[16%]">
               <div className="Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
                 {!isScreen && renderMenuIcon()}
-                <img
-                  className="w-full cursor-pointer hidden  md:block "
-                  src="./assets/LogoPlant_2.jpg"
-                  alt="LogoPlants"
-                />
+                <Link href={routerName.DashBoard}>
+                  <img
+                    className="w-full cursor-pointer hidden  md:block "
+                    src="./assets/LogoPlant_2.jpg"
+                    alt="LogoPlants"
+                  />
+                </Link>
               </div>
             </div>
             <div className="header_right w-[84%]">

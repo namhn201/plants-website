@@ -2,6 +2,9 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +26,8 @@ export default function Home() {
 
   return (
     <div>
-      {/* Loading... */}
+      Loading...
+
     </div>
   );
 }

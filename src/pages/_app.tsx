@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import "antd/dist/antd"; // Import Ant Design CSS
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import { ThemeProvider } from "@material-tailwind/react";
 
 import type { AppProps } from "next/app";

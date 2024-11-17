@@ -29,7 +29,7 @@ const FooterComponent = () => {
         </div>
 
         <div className="grid justify-between grid-cols-1 gap-4 md:grid-cols-1">
-          <div className="grid justify-between grid-cols-4 gap-4">
+          <div className="grid justify-between sm:grid-cols-4 gap-4 grid-cols-1">
             <ul className="text-[#666867]">
               <p className="block mb-1 text-base font-semibold  text-slate-800 text-black">
                 Product
