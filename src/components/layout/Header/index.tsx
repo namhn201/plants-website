@@ -170,7 +170,7 @@ const Header = () => {
       <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem]  py-4 pl-4 shadow-xl shadow-blue-gray-900/5">
         <div className="mb-2 py-4 pl-4 pr-2 flex justify-between ">
           <Typography variant="h5" color="blue-gray">
-            Sidebar
+            {Logo()}r
           </Typography>
           <button
             className="font-bold rounded-md border border-transparent px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -325,6 +325,15 @@ const Header = () => {
       </Card>
     </div>
   );
+  const Logo = () =>(
+    <Link href={routerName.DashBoard}>
+    <img
+      className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
+      src="./assets/LogoPlant_2.jpg"
+      alt="LogoPlants"
+    />
+  </Link>
+  )
   return (
     <header id="header" className="">
       {/* <div className="header_top_sale bg-[#f5f5f5] h-[41px]  justify-center hidden md:flex border-t border-b border-solid border-[#F2F2F2]">
@@ -338,13 +347,7 @@ const Header = () => {
             <div className="header_left w-[16%]">
               <div className="Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
                 {!isScreen && renderMenuIcon()}
-                <Link href={routerName.DashBoard}>
-                  <img
-                    className="w-full cursor-pointer hidden  md:block "
-                    src="./assets/LogoPlant_2.jpg"
-                    alt="LogoPlants"
-                  />
-                </Link>
+                {Logo()}
               </div>
             </div>
             <div className="header_right w-[84%] h-full">{headerBottom()}</div>
