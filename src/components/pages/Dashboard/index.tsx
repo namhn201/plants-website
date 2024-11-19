@@ -58,8 +58,8 @@ import Slider from "react-slick";
 // };
 
 const DashboardComponent = () => {
-  const titleImage_1 = "Text Reveal Animation 💫";
-  const titleImage_2 = "Text Reveal Animation_2 💫";
+  // const titleImage_1 = "Text Reveal Animation 💫";
+  // const titleImage_2 = "Text Reveal Animation_2 💫";
 
   return (
     <div className="h-full">
@@ -126,83 +126,87 @@ const DashboardComponent = () => {
         </Carousel>
       </div>
       {/* 3 card image */}
-      <div className="flex h-full w-full justify-center mb-4">
+      <div className="flex h-full w-full justify-center mb-4 h-full md:h-[300px]">
         <div className="md:flex justify-center md:justify-evenly gap-3 w-[100%] h-full py-3 md:py-7 ">
-          <div className="w-full h-full md:max-w-[550px] md:max-h-[300px]">
-            <div className="relative pb-3 px-3 md:pb-0 md:px-0">
+          <div className="w-full h-full ">
+            {/* md:max-w-[550px] md:max-h-[300px] */}
+            <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
               <img
-                className="h-full w-full rounded-md"
-                src="https://elementor.dostguru.com/plantishdemo/wp-content/uploads/2021/07/33.webp"
+                className="h-full w-full object-cover rounded-md max-h-[300px]"
+                src="./assets/plant_menu_2.jpg"
                 alt=""
               />
+              <div className="absolute inset-0 bg-white bg-opacity-25"></div>
               <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-                {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
-                  aa
-                </h1> */}
-                <p className="text-[15px] sm:text-[15px] font-semibold text-center">
+                <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Cung cấp các loại cây xanh
                 </p>
-                {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
-                <Button
-                  variant="outlined"
-                  className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37] md:mt-2"
-                  size="sm"
+                <button
+                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
-                  Xem thêm
-                </Button>
+                  XEM THÊM
+                </button>
               </div>
             </div>
           </div>
 
-          <div className="w-full h-full md:max-w-[550px] md:max-h-[300px]">
-            <div className="relative pb-3 px-3 md:pb-0 md:px-0">
+          <div className="w-full h-full">
+            <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
               <img
-                className="h-full w-full rounded-md"
-                src="https://elementor.dostguru.com/plantishdemo/wp-content/uploads/2021/07/34.webp"
+                className="h-full w-full object-cover rounded-md max-h-[300px]"
+                src="./assets/plant_menu_1.jpg"
                 alt=""
               />
+              <div className="absolute inset-0 bg-white bg-opacity-25"></div>
+
               <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
                 {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
                   aa
                 </h1> */}
-                <p className=" text-[14px] sm:text-[15px] font-semibold text-center lg:w-[80%]">
-                  Cung cấp nhiều loại cây cảnh khác.
+                <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
+                  Cung cấp nhiều loại cây cảnh khác
                 </p>
                 {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
-                <Button
+                {/* <Button
                   variant="outlined"
-                  className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37]  md:mt-2"
+                  className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37]  md:mt-2 hover:bg-[#014E37] hover:text-white"
                   size="sm"
                 >
                   Xem thêm
-                </Button>
+                </Button> */}
+                <button
+                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  type="button"
+                >
+                  XEM THÊM
+                </button>
               </div>
             </div>
           </div>
           {/* <div className="relative px-3 md:px-0"> */}
 
-          <div className="w-full h-full md:max-w-[550px] md:max-h-[300px]">
-            <div className="relative px-3 md:px-0">
+          <div className="w-full h-full ">
+            <div className="relative px-3 md:px-0 h-full w-full">
               <img
-                className="h-full w-full rounded-md"
-                src="https://elementor.dostguru.com/plantishdemo/wp-content/uploads/2021/07/35.webp"
+                className="h-full w-full object-cover rounded-md max-h-[300px]"
+                src="./assets/plant_menu_7.jpg"
                 alt=""
               />
+              <div className="absolute inset-0 bg-white bg-opacity-25"></div>
+
               <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
                 {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
                   aa
                 </h1> */}
-                <p className=" text-[14px] sm:text-[15px] font-semibold text-center">
+                <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Và các loại Thuốc bảo vệ thực vật
                 </p>
                 {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
-                <Button
-                  variant="outlined"
-                  className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37] md:mt-2"
-                  size="sm"
+                <button
+                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
-                  Xem thêm
-                </Button>
+                  XEM THÊM
+                </button>
               </div>
             </div>
           </div>
@@ -289,7 +293,7 @@ const DashboardComponent = () => {
                       <img
                         src="./assets/plant_product_1.jpg"
                         alt="card-image"
-                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110 "
+                        className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110 "
                       />
                     </CardHeader>
                     {/* <div className="flex justify-center items-center">
@@ -324,7 +328,7 @@ const DashboardComponent = () => {
                       <img
                         src="./assets/plant_product_2.jpg"
                         alt="card-image"
-                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
+                        className=" cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                       />
                     </CardHeader>
 
@@ -359,7 +363,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_7.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -394,7 +398,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_8.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -432,7 +436,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_9.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -467,7 +471,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_10.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -560,7 +564,7 @@ const DashboardComponent = () => {
               </div>
               <div>
                 <h1 className="text-xl xl:text-3xl text-[#014e37] font-semibold mb-3">
-                  Cây cảnh kiểng– Sự độc đáo trong từng chiếc lá
+                  Cây cảnh kiểng – Sự độc đáo trong từng chiếc lá
                 </h1>
                 <p className="font-semibold mb-3">
                   Các dòng cây cảnh đột biến của chúng tôi mang giá trị thẩm mỹ
@@ -583,25 +587,24 @@ const DashboardComponent = () => {
               </div>
               <div className="w-full">
                 <Link href={routerName.Team}>
-                <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-[100%] mt-5">
-                  VỀ CÔNG TY NHÀ MÁY
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="h-5 w-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Button>
+                  <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-[100%] mt-5">
+                    VỀ CÔNG TY NHÀ MÁY
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                    </svg>
+                  </Button>
                 </Link>
-               
               </div>
             </div>
           </div>
@@ -621,7 +624,7 @@ const DashboardComponent = () => {
             {/* <div className="absolute top-[398px] inset-0 bg-black bg-opacity-5 h-[20px]"></div> */}
 
             <div className="absolute top-0 flex justify-center w-full items-center h-full">
-              <div className=" w-[93%] md:w-[70%] md:flex justify-center items-center">
+              <div className=" w-[93%] md:w-[70%] md:flex justify-center items-center gap-3">
                 <div className="w-[80%] mb-3">
                   <p className="text-2xl sm:text-3xl font-semibold pb-3">
                     GIAO HÀNG NHANH CHÓNG, ĐÁNG TIN CẬY VÀ SỐ LƯỢNG THẤP!

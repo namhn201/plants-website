@@ -58,10 +58,10 @@ const FooterComponent = () => {
                 </a>
               </li> */}
               <li>
-                <p className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm flex gap-1">
+                <a className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm flex gap-1">
                   <p className="font-semibold">Email:</p>
                   <p className=""> info@gmail.garden.com </p>
-                </p>
+                </a>
               </li>
             </ul>
             <ul className="text-[#666867]">
