@@ -189,19 +189,16 @@ const DashboardComponent = () => {
             <div className="relative px-3 md:px-0 h-full w-full">
               <img
                 className="h-full w-full object-cover rounded-md max-h-[300px]"
-                src="./assets/plant_menu_7.jpg"
+                src="./assets/plant_menu_6.jpg"
                 alt=""
               />
               <div className="absolute inset-0 bg-white bg-opacity-25"></div>
 
               <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-                {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
-                  aa
-                </h1> */}
+               
                 <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Và các loại Thuốc bảo vệ thực vật
                 </p>
-                {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
                 <button
                   className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
