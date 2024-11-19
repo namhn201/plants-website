@@ -1,4 +1,5 @@
 // import { Button, Carousel } from "@material-tailwind/react";
+import { routerName } from "@/constants/router.constant";
 import {
   Carousel,
   Card,
@@ -8,6 +9,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import Slider from "react-slick";
 // import image from "";
 // const settings = {
@@ -66,7 +68,7 @@ const DashboardComponent = () => {
         <Carousel
           autoplay={true}
           loop={true}
-          // autoplayDelay={3000}
+          autoplayDelay={6000}
           className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
         >
           {/* Image 1 */}
@@ -77,7 +79,7 @@ const DashboardComponent = () => {
               className="h-full w-full "
             />
             {/* Nội dung chiếm một nửa chiều rộng bên phải */}
-            <div className="absolute top-0 right-0 w-full h-full text-black p-6 flex flex-col justify-center h-[100%]">
+            <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center h-[100%]">
               <div className=" text-sm sm:text-xl md:text-3xl font-bold text-[#014E37] mb-6 w-[60%]">
                 {/* <p>Nature's Embrace, </p>
                 <p>Right at Home</p> */}
@@ -104,7 +106,7 @@ const DashboardComponent = () => {
               className="h-full w-full object-cover"
             />
             {/* Nội dung chiếm một nửa chiều rộng bên phải */}
-            <div className="absolute top-0 right-0 w-full h-full text-black p-6 flex flex-col justify-center h-[100%]">
+            <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center h-[100%]">
               <div className=" text-sm sm:text-xl md:text-3xl font-bold text-[#014E37] mb-6 w-[60%]">
                 {/* <p>Nature's Embrace, </p>
                 <p>Right at Home</p> */}
@@ -209,7 +211,7 @@ const DashboardComponent = () => {
       {/* {Quản cáo sản phẩm } */}
       <div className="w-full flex justify-center">
         <div className="">
-          <p className="text-center font-semibold text-3xl">
+          <p className="text-center font-semibold text-2xl sm:text-3xl">
             Một số sản phẩm nổi bật
           </p>
           <div className="flex justify-center items-center mb-7">
@@ -225,8 +227,8 @@ const DashboardComponent = () => {
       </div>
 
       <div className="w-full h-full flex justify-center mb-5">
-        <div className="w-[93%] md:flex justify-evenly items-center h-full ">
-          <div className=" md:w-[35%] flex md:h-full py-6">
+        <div className="w-[93%] md:flex justify-evenly h-full gap-4">
+          <div className=" md:w-[50%] flex md:h-full py-6">
             <div className="flex flex-col justify-center w-[100%]">
               <div className="flex justify-center md:justify-start text-4xl text-[#014e37] font-semibold mb-5 md:mb-10">
                 CÂY CẢNH ĐỘT BIẾN
@@ -253,29 +255,31 @@ const DashboardComponent = () => {
                   triển theo cách đặc biệt, ví dụ như xương rồng đột biến
                 </p>
               </div>
-              <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] md:w-[80%] mt-5">
-                Xem thêm các sản phẩm khác
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </Button>
+              <Link href={routerName.Products}>
+                <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-full md:w-[80%] mt-5">
+                  Xem thêm các sản phẩm khác
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </Button>
+              </Link>
             </div>
           </div>
-          <div className="md:w-[60%] ">
+          <div className="md:w-[50%] ">
             <div className="flex justify-center items-center w-full sm:block">
-              <div className="sm:flex justify-center gap-5">
-                <div className="sm:w-[50%] mb-5 sm:mb-0">
+              <div className="lg:flex justify-center gap-5">
+                <div className="lg:w-[50%] mb-5 lg:mb-0">
                   <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
                     <CardHeader
                       shadow={false}
@@ -285,7 +289,7 @@ const DashboardComponent = () => {
                       <img
                         src="./assets/plant_product_1.jpg"
                         alt="card-image"
-                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110 "
                       />
                     </CardHeader>
                     {/* <div className="flex justify-center items-center">
@@ -310,7 +314,7 @@ const DashboardComponent = () => {
                     </CardBody>
                   </Card>
                 </div>
-                <div className="sm:w-[50%]">
+                <div className="lg:w-[50%]">
                   <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
                     <CardHeader
                       shadow={false}
@@ -320,7 +324,7 @@ const DashboardComponent = () => {
                       <img
                         src="./assets/plant_product_2.jpg"
                         alt="card-image"
-                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                        className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                       />
                     </CardHeader>
 
@@ -342,8 +346,8 @@ const DashboardComponent = () => {
         </div>
       </div>
 
-      <div className=" flex justify-center">
-        <div className=" lg:flex justify-center  w-[93%] md:w-[90%] gap-4">
+      <div className=" flex justify-center mb-5">
+        <div className=" lg:flex justify-center  w-[93%] gap-4">
           <div className=" lg:w-[50%] sm:flex gap-5 mb-5">
             <div className=" sm:w-1/2 mb-5 sm:mb-0">
               <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
@@ -355,7 +359,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_7.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -390,7 +394,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_8.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -428,7 +432,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_9.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -463,7 +467,7 @@ const DashboardComponent = () => {
                   <img
                     src="./assets/plant_product_10.jpg"
                     alt="card-image"
-                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800"
+                    className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                   />
                 </CardHeader>
                 {/* <div className="flex justify-center items-center">
@@ -515,9 +519,9 @@ const DashboardComponent = () => {
       {/* //ss */}
       {/* Aboutus */}
       {/* Line ngăng giữa */}
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mb-2">
         <div className="">
-          <p className="text-center font-semibold text-3xl">
+          <p className="text-center font-semibold text-2xl sm:text-3xl">
             Đội ngũ của chúng tôi
           </p>
           <div className="flex justify-center items-center mb-7">
@@ -533,24 +537,25 @@ const DashboardComponent = () => {
       </div>
       {/* Line ngăng giữa */}
 
-      <div className="w-full  flex justify-center">
-        <div className="w-[93%] lg:flex justify-center lg:justify-evenly items-center">
-          <div className=" lg:w-[50%] flex justify-center ">
+      <div className="w-full flex justify-center mb-10">
+        <div className="w-[93%] lg:flex justify-center lg:justify-evenly gap-10">
+          <div className=" lg:w-[50%] flex justify-center items-center mb-5 lg:mb-0">
             <div className="flex justify-center md:min-h-[500px] max-w-[800px] h-full ">
               <img className=" w-full" src="./assets/plant_bg_2.jpg" alt="" />
             </div>
           </div>
-          <div className="lg:w-[40%] ">
-            <div className="flex flex-col w-[98%] xl:w-[70%]">
+          <div className="lg:w-[50%] ">
+            <div className="flex flex-col w-[98%] xl:w-[100%]">
               <div>
                 <h1 className="text-xl xl:text-3xl text-[#014e37] font-semibold mb-3">
                   Cung cấp cây xanh
                 </h1>
                 <p className="font-semibold mb-3">
-                  Chúng tôi cung cấp cây xanh chất lượng cao, đa dạng chủng loại
-                  từ các nhà vườn uy tín. Những sản phẩm của chúng tôi không chỉ
-                  làm đẹp không gian mà còn cải thiện môi trường sống, mang lại
-                  sự tươi mới và thư thái.
+                  Chúng tôi tự hào cung cấp các loại cây xanh chất lượng cao,
+                  được chọn lọc kỹ lưỡng từ những nhà vườn uy tín. Với các giống
+                  cây xanh phong phú và đa dạng, chúng tôi không chỉ mang đến vẻ
+                  đẹp tự nhiên mà còn giúp cải thiện không khí, tạo không gian
+                  sống trong lành và thư giãn hơn.
                 </p>
               </div>
               <div>
@@ -558,9 +563,10 @@ const DashboardComponent = () => {
                   Cây cảnh kiểng– Sự độc đáo trong từng chiếc lá
                 </h1>
                 <p className="font-semibold mb-3">
-                  Các dòng cây cảnh đột biến của chúng tôi mang vẻ đẹp hiếm có,
-                  độc đáo và được chăm sóc kỹ lưỡng, phù hợp với những người yêu
-                  cây tìm kiếm sự khác biệt.
+                  Các dòng cây cảnh đột biến của chúng tôi mang giá trị thẩm mỹ
+                  cao, với vẻ đẹp hiếm có và đặc trưng riêng biệt. Mỗi sản phẩm
+                  đều được chăm sóc cẩn thận, đáp ứng nhu cầu của những người
+                  yêu cây cảnh muốn tìm kiếm sự khác biệt và độc đáo.
                 </p>
               </div>
               <div>
@@ -570,13 +576,14 @@ const DashboardComponent = () => {
                 <p className="font-semibold">
                   Ngoài cây xanh và cây cảnh, chúng tôi còn cung cấp các sản
                   phẩm thuốc trừ sâu an toàn, thân thiện với môi trường. Các
-                  giải pháp bảo vệ cây trồng giúp duy trì sự phát
-                  triển khỏe mạnh và bền vững cho cây cối, giảm thiểu
+                  giải pháp bảo vệ cây trồng của chúng tôi giúp duy trì sự phát
+                  triển khỏe mạnh và bền vững cho cây cối, đồng thời giảm thiểu
                   tác động đến môi trường xung quanh.
                 </p>
               </div>
               <div className="w-full">
-                <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37]  w-[100%] mt-5">
+                <Link href={routerName.Team}>
+                <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-[100%] mt-5">
                   VỀ CÔNG TY NHÀ MÁY
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -593,6 +600,44 @@ const DashboardComponent = () => {
                     />
                   </svg>
                 </Button>
+                </Link>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full h-[400px] mb-20">
+        <div className="w-full h-full ">
+          <div className="w-full h-full relative">
+            <img
+              className="w-full h-full object-cover"
+              src="./assets/plant_bg_4.jpg"
+              alt=""
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-60 h-[420px]"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 h-[420px]"></div>
+            {/* <div className="absolute top-[398px] inset-0 bg-black bg-opacity-5 h-[20px]"></div> */}
+
+            <div className="absolute top-0 flex justify-center w-full items-center h-full">
+              <div className=" w-[93%] md:w-[70%] md:flex justify-center items-center">
+                <div className="w-[80%] mb-3">
+                  <p className="text-2xl sm:text-3xl font-semibold pb-3">
+                    GIAO HÀNG NHANH CHÓNG, ĐÁNG TIN CẬY VÀ SỐ LƯỢNG THẤP!
+                  </p>
+                  <p className="font-semibold">
+                    Với vị trí thuận lợi gần các tuyến đường vận chuyển chính
+                    tại Virginia, Leafjoy cam kết mang đến cho bạn những sản
+                    phẩm nhanh chóng và tiện lợi, mà không cần phải sử dụng đến
+                    những chiếc xe tải lớn!
+                  </p>
+                </div>
+                <div className="md:w-[20%]">
+                  <Link href={routerName.Contact}>
+                    <Button className=" w-full bg-[#014e37] ">Liên hệ</Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -1,10 +1,15 @@
+import { routerName } from "@/constants/router.constant";
+import Link from "next/link";
+
 const FooterComponent = () => {
   return (
     <footer className="relative w-full bg-[#d9e5e1] pt-20">
       <div className="w-full p-4 sm:px-8 mx-auto max-w-7xl">
         {/* //Subcrise Mail */}
         <div className="flex justify-center items-center mb-5">
-          <p className=" font-semibold text-[28px] md:text-[34px]">Subscribe Our Newsletter</p>
+          <p className=" font-semibold text-[28px] md:text-[34px]">
+            Subscribe Our Newsletter
+          </p>
         </div>
         <div className=" flex mb-20 w-full flex - justify-center items-center">
           <div className="w-full max-w-[45rem] min-w-[200px]">
@@ -32,14 +37,43 @@ const FooterComponent = () => {
           <div className="grid justify-between sm:grid-cols-4 gap-4 grid-cols-1">
             <ul className="text-[#666867]">
               <p className="block mb-1 text-base font-semibold  text-slate-800 text-black">
-                Product
+                Giới thiệu
+              </p>
+              <li>
+                <p className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
+                  100 Address Highway, quan 1, TP.HCM
+                </p>
+              </li>
+              <li>
+                <a className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
+                  Điện thoại: (000) 000-0000
+                </a>
+              </li>
+              {/* <li>
+                <a
+                  href="#"
+                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
+                >
+                  
+                </a>
+              </li> */}
+              <li>
+                <p className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm flex gap-1">
+                  <p className="font-semibold">Email:</p>
+                  <p className=""> info@gmail.garden.com </p>
+                </p>
+              </li>
+            </ul>
+            <ul className="text-[#666867]">
+              <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
+                Sản phẩm
               </p>
               <li>
                 <a
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  Overview
+                  Các loại cây xanh
                 </a>
               </li>
               <li>
@@ -47,7 +81,7 @@ const FooterComponent = () => {
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  Features
+                  Các loại cây cảnh
                 </a>
               </li>
               <li>
@@ -55,28 +89,20 @@ const FooterComponent = () => {
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  Solutions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Tutorials
+                  Thuốc bảo vệ thực vât
                 </a>
               </li>
             </ul>
             <ul className="text-[#666867]">
               <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
-                Company
+                Công ty
               </p>
               <li>
                 <a
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  About us
+                  Tuyển dụng
                 </a>
               </li>
               <li>
@@ -84,7 +110,7 @@ const FooterComponent = () => {
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  Careers
+                  Cơ cấu tổ chức
                 </a>
               </li>
               <li>
@@ -92,91 +118,28 @@ const FooterComponent = () => {
                   href="#"
                   className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  Press
+                  Lịch sử hình thành
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block text-slate-700 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
+                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
                 >
-                  News
+                  Liên hệ
                 </a>
               </li>
             </ul>
             <ul className="text-[#666867]">
-              <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
-                Resource
-              </p>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Newsletter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Events
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Help center
-                </a>
-              </li>
-            </ul>
-            <ul className="text-[#666867]">
-              <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
-                Help Center
-              </p>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Discord
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Github
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm"
-                >
-                  Contact Us
-                </a>
-              </li>
+              <Link href={routerName.DashBoard}>
+                <div className="Logo cursor-pointer">
+                  <img
+                    className="bg-transparent"
+                    src="./assets/LogoPlant_removeBG.png"
+                    alt=""
+                  />
+                </div>
+              </Link>
             </ul>
           </div>
         </div>
