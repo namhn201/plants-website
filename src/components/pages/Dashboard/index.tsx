@@ -1,5 +1,6 @@
 // import { Button, Carousel } from "@material-tailwind/react";
 import { routerName } from "@/constants/router.constant";
+import Breadcrumb from '@/components/breadcrumb'
 import {
   Carousel,
   Card,
@@ -63,6 +64,8 @@ const DashboardComponent = () => {
 
   return (
     <div className="h-full">
+            {/* <Breadcrumb /> */}
+
       {/* Slider */}
       <div className="image_slider">
         <Carousel

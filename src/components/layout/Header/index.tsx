@@ -170,7 +170,7 @@ const Header = () => {
       <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem]  py-4 pl-4 shadow-xl shadow-blue-gray-900/5">
         <div className="mb-2 py-4 pl-4 pr-2 flex justify-between ">
           <Typography variant="h5" color="blue-gray">
-            {Logo()}r
+            {Logo()}
           </Typography>
           <button
             className="font-bold rounded-md border border-transparent px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -329,7 +329,7 @@ const Header = () => {
     <Link href={routerName.DashBoard}>
     <img
       className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
-      src="./assets/LogoPlant_2.jpg"
+      src="/assets/LogoPlant_2.jpg"
       alt="LogoPlants"
     />
   </Link>
