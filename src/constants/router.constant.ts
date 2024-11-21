@@ -7,4 +7,5 @@ export const routerName = {
   History:'/history',
   Products:'/products',
   Team:'/team',
+  GreenTree:'',
 }

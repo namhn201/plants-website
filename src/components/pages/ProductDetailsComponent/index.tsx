@@ -131,6 +131,12 @@ const ProductDetailsComponent = () => {
           </div>
         </div>
       </div>
+      <div className="w-[800px] h-[300px] bg-black rounded-md">
+        <video className="h-full w-[300px] rounded-lg" controls autoPlay>
+          <source src="/assets/cangbanglangvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };

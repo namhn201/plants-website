@@ -8,8 +8,21 @@ import {
 import Slider from "react-slick";
 import Breadcrumb from "@/components/breadcrumb";
 import Link from "next/link";
+import GreenTreeComponent from "../GreentreeComponent";
+import router from "next/router";
+import { routerName } from "@/constants/router.constant";
+import { useState } from "react";
 
 const ProductComponent = () => {
+  const [isRender, setisRender] = useState(false)
+  const handleNavigation = () => {
+    console.log("Listening from ProductsComponent");
+    setisRender(true)
+    // router.push(routerName.GreenTree); 
+  };
+  if(isRender){
+    return <GreenTreeComponent />
+  }
   const settings = {
     accessibility: true,
     dots: true,
@@ -80,8 +93,10 @@ const ProductComponent = () => {
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-5">
         <div className="flex w-[50%] justify-evenly font-semibold">
-
-          <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+          <button
+            onClick={handleNavigation}
+            className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]"
+          >
             Cây Xanh
           </button>
           <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
