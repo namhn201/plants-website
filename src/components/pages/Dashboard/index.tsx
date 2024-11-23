@@ -1,6 +1,6 @@
 // import { Button, Carousel } from "@material-tailwind/react";
 import { routerName } from "@/constants/router.constant";
-import Breadcrumb from '@/components/breadcrumb'
+import Breadcrumb from "@/components/breadcrumb";
 import {
   Carousel,
   Card,
@@ -12,6 +12,9 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 import Slider from "react-slick";
+import { useEffect, useState } from "react";
+import Header from "@/components/layout/Header";
+import FooterComponent from "@/components/layout/Footer";
 // import image from "";
 // const settings = {
 //   accessibility: true,
@@ -59,17 +62,73 @@ import Slider from "react-slick";
 // };
 
 const DashboardComponent = () => {
+  const [showHeader, setShowHeader] = useState(false);
+
   // const titleImage_1 = "Text Reveal Animation 💫";
   // const titleImage_2 = "Text Reveal Animation_2 💫";
 
+  useEffect(() => {
+    // Kiểm tra xem có phải đang chạy trên client-side không
+    if (typeof window !== "undefined") {
+      const callback = function (entries: any) {
+        entries.forEach((entry: any) => {
+          // console.log(entry);
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+          } else {
+            entry.target.classList.remove("animate-fadeIn");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback);
+
+      const targets = document.querySelectorAll(".js-show-on-scroll");
+      targets.forEach(function (target) {
+        target.classList.add("opacity-0");
+        observer.observe(target);
+      });
+    }
+  }, []);
+
+  //xử lý cuộn header
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Kiểm tra vị trí cuộn trang
+      if (window.scrollY > 100) { // Điều chỉnh giá trị này tùy theo nhu cầu
+        setShowHeader(true); // Hiển thị header
+      } else {
+        setShowHeader(false); // Ẩn header
+      }
+    };
+
+    // Gắn sự kiện cuộn trang
+    window.addEventListener("scroll", handleScroll);
+
+    // Dọn dẹp sự kiện khi component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="h-full">
-            {/* <Breadcrumb /> */}
+      {/* <Breadcrumb /> */}
+      <div
+        className={`transition-all duration-500 ${
+          showHeader ? "bg-[#fff]" : "bg-transparent"
+        } fixed top-0 left-0 w-full z-50`}
+        id="header"
+      >
+        <Header />
+      </div>
 
       {/* Slider */}
-      <div className="image_slider">
+      <div className="image_slider h-[100dvh]">
         <Carousel
-          autoplay={true}
+          // autoplay={true}
           loop={true}
           autoplayDelay={6000}
           className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
@@ -77,27 +136,35 @@ const DashboardComponent = () => {
           {/* Image 1 */}
           <div className="relative w-full  h-full ">
             <img
-              src="./assets/plant_slider_4.jpg"
+              src="./assets/plant_slider_3.jpg"
               alt="image 1"
-              className="h-full w-full "
+              className="h-full w-full object-cover "
             />
             {/* Nội dung chiếm một nửa chiều rộng bên phải */}
-            <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center h-[100%]">
-              <div className=" text-sm sm:text-xl md:text-3xl font-bold text-[#014E37] mb-6 w-[60%]">
-                {/* <p>Nature's Embrace, </p>
+            <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center text-center">
+              <div className="w-[100%]">
+                <div className=" text-xl sm:text-2xl md:text-4xl font-bold text-[#014E37] mb-6 w-[100%]">
+                  {/* <p>Nature's Embrace, </p>
                 <p>Right at Home</p> */}
-                <p className="">NamHuynh Garden</p>
-                <p>Mang thiên nhiên vào từng không gian sống.</p>
+                  <p className="w-full">NamHuynh Garden</p>
+                  <p>Mang thiên nhiên vào từng không gian sống.</p>
+                </div>
+                <div className="w-full flex justify-center">
+                  <p className="sm:text-lg font-semibold text-[#202121] w-[80%] lg:block hidden">
+                    NamHuynh Garden là doanh nghiệp với đam mê làm vườn, chuyên
+                    cung cấp cây trồng trong nhà chất lượng cao, dễ tiếp cận mà
+                    không cần số lượng lớn, mang đến không gian sống tươi mới và
+                    gần gũi với thiên nhiên
+                  </p>
+                </div>
+
+                <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
+                  Liên hệ
+                </Button>
               </div>
-              <p className="sm:text-lg font-semibold text-[#202121] w-[50%] lg:block hidden">
-                NamHuynh Garden là doanh nghiệp với đam mê làm vườn, chuyên cung
-                cấp cây trồng trong nhà chất lượng cao, dễ tiếp cận mà không cần
-                số lượng lớn, mang đến không gian sống tươi mới và gần gũi với
-                thiên nhiên
-              </p>
-              <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
+              {/* <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
                 Liên hệ
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -131,7 +198,7 @@ const DashboardComponent = () => {
       {/* 3 card image */}
       <div className="flex h-full w-full justify-center mb-4 h-full md:h-[300px]">
         <div className="md:flex justify-center md:justify-evenly gap-3 w-[100%] h-full py-3 md:py-7 ">
-          <div className="w-full h-full ">
+          <div className="w-full h-full js-show-on-scroll ">
             {/* md:max-w-[550px] md:max-h-[300px] */}
             <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
               <img
@@ -144,16 +211,14 @@ const DashboardComponent = () => {
                 <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Cung cấp các loại cây xanh
                 </p>
-                <button
-                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                >
+                <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                   XEM THÊM
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="w-full h-full">
+          <div className="w-full h-full js-show-on-scroll">
             <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
               <img
                 className="h-full w-full object-cover rounded-md max-h-[300px]"
@@ -188,7 +253,7 @@ const DashboardComponent = () => {
           </div>
           {/* <div className="relative px-3 md:px-0"> */}
 
-          <div className="w-full h-full ">
+          <div className="w-full h-full js-show-on-scroll ">
             <div className="relative px-3 md:px-0 h-full w-full">
               <img
                 className="h-full w-full object-cover rounded-md max-h-[300px]"
@@ -198,13 +263,10 @@ const DashboardComponent = () => {
               <div className="absolute inset-0 bg-white bg-opacity-25"></div>
 
               <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-               
                 <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Và các loại Thuốc bảo vệ thực vật
                 </p>
-                <button
-                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                >
+                <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                   XEM THÊM
                 </button>
               </div>
@@ -213,7 +275,7 @@ const DashboardComponent = () => {
         </div>
       </div>
       {/* {Quản cáo sản phẩm } */}
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center ">
         <div className="">
           <p className="text-center font-semibold text-2xl sm:text-3xl">
             Một số sản phẩm nổi bật
@@ -231,7 +293,7 @@ const DashboardComponent = () => {
       </div>
 
       <div className="w-full h-full flex justify-center mb-5">
-        <div className="w-[93%] md:flex justify-evenly h-full gap-4">
+        <div className="w-[93%] md:flex justify-evenly h-full gap-4 js-show-on-scroll">
           <div className=" md:w-[50%] flex md:h-full py-6">
             <div className="flex flex-col justify-center w-[100%]">
               <div className="flex justify-center md:justify-start text-4xl text-[#014e37] font-semibold mb-5 md:mb-10">
@@ -354,7 +416,7 @@ const DashboardComponent = () => {
         <div className=" lg:flex justify-center  w-[93%] gap-4">
           <div className=" lg:w-[50%] sm:flex gap-5 mb-5">
             <div className=" sm:w-1/2 mb-5 sm:mb-0">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
+              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
                 <CardHeader
                   shadow={false}
                   floated={false}
@@ -389,7 +451,7 @@ const DashboardComponent = () => {
               </Card>
             </div>
             <div className=" sm:w-1/2">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
+              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
                 <CardHeader
                   shadow={false}
                   floated={false}
@@ -427,7 +489,7 @@ const DashboardComponent = () => {
 
           <div className=" lg:w-[50%] sm:flex gap-5 mb-5  ">
             <div className=" sm:w-1/2 mb-5 sm:mb-0">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
+              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
                 <CardHeader
                   shadow={false}
                   floated={false}
@@ -462,7 +524,7 @@ const DashboardComponent = () => {
               </Card>
             </div>
             <div className=" sm:w-1/2">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
+              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
                 <CardHeader
                   shadow={false}
                   floated={false}
@@ -646,6 +708,7 @@ const DashboardComponent = () => {
           </div>
         </div>
       </div>
+      {/* <FooterComponent /> */}
     </div>
   );
 };

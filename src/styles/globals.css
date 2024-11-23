@@ -164,3 +164,44 @@ body {
   color: white;
   transform: rotateY(180deg);
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5); /* Kích thước nhỏ hơn ban đầu */
+    opacity: 0; /* Ban đầu mờ */
+  }
+  100% {
+    transform: scale(1); /* Phóng to tới kích thước ban đầu */
+    opacity: 1; /* Cuối cùng là rõ */
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1s ease-out forwards; /* Chạy hiệu ứng zoom trong 1 giây */
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background: #f0f0f0;
+  margin: 10px 0;
+}
+
+.section:nth-child(even) {
+  background: #d0d0d0;
+}

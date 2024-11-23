@@ -1,0 +1,150 @@
+{
+    "plants": [
+      {
+        "category": "green tree",
+        "items": [
+          {
+            "id": 1,
+            "name": "Cây Bằng Lăng",
+            "otherNames": ["Bằng Lăng Tím", "Bằng Lăng Nước"],
+            "scientificName": "Lagerstroemia speciosa (L.) Pers",
+            "origin": "Ấn Độ",
+            "characteristics": "Cây Bằng Lăng là cây thân gỗ, tán dày, lá xanh hình oval, dài 8-15 cm, rụng vào mùa thu. Hoa tím hoặc tím nhạt, mọc thành chùm dài 20-30 cm, nở rộ vào mùa hè, mỗi bông 6 cánh mỏng. Quả hình cầu, đường kính 1,5-2 cm, chuyển từ tím nhạt sang nâu cứng khi chín. Ngoài hoa tím, còn có các giống hoa màu hồng, tím sậm, tím trắng.",
+            "categoryType": "Cây xanh",
+            "usage": "Cây Bằng Lăng là cây thân gỗ, tán dày, lá xanh hình oval, dài 8-15 cm, rụng vào mùa thu. Hoa tím hoặc tím nhạt, mọc thành chùm dài 20-30 cm, nở rộ vào mùa hè, mỗi bông 6 cánh mỏng. Quả hình cầu, đường kính 1,5-2 cm, chuyển từ tím nhạt sang nâu cứng khi chín. Ngoài hoa tím, còn có các giống hoa màu hồng, tím sậm, tím trắng.",
+            "careInstructions": {
+              "step1": "Đặc thù của cây bằng lăng là sống ngoài trời, thích hợp với nơi có nhiều ánh sáng mặt trời. Nó sinh trưởng tốt trên đất tơi xốp, thoáng khí và dễ thoát nước. Trước khi trồng cây bằng lăng tầm 1 tháng, bạn nên bón phân cho đất trồng. Mục đích của việc này là cung cấp nguồn dinh dưỡng cần thiết cho cây bằng lăng (ngay khi nó được trồng).",
+              "step2": "Thời điểm thích hợp nhất để trồng cây bằng lăng là khoảng tháng 5 – tháng 6 (nên trồng vào đầu mùa mưa). Có nhiều nước cây sẽ lớn nhanh và xanh tốt quanh năm. Để cây bằng lăng ra hoa đẹp, bạn nên chăm chút nhiều hơn đất trồng. Cụ thể như sau: mỗi năm nhặt cỏ xung quanh gốc cây 2-3 lần, kết hợp với đó là xới đất và vun gốc. Mỗi năm bón phân hữu cơ 1-2 lần. Cây bằng lăng không yêu cầu bạn tưới nước nhiều, cũng không cầu kỳ trong chăm sóc. Giống cây này đẹp nhất khi ra hoa. Hoa bằng lăng đạt hiệu quả cao trong làm đẹp. Không loài hoa nào đạt được tính lãng mạn và thanh tao của hoa bằng lăng."
+            },
+            "images": [
+              "/assets/caybanglang_side_1.jpg",
+              "/assets/caybanglang_side_2.jpg",
+              "/assets/caybanglang.jpg"
+            ],
+            "video": "/assets/caybanglangvideo_2.mp4",
+            "typical products": 80
+          },
+          {
+            "id": 2,
+            "name": "Cây Hoa Mai",
+            "otherNames": ["Mai Vàng", " Hoàng Mai"],
+            "scientificName": "Ochna integerrima",
+            "origin": "Việt Nam",
+            "characteristics": "Cây Hoa Mai là loại cây thân gỗ, cành mềm, lá màu xanh đậm, hình bầu dục nhọn đầu. Hoa màu vàng rực rỡ, 5 cánh, thường nở rộ vào dịp Tết Nguyên Đán. Quả màu đen bóng khi chín, hình bầu dục nhỏ.",
+            "categoryType": "Cây xanh",
+            "usage": "Hoa Mai được coi là biểu tượng của may mắn, tài lộc trong văn hóa Việt Nam. Thường được dùng để trang trí trong dịp Tết.",
+            "careInstructions": {
+              "step1": "Trồng cây mai ở nơi có ánh sáng đầy đủ. Đất trồng cần tơi xốp và thoát nước tốt. Thời điểm thích hợp để trồng cây là đầu mùa mưa.",
+              "step2": "Tưới nước thường xuyên nhưng không để úng. Hàng năm, cắt tỉa cành và bón phân hữu cơ để cây phát triển tốt và ra hoa đẹp."
+            },
+            "images": [
+              "/assets/cayhoamai_side_1.jpg",
+              "/assets/cayhoamai_side_2.jpg",
+              "/assets/cayhoamai.jpg"
+            ],
+            "video": "/assets/cayhoamaivideo.mp4",
+            "typical products": 60
+
+          },
+          {
+            "id": 3,
+            "name": "CÂY CHUÔNG VÀNG",
+            "otherNames": ["Cây hoa chuông vàng", " cây hoàng yến chuông vàng"],
+            "scientificName": "Tabebuia argentea",
+            "origin": "Ấn Độ",
+            "characteristics": "Cây chuông vàng là loài thân gỗ nhỏ. Thân cây màu xám trắng; thân có lằn sọc. Chiều cao phổ biến của cây trưởng thành thường từ 5-8m. Nếu được chăm sóc tốt, có những cây có thể phát triển đến 15m Tốc độ sinh trưởng của cây khá nhanh; lại ít sâu bệnh. Loài cây này ưa sáng; có bộ rễ khỏe mạnh nên hấp thu tốt chất dinh dưỡng và nước từ đất. Ở nước ta, thời gian lý tưởng nhất để trồng cây Chuông Vàng là vào mùa xuân – đối với các tỉnh phía Bắc và bắt đầu mùa mưa (tháng tư)  đối với các tỉnh phía Nam.",
+            "categoryType": "Cây xanh",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Cây thích hợp với môi trường có ánh sáng (nhưng không quá nắng). Chính vì vậy, người ta thường trồng hoa chuông đan xen với những giống cây xanh khác. Về chế độ nước, bạn nên tưới nước cho cây 1-2 lần/1 ngày. Lưu ý lượng nước vừa đủ, không quá nhiều. Khi tưới cây, bạn chọn khoảng cách thích hợp để phun nước. Tốt nhất nên phun nước cách xa hoa và lá cây chừng 10cm. Nếu phun nước quá gần, hoa chuông vàng có thể bị nát.",
+              "step2": "Trồng cây chuông vàng hơi phức tạp một chút. Đặc điểm của nó là không sống được trong chậu (như các giống cây cảnh khác). Bạn buộc phải trồng nó trên đất. Đấy là lý do tại sao: cây chuông vàng có nhiều ở công viên, vỉa hè hay sân vườn biệt thự. Có 2 cách nhân giống cây chuông vàng: bằng hạt hoặc giâm cành. Khi cây còn nhỏ, phải che chắn kỹ càng. Trước khi trồng cây xuống đất, phải đào hố trước 1 tuần. Công đoạn này không mấy dễ dàng. Đất trồng phải có độ tơi xốp nhất định. Để cây chuông vàng sinh trưởng tốt, người ta thường trộn các loại tro trấu, đất mùn, phân xanh,… vào đất trồng."
+            },
+            "images": [
+              "/assets/caychuongvang_side_1.jpg",
+              "/assets/caychuongvang_side_2.jpg",
+              "/assets/caychuongvang.jpg"
+            ],
+            "video": "/assets/caychuongvangvideo.mp4",
+            "typical products": 90
+
+          },
+          {
+            "id": 4,
+            "name": "CÂY CAU ĐUÔI CHỒN",
+            "otherNames": ["Cau đuôi chồn", " cao đuôi chồn"],
+            "scientificName": "Normanbya normanbyi",
+            "origin": "Australia",
+            "characteristics": "Đặc điểm hình thái của cau đuôi chồn là loại cây thân trụ, xơ dừa và sống đơn độc lâu năm. Thân cây tròn dài, có từng đốt rõ ràng và màu xanh xám nhẵn. Cau đuôi chồn có lá xếp vòng, tủa ra giống như một chiếc đuôi chồn và có màu xanh sẫm, mỗi tán lá dài tầm 3m – 4m, các lá phụ buông dài. Hoa cau đuôi chồn có màu trắng mọc thành từng chùm.Khi nhỏ, hoa ẩn sau các bẹ lá nhưng khi lớn dần lên thì hoa cau đuôi chồn thò ra khỏi bẹ và rủ xuống. Chúng thường mọc ở các bẹ cuối cùng, mỗi chùm hoa có chiều dài khoảng 0,5-1m. Hoa cây cau đuôi chồn thuộc loại hoa đơn tính, hoa đực có kích thước lớn hơn hoa cái. Quả cây có hình bầu dục khi còn non có màu xanh thẫm và chuyển sang màu đỏ nâu khi chín.",
+            "categoryType": "Cây xanh",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Là loại cây ưa sáng nên bạn cần trồng cây chỗ có nhiều ánh nắng mặt trời. Cau Đuôi Chồn thích hợp với đất thịt pha cát. Là cây có khả năng giữ ẩm và thoát hơi nước tốt lên đất thịt pha cát rất phù hợp với cây. Trồng cây trên đất này thì cây sẽ phát triển mạnh mẽ và ít sâu bệnh. Như các loại cây khác kỹ thuật trồng cây Cau Đuôi Chồn cũng cần chú ý tới đào hố. Hố nên đào hình vuông và bón lót trước khi trồng cây. Bạn có thể bón phân chuồng, phân hữu cơ kết hợp bón vôi để phòng sâu bệnh. Khi trồng xuống đất ta lên đặt phần cổ rễ cao hơn so với miệng hố như vậy cây sẽ trồi rễ mới và phát triển nuôi cây. Dùng cọc cố định cây sau khi trồng.",
+              "step2": "Là loại cây dễ trồng, dễ chăm sóc nhưng không vì thế mà bỏ mặc cây tự phát triển. Cần thường xuyên tưới nước, không để đất bị khô. Bón phân định kỳ để cung cấp dinh dưỡng cho cây. Cau Đuôi Chồn cần được trồng hoặc đặt ở những nơi ánh sáng đầy đủ. Không đặt nơi ánh sáng yếu vì bản lá sẽ mỏng, tốc độ sinh trưởng của cây sẽ bị giảm đi. Kéo dài sẽ làm lá chóng rụng và chết. Định kỳ 2 tháng tưới cho cây bằng nước phân chuồng 1/15 – 1/20 để cây phát triển và lá luôn xanh tốt. Cau Đuôi Chồn là cây có sức đề kháng tốt, phù hợp trồng ở khí hậu nước ta. Tuy nhiên để cây phát triển khỏe mạnh, không sâu bệnh ta cũng nên thường xuyên kiểm tra."
+            },
+            "images": [
+              "/assets/caycauduoichon_side_1.jpg",
+              "/assets/caycauduoichon_side_2.jpg",
+              "/assets/caycauduoichon.jpg"
+            ],
+            "video": "/assets/caycauduoichonvideo.mp4",
+            "typical products": 30
+
+          },
+          {
+            "id": 5,
+            "name": "CÂY MUỒNG HOA ĐÀO",
+            "otherNames": [" Muồng anh đào"], 
+            "scientificName": "Cassia javanica Linn",
+            "origin": "Từ rừng tự nhiên khu vực Đông Nam Á",
+            "characteristics": "Muồng hoa đào là cây gỗ nhỡ, cao từ 10 đến 20 m, đường kính thân khoảng 60 cm. Cây có tán lá hình ô rộng, vỏ thân màu nâu xám, không nứt và có nhiều lỗ bi. Cành non có lông, lá kép lông chim chẵn, cuống dài 10-15 cm. Lá nhỏ, dài 6-10 cm, đỉnh tù hoặc hơi nhọn. Cụm hoa lớn, dài đến 15 cm, cuống hoa có lông, cánh hoa màu hồng tươi, nhị 10, không đều.",
+            "categoryType": "Cây xanh",
+            "usage": "Cây muồng hoa đào có hoa đẹp, tán rộng, mọc nhanh, rễ bám chắc và ít gãy đổ khi mưa bão, thích hợp làm cây cảnh quan đô thị. Cây giúp cải thiện môi trường và thanh lọc không khí. Gỗ muồng hoa đào màu vàng, nhẹ, kém chịu mối mọt nhưng vẫn được dùng làm đồ nội thất và đồ gia dụng.",
+            "careInstructions": {
+              "step1": "Cây Muồng Hoa Đào cần ánh sáng toàn phần, vì vậy bạn nên trồng cây ở nơi có khả năng đón nhiều ánh nắng. Ánh sáng là điều kiện cần để cây quang hợp và hấp thụ dinh dưỡng tốt hơn, ra hoa nhiều và đẹp hơn. Cây có khả năng sinh trưởng nhanh, phát triển cành nhánh liên tục nên nhu cầu dinh dưỡng cao. Bạn cần bón phân định kỳ 1 – 2 tháng/lần, sử dụng khoảng 150 – 200g phân NPK (đây là lượng bón cho 1 cây). Có thể kết hợp thêm phân hữu cơ để bón cho cây. Hàng năm định kỳ 6 tháng/lần bạn cần tiến hành dọn cỏ, bón phân và vun gốc. Dọn cỏ và cắt tỉa cây định kỳ",
+              "step2": "Theo đánh giá của chúng tôi, Muồng Anh Đào ít bị sâu bệnh hại. Nhưng thời điểm cây ra hoa lại rất dễ bị bệnh nếu trước đó bạn không chăm sóc tốt, không có biện pháp phòng chống trước. Hai loại sâu bệnh hại thường xuất hiện trên cây Muồng Hoa Anh Đào bạn cần phải chú ý: Rệp sáp và Bọ phấn trắng"
+            },
+            "images": [
+              "/assets/caymuonghoadao_side_1.jpg",
+              "/assets/caymuonghoadao_side_2.jpg",
+              "/assets/caymuonghoadao.jpg"
+            ],
+            "video": "/assets/caymuonghoadaovideo.mp4",
+            "typical products": 70
+
+          },
+          {
+            "id": 6,
+            "name": "CÂY PHƯỢNG TÍM",
+            "otherNames": ["Cây hoa phượng tím"],
+            "scientificName": "Jacaranda acutifolia",
+            "origin": "Brazil, Bôlivia và được trồng phổ biến ở châu Phi, Nam Mỹ, Châu Đại Dương",
+            "characteristics": "Đây là cây thân gỗ nhỏ, chiều cao cây lên tới 15-20m. Cành nhánh của cây rộng và thưa, đường kính lên tới 3-7m. Điểm nhận biết phượng tím là ở sắc hoa màu tím, và kiểu dáng quyến rũ của hoa. Hoa của cây phượng tím dáng dài 4-5cm, hình chuông khác với cánh hoa xòe của phượng vỹ màu đỏ. Miệng hoa xòe và cong lên, lông tơ của hoa mềm mại. Các bông hoa mọc thành chùm dày đặc, khi nở tạo nên không gian ngập tràn sắc tím. Thời gian nở hoa là vào mùa đông đến hết mùa xuân. Sau 3-5 ngày nở là hoa tàn để nở hoa mới ở chụy đầu cành. Cứ như vậy trong khoảng 4-5 tháng là hoa nở thường xuyên. Lá của phượng tím cũng là loại lá kép giống phượng vỹ, cánh lá nhỏ màu xanh đậm.",
+            "categoryType": "Cây xanh",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Nhiệt độ và loại đất: Yêu cầu nhiệt độ  ban đêm từ 16 – 18oC, khi cây lớn có thể phát triển ở 27 – 3oC, Nhiệt độ cây  hoa phượng tím có thể chịu được và vẫn có thể phát triển có thể lên tới 40 độ trong giai đoạn nghỉ đông cần có nhiệt độ thấp để cây tích lũy dưỡng liệu cho mùa xuân đến, nở hoa kết quả. Tuy nhiên đây chỉ là những kết quả thực nghiệm ở Nam bán cầu, ở nước ta có lẽ còn có những sai khác. Lập địa nên trồng ở nơi không khí thoáng sạch, mát mẻ và có ánh sáng tốt. Cây không kén đất, kể cả đất kiềm, chua hoặc đất sỏi sạn. Với đất trồng có nhiều dinh dưỡng thì cây sẽ phát triển nhanh hơn , cành lá hoa xum xuê hơn",
+              "step2": "Ánh sáng: Giai đoạn cây con trong vườn ươm cần 1/3 đến 1/2 lượng ánh sáng, khi đã ra đất trồng cần nhiều ánh sáng để tạo mầm hoa. Không quan yếu, cây chịu được đất khô hạn, nhưng khi trồng làm cảnh cần bón phân chuồng đầu mùa mưa. Cây trồng 1 năm, cao từ 2 – 4 m, đến năm sau đã có khả năng cho hoa. Nếu trồng ven đường, mật độ thích hợp từ 3,5 – 4,5 m/cây sẽ cho hoa sớm, trồng thưa hay đơn độc thì hoa hơi muộn."
+
+            },
+            "images": [
+              "/assets/cayphuongtim_side_1.jpg",
+              "/assets/cayphuongtim_side_2.jpg",
+              "/assets/cayphuongtim.jpg"
+            ],
+            "video": "/assets/cayphuongtimvideo.mp4",
+            "typical products": 50
+
+          }
+        ]
+      },
+      {
+        "category": "Cây kiểng",
+        "items": []
+      },
+      {
+        "category": "Thuốc trừ sâu",
+        "items": []
+      }
+    ]
+  }
+  

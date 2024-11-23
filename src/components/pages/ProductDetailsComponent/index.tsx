@@ -1,141 +1,327 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Breadcrumb from "@/components/breadcrumb";
-import { Carousel } from "@material-tailwind/react";
+import { routerName } from "@/constants/router.constant";
+import { Button } from "@material-tailwind/react";
+import { AnyNaptrRecord } from "dns";
+import { div } from "framer-motion/client";
+import Link from "next/link";
+import { useEffect } from "react";
 
-const ProductDetailsComponent = () => {
+const ProductDetailsComponent = (dataPlant: any) => {
+  if (!dataPlant) {
+    return <div>Không tìm thấy cây này.</div>;
+  }
+  console.log("DATA", dataPlant.data);
+  const plantDetails = dataPlant.data.plant;
+  console.log("PLantDetails", plantDetails.id);
+  useEffect(() => {
+    // Kiểm tra xem có phải đang chạy trên client-side không
+    if (typeof window !== "undefined") {
+      const callback = function (entries: any) {
+        entries.forEach((entry: any) => {
+          console.log(entry);
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+          } else {
+            entry.target.classList.remove("animate-fadeIn");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback);
+
+      const targets = document.querySelectorAll(".js-show-on-scroll");
+      targets.forEach(function (target) {
+        target.classList.add("opacity-0");
+        observer.observe(target);
+      });
+    }
+  }, []);
   return (
-    <div className="w-full">
-      <Breadcrumb />
-      <div className="w-full flex justify-center">
-        <div className="w-[70%] flex justify-center">
-          <div className=" w-[40%] h-650px]">
-            <div className="w-full h-full ">
-              <Carousel
-                autoplay={true}
-                loop={true}
-                autoplayDelay={10000}
-                // navigation={false}
-                className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
-              >
-                <img
-                  className="w-full h-full object-cover"
-                  src="/assets/caybanglang.jpg"
-                  alt=""
-                />
-                <img
-                  className="w-full h-full object-cover"
-                  src="/assets/caychuongvang.jpg"
-                  alt=""
-                />
-              </Carousel>
-            </div>
-            {/* <div className="w-full h-1/6 flex justify-center">
-              <div className="w-[70%] flex gap-5">
-                <div className="w-1/3 h-full bg-purple-400">a</div>
-                <div className="w-1/3 h-full bg-red-400">a</div>
-                <div className="w-1/3 h-full bg-purple-800">a</div>
+    <div>
+      <nav className="flex justify-center mb-5">
+        <ul className="flex gap-1 w-[93%]">
+          <li>
+            <Link href={routerName.DashBoard}>
+              <p>Trang chủ /</p>
+            </Link>
+          </li>
+          <li>
+            <Link href={routerName.Products}>
+              <p>Trang chủ /</p>
+            </Link>
+          </li>
+          <li>
+            <a href="#URL">Cây xanh</a>
+          </li>
+          {/* <li>Current Page</li> */}
+        </ul>
+      </nav>
+      <div className="w-full h-full flex justify-center">
+        <div className="w-[93%] h-full flex-col ">
+          {/* Sản phẩm 1 */}
+          <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10">
+            <div className="w-full h-full p-5">
+              <div className="w-full h-full flex justify-center">
+                <div className="w-full h-full lg:flex gap-5">
+                  <div className="lg:w-[70%]  h-full">
+                    <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
+                      <div className="w-[30%]  rounded-2xl">
+                        <div className="h-[30%] rounded-2xl">
+                          <img
+                            className="w-full h-full object-cover rounded-2xl pb-5"
+                            src={plantDetails.images[0]}
+                            alt="image_product_left"
+                          />
+                        </div>
+                        <div className="h-[70%] rounded-2xl">
+                          <div className="relative w-full h-full overflow-hidden ">
+                            <video
+                              className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
+                              controls
+                              autoPlay
+                              muted
+                              loop
+                            >
+                              <source
+                                src={plantDetails.video}
+                                type="video/mp4"
+                              />
+                              Loading...
+                            </video>
+                          </div>
+                          {/* <img
+                  className="w-full h-full object-cover rounded-2xl"
+                  src="/assets/caybanglang_side_2.jpg"
+                  alt="image_product_right"
+                /> */}
+                        </div>
+                      </div>
+                      <div className="w-[70%] h-full bg-green-300 rounded-2xl">
+                        <img
+                          className="w-full h-full object-cover rounded-2xl"
+                          src={plantDetails.images[0]}
+                          alt="image_main_products"
+                        />
+                      </div>
+                    </div>
+                    <div className="w-full h-full bg-brown-500 rounded-2xl flex-col">
+                      <div className="h-[380px]">
+                        <img
+                          className="w-full h-full object-cover rounded-2xl"
+                          src={plantDetails.images[1]}
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0">
+                    <div className=" p-5 h-[20%] w-full border-b border-solid">
+                      <p className="font-semibold text-2xl">
+                        {plantDetails.name}
+                      </p>
+                      <div className="mt-3 font-semibold">
+                        <p>Tên gọi khác: {plantDetails.otherNames}</p>
+                        <p>Tên khoa học : {plantDetails.scientificName}</p>
+                        <p>Nguồn gốc : {plantDetails.origin}</p>
+                      </div>
+                    </div>
+                    <div className="w-full h-[80%] p-5">
+                      <div className="w-full h-full">
+                        <p className="font-semibold">ĐẶC TRƯNG</p>
+                        <hr className="mb-3" />
+
+                        <div className="mt-5">
+                          <p>{plantDetails.characteristics}</p>
+                        </div>
+                        <p className="font-semibold mt-5">DANH MỤC</p>
+                        <hr className="mb-3" />
+                        <div>
+                          <p>{plantDetails.categoryType}</p>
+                        </div>
+                        <p className="font-semibold mt-5">CÔNG DỤNG</p>
+                        <hr className="mb-3" />
+
+                        <div>
+                          <p>{plantDetails.usage}</p>
+                        </div>
+                        <Link href={routerName.Contact}>
+                          <Button className="bg-[#014e37] mt-5 w-full ">
+                            Liên hệ
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div> */}
+
+              <div className="w-full] bg-[#EDEDED] rounded-2xl mt-5 p-10">
+                <p className="text-2xl mb-3 font-semibold">
+                  HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY BẰNG LĂNG
+                </p>
+                <p>
+                  {plantDetails.careInstructions.step1}
+                </p>
+                <p>
+                {plantDetails.careInstructions.step2}
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="w-[60%] border-l border-solid border-[#EDEDED] pl-6">
-            <div className="py-4">
-              <p className="text-2xl font-semibold">Cây Bằng Lăng</p>
+
+          {/* Line ngăng giữa */}
+          <div className="w-full flex justify-center mb-2">
+            <div className="">
+              {/* <p className="text-center font-semibold text-2xl sm:text-3xl">
+
+        </p> */}
+              <div className="flex justify-center items-center mb-7">
+                <div className="w-[300px] flex justify-center items-center pl-1">
+                  <img
+                    className="rounded-full w-[full]"
+                    src="./assets/liner_flower.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            <div className="border-t border-solid border-[#EDEDED] py-4">
-              <p>Tên gọi khác: Bằng Lăng Tím, Bằng Lăng Nước</p>
-              <p>Tên khoa học : Lagerstroemia speciosa (L.) Pers</p>
-              <p>Nguồn gốc : Ấn Độ</p>
+          </div>
+          {/* Line ngăng giữa */}
+
+          {/* Sản Phẩm 2 */}
+          {/* <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10 js-show-on-scroll">
+          <div className="w-full h-full p-5">
+            <div className="w-full h-full flex justify-center">
+              <div className="w-full h-full lg:flex gap-5">
+                <div className="lg:w-[70%]  h-full">
+                  <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
+                    <div className="w-[30%]  rounded-2xl">
+                      <div className="h-[30%] rounded-2xl">
+                        <img
+                          className="w-full h-full object-cover rounded-2xl pb-5"
+                          src="/assets/caychuongvang_side_1.jpg"
+                          alt="image_product_left"
+                        />
+                      </div>
+                      <div className="h-[70%] rounded-2xl">
+                        <div className="relative w-full h-full overflow-hidden ">
+                          <video
+                            className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
+                            controls
+                            autoPlay
+                            muted
+                            loop
+                          >
+                            <source
+                              src="/assets/caychuongvangvideo.mp4"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-[70%] h-full bg-green-300 rounded-2xl">
+                      <img
+                        className="w-full h-full object-cover rounded-2xl"
+                        src="/assets/caychuongvang.jpg"
+                        alt="image_main_products"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full h-full bg-brown-500 rounded-2xl flex-col">
+                    <div className="h-[380px]">
+                      <img
+                        className="w-full h-full object-cover rounded-2xl"
+                        src="/assets/caychuongvang_side_2.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0">
+                  <div className=" p-5 h-[20%] w-full border-b border-solid">
+                    <p className="font-semibold text-2xl">CÂY CHUÔNG VÀNG</p>
+                    <div className="mt-3 font-semibold">
+                      <p>
+                        Tên gọi khác : Cây hoa chuông vàng, cây hoàng yến
+                        chuông vàng, cây huỳnh liên
+                      </p>
+                      <p>Tên khoa học : Tabebuia argentea</p>
+                      <p>Nguồn gốc : Ấn Độ</p>
+                    </div>
+                  </div>
+                  <div className="w-full h-[80%] p-5">
+                    <div className="w-full h-full">
+                      <p className="font-semibold">ĐẶC TRƯNG</p>
+                      <hr className="mb-3" />
+
+                      <div className="mt-5">
+                        <p>
+                          Cây chuông vàng là loài thân gỗ nhỏ. Thân cây màu
+                          xám trắng; thân có lằn sọc. Chiều cao phổ biến của
+                          cây trưởng thành thường từ 5-8m. Nếu được chăm sóc
+                          tốt, có những cây có thể phát triển đến 15m Tốc độ
+                          sinh trưởng của cây khá nhanh; lại ít sâu bệnh. Loài
+                          cây này ưa sáng; có bộ rễ khỏe mạnh nên hấp thu tốt
+                          chất dinh dưỡng và nước từ đất. Ở nước ta, thời gian
+                          lý tưởng nhất để trồng cây Chuông Vàng là vào mùa
+                          xuân – đối với các tỉnh phía Bắc và bắt đầu mùa mưa
+                          (tháng tư) – đối với các tỉnh phía Nam.
+                        </p>
+                      </div>
+                      <p className="font-semibold mt-5">DANH MỤC</p>
+                      <hr className="mb-3" />
+                      <div>
+                        <p>Cây xanh</p>
+                      </div>
+                      <p className="font-semibold mt-5">CÔNG DỤNG</p>
+                      <hr className="mb-3" />
+
+                      <div>
+                        <p>...</p>
+                      </div>
+                      <Button className="bg-[#014e37] mt-5 w-full ">
+                        Liên hệ
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="border-t border-solid border-[#EDEDED] py-4">
+
+            <div className="w-full] bg-[#EDEDED] rounded-2xl mt-5 p-10">
+              <p className="text-2xl mb-3 font-semibold">
+                HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY CHUÔNG VÀNG
+              </p>
               <p>
-                Cây bằng lăng là loại cây bóng mát trên đường phố, các công
-                viên, bóng mát ở sân vườn nhà, tạo mảng xanh cho khu nhà máy, xí
-                nghiệp… Với sắc hoa tím đặc trưng và rực rỡ, cây Bằng lăng tím
-                trở thành cây bóng mát ưa chuộng tại các khu đô thị.
+                Cây thích hợp với môi trường có ánh sáng (nhưng không quá
+                nắng). Chính vì vậy, người ta thường trồng hoa chuông đan xen
+                với những giống cây xanh khác. Về chế độ nước, bạn nên tưới
+                nước cho cây 1-2 lần/1 ngày. Lưu ý lượng nước vừa đủ, không
+                quá nhiều. Khi tưới cây, bạn chọn khoảng cách thích hợp để
+                phun nước. Tốt nhất nên phun nước cách xa hoa và lá cây chừng
+                10cm. Nếu phun nước quá gần, hoa chuông vàng có thể bị nát.
+              </p>
+              <p>
+                Trồng cây chuông vàng hơi phức tạp một chút. Đặc điểm của nó
+                là không sống được trong chậu (như các giống cây cảnh khác).
+                Bạn buộc phải trồng nó trên đất. Đấy là lý do tại sao: cây
+                chuông vàng có nhiều ở công viên, vỉa hè hay sân vườn biệt
+                thự. Có 2 cách nhân giống cây chuông vàng: bằng hạt hoặc giâm
+                cành. Khi cây còn nhỏ, phải che chắn kỹ càng. Trước khi trồng
+                cây xuống đất, phải đào hố trước 1 tuần. Công đoạn này không
+                mấy dễ dàng. Đất trồng phải có độ tơi xốp nhất định. Để cây
+                chuông vàng sinh trưởng tốt, người ta thường trộn các loại tro
+                trấu, đất mùn, phân xanh,… vào đất trồng.
               </p>
             </div>
-            <div className="border-t border-solid border-[#EDEDED] py-4">
-              Danh mục: Cây xanh
-            </div>
           </div>
+        </div> */}
         </div>
-      </div>
-      <div className=" flex justify-center my-6">
-        <div className="w-[70%] border border-solid border-[#EDEDED] rounded-md">
-          <p className="text-2xl p-4">Mô tả</p>
-          <div className="px-6 pb-6">
-            <div className="Dacdiem">
-              <p className="text-xl font-semibold mb-3">
-                ĐẶC ĐIỂM CÂY BẰNG LĂNG
-              </p>
-              <p>
-                Cây Bằng Lăng là cây thân gỗ, thẳng, thân khá nhẵn nhụi, phân
-                nhánh cao, tán dày. Lá có màu xanh, dài từ 8-15 cm, rộng từ 3-7
-                cm, có hình oval hoặc elip, thường rụng vào mùa thu.
-              </p>
-              <p>
-                Hoa Bằng Lăng có màu tím hoặc tím nhạt, mọc thành từng chùm trên
-                đầu mỗi nhánh, mỗi chùm dài từ 20-30 cm, hoa thường nở vào mùa
-                hè. Mỗi bông hoa có 6 cánh, cánh hoa mỏng manh như xác pháo. Quả
-                có hình cầu, đường kính 1,5 -2 cm, ban đầu quả có màu tím nhạt
-                pha xanh, mềm khi già chuyển sang màu nâu gỗ, cứng. Đối với loài
-                cây này, ngoài giống hoa tím, cây còn có nhiều giống hoa với
-                nhiều màu sắc khác nhau như tím trắng, hồng, tím sậm…
-              </p>
-            </div>
-            <div className="cong dung">
-              <p className="text-xl font-semibold my-3">
-                CÔNG DỤNG CÂY BẰNG LĂNG
-              </p>
-              <p>
-                Đối với một số nước Châu Á, dùng lá cây Bằng Lăng Nước nấu uống
-                như nước trà sẽ có công dụng chữa bệnh tiểu đường và đau bao tử.
-                Ngoài ra, trong lá cây bằng lăng còn có chất làm giảm nguy cơ
-                béo phì.
-              </p>
-              <p>
-                Bằng Lăng là cây có hoa đẹp, cho bóng mát nên thường được trồng
-                làm hoa cảnh, thường thấy cây trồng hai bên vỉa hè đường phố,
-                công viên, trồng lấy bóng mát ở sân vườn nhà, tạo mảng xanh cho
-                khu nhà máy, xí nghiệp…
-              </p>
-            </div>
-            <div className="huongdan">
-              <p className="text-xl font-semibold my-3">
-                HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY BẰNG LĂNG
-              </p>
-              <p>
-                Đặc thù của cây bằng lăng là sống ngoài trời, thích hợp với nơi
-                có nhiều ánh sáng mặt trời. Nó sinh trưởng tốt trên đất tơi xốp,
-                thoáng khí và dễ thoát nước. Trước khi trồng cây bằng lăng tầm 1
-                tháng, bạn nên bón phân cho đất trồng. Mục đích của việc này là
-                cung cấp nguồn dinh dưỡng cần thiết cho cây bằng lăng (ngay khi
-                nó được trồng).
-              </p>
-              <p>
-                Thời điểm thích hợp nhất để trồng cây bằng lăng là khoảng tháng
-                5 – tháng 6 (nên trồng vào đầu mùa mưa). Có nhiều nước cây sẽ
-                lớn nhanh và xanh tốt quanh năm. Để cây bằng lăng ra hoa đẹp,
-                bạn nên chăm chút nhiều hơn đất trồng. Cụ thể như sau: mỗi năm
-                nhặt cỏ xung quanh gốc cây 2-3 lần, kết hợp với đó là xới đất và
-                vun gốc. Mỗi năm bón phân hữu cơ 1-2 lần. Cây bằng lăng không
-                yêu cầu bạn tưới nước nhiều, cũng không cầu kỳ trong chăm sóc.
-                Giống cây này đẹp nhất khi ra hoa. Hoa bằng lăng đạt hiệu quả
-                cao trong làm đẹp. Không loài hoa nào đạt được tính lãng mạn và
-                thanh tao của hoa bằng lăng.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-[800px] h-[300px] bg-black rounded-md">
-        <video className="h-full w-[300px] rounded-lg" controls autoPlay>
-          <source src="/assets/cangbanglangvideo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
     </div>
   );

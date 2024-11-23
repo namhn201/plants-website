@@ -35,6 +35,7 @@ import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
 const Header = () => {
+  // console.log("Listening from HeaderComponent", showHeader);
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = React.useState(0);
 
@@ -164,7 +165,7 @@ const Header = () => {
   const sideBar = () => (
     <div
       id="wrapper"
-      className={` md:hidden fixed left-0 top-0 z-20 flex h-full max-h-[100vh] w-[75%] max-w-[300px] transform flex-col rounded-[20px] bg-white px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
+      className={` md:hidden fixed left-0 top-0 z-20 flex h-[100dvh] w-[75%] max-w-[300px] transform flex-col rounded-[20px] bg-white px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
     >
       <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem]  py-4 pl-4 shadow-xl shadow-blue-gray-900/5">
@@ -325,22 +326,19 @@ const Header = () => {
       </Card>
     </div>
   );
-  const Logo = () =>(
+  const Logo = () => (
     <Link href={routerName.DashBoard}>
-    <img
-      className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
-      src="/assets/LogoPlant_2.jpg"
-      alt="LogoPlants"
-    />
-  </Link>
-  )
+      <img
+        className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
+        src="/assets/LogoPlant_removeBG.png"
+        alt="LogoPlants"
+      />
+    </Link>
+  );
+  //xu ly cuọn header
+
   return (
     <header id="header" className="">
-      {/* <div className="header_top_sale bg-[#f5f5f5] h-[41px]  justify-center hidden md:flex border-t border-b border-solid border-[#F2F2F2]">
-        <div className="w-[90%] flex justify-start items-center">
-          <p>Hot Sale 30% Today</p>
-        </div>
-      </div> */}
       <div className="header_main flex h-[90px] md:h-[100px] justify-center border-t border-solid border-[#F2F2F2] ">
         <div className="header-top h-full w-[93%] ">
           <div className="header_container h-full items-center justify-between flex">

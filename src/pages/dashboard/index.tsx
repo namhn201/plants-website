@@ -4,9 +4,9 @@ import DashboardComponent from '@/components/pages/Dashboard'
 const DashBoard = () => {
     return (
       <div>
-        <Layout>
+        {/* <Layout> */}
           <DashboardComponent/>
-        </Layout>
+        {/* </Layout> */}
       </div>
     )
   }

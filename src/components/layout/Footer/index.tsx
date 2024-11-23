@@ -8,7 +8,7 @@ const FooterComponent = () => {
         {/* //Subcrise Mail */}
         <div className="flex justify-center items-center mb-5">
           <p className=" font-semibold text-[28px] md:text-[34px]">
-            Subscribe Our Newsletter
+            LIÊN HỆ MAIL VỚI CHÚNG TÔI
           </p>
         </div>
         <div className=" flex mb-20 w-full flex - justify-center items-center">
@@ -17,7 +17,7 @@ const FooterComponent = () => {
               <input
                 type="text"
                 className=" bg-[#ffffff] h-[45px] w-full pl-4 pr-10 py-2 placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-                placeholder="Type here..."
+                placeholder="Email..."
               />
 
               <svg
