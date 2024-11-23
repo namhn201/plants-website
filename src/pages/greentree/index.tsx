@@ -12,10 +12,15 @@ const GreenTree = (props: any) => {
   );
 };
 export const getStaticProps = async () => {
+    const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000" 
+      : "https://plants-website-taupe.vercel.app"; 
+      
   console.log(
     "I'm in serverrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
   );
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(`${baseUrl}/api/data`);
   const data = await res.json();
   console.log(data);
 

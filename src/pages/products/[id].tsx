@@ -18,7 +18,11 @@ const ProductDetail = (plant: any) => {
   );
 };
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000" 
+      : "https://plants-website-taupe.vercel.app"; 
+  const res = await fetch(`${baseUrl}/api/data`);
   const data = await res.json();
   const plants = data.plants;
   console.log("Data from API from get path:", data);
@@ -37,13 +41,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.log("CÁI NÀY LÀ CÁI GÌ ĐÂY:", params)
+  const baseUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000" 
+    : "https://plants-website-taupe.vercel.app"; 
+    console.log("CÁI NÀY LÀ CÁI GÌ ĐÂY:", params);
   const { id } = params!;
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(`${baseUrl}/api/data`);
   const data = await res.json();
   const plants = data.plants;
 
-  // Log dữ liệu lấy từ API và id truyền vào
   console.log("Data from API:", data);
   console.log("ID received:", id);
 
