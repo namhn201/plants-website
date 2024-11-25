@@ -61,9 +61,15 @@ import FooterComponent from "@/components/layout/Footer";
 //   ],
 // };
 
-const DashboardComponent = () => {
+const DashboardComponent = (decorativeplant: any) => {
+  console.log("Listening from DecorativeplantComponent");
+  console.log(
+    "propssssssssss from DecorativeplantComponent ",
+    decorativeplant.props.decorativeplantCatagory
+  );
   const [showHeader, setShowHeader] = useState(false);
-
+  const plants = decorativeplant.props.decorativeplantCatagory;
+  console.log("plants", plants);
   // const titleImage_1 = "Text Reveal Animation 💫";
   // const titleImage_2 = "Text Reveal Animation_2 💫";
 
@@ -96,23 +102,24 @@ const DashboardComponent = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Kiểm tra vị trí cuộn trang
-      if (window.scrollY > 100) { // Điều chỉnh giá trị này tùy theo nhu cầu
+      if (window.scrollY > 100) {
         setShowHeader(true); // Hiển thị header
       } else {
         setShowHeader(false); // Ẩn header
       }
     };
 
-    // Gắn sự kiện cuộn trang
     window.addEventListener("scroll", handleScroll);
 
-    // Dọn dẹp sự kiện khi component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  // xử lý click ảnh
+  // const handleClickImg = () => {
+  //   router
+  // };
   return (
     <div className="h-full">
       {/* <Breadcrumb /> */}
@@ -343,68 +350,14 @@ const DashboardComponent = () => {
             </div>
           </div>
           <div className="md:w-[50%] ">
-            <div className="flex justify-center items-center w-full sm:block">
-              <div className="lg:flex justify-center gap-5">
-                <div className="lg:w-[50%] mb-5 lg:mb-0">
-                  <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
-                    <CardHeader
-                      shadow={false}
-                      floated={false}
-                      className="h-[370px]"
-                    >
-                      <img
-                        src="./assets/plant_product_1.jpg"
-                        alt="card-image"
-                        className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110 "
-                      />
-                    </CardHeader>
-                    {/* <div className="flex justify-center items-center">
-                    <img
-                      className="w-44"
-                      src="./assets/liner_flower_products_3.jpg"
-                      alt=""
-                    />
-                  </div> */}
-                    <CardBody>
-                      <div className="mb-2 text-center flex justify-center">
-                        <Typography
-                          color="blue-gray"
-                          className="font-semibold w-100% sm:w-[50%] whitespace-nowrap sm:whitespace-pre-line"
-                        >
-                          MONSTERA ĐỘT BIẾN
-                        </Typography>
-                        {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
-                      </div>
-                    </CardBody>
-                  </Card>
-                </div>
-                <div className="lg:w-[50%]">
-                  <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full">
-                    <CardHeader
-                      shadow={false}
-                      floated={false}
-                      className="h-[370px]"
-                    >
-                      <img
-                        src="./assets/plant_product_2.jpg"
-                        alt="card-image"
-                        className=" cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
-                      />
-                    </CardHeader>
-
-                    <CardBody>
-                      <div className="mb-2 text-center flex justify-center">
-                        <Typography color="blue-gray" className="font-semibold">
-                          MONSTERA ADANSONII INDONESIAN VARIEGATED{" "}
-                        </Typography>
-                        {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
-                      </div>
-                    </CardBody>
-                  </Card>
+            <div className="flex justify-center items-center w-full sm:block w-full h-full">
+              <div className="lg:flex justify-center gap-5 w-full h-full">
+                <div className="w-full h-full">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/assets/plant_bg_5.jpg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -413,152 +366,37 @@ const DashboardComponent = () => {
       </div>
 
       <div className=" flex justify-center mb-5">
-        <div className=" lg:flex justify-center  w-[93%] gap-4">
-          <div className=" lg:w-[50%] sm:flex gap-5 mb-5">
-            <div className=" sm:w-1/2 mb-5 sm:mb-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-[93%] gap-4">
+          {plants.map((plant: any) => (
+            <div className="mb-5">
               <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
                 <CardHeader
                   shadow={false}
                   floated={false}
                   className="h-[370px]"
                 >
-                  <img
-                    src="./assets/plant_product_7.jpg"
-                    alt="card-image"
-                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
-                  />
-                </CardHeader>
-                {/* <div className="flex justify-center items-center">
+                  <Link href={`/products/${plant.category}/${plant.id}`}>
                     <img
-                      className="w-44"
-                      src="./assets/liner_flower_products_3.jpg"
-                      alt=""
+                      // onClick={handleClickImg}
+                      src={plant.images[2] ? plant.images[2] : plant.images[0]}
+                      alt="card-image"
+                      className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
                     />
-                  </div> */}
+                  </Link>
+                </CardHeader>
                 <CardBody>
                   <div className="mb-2 text-center flex justify-center">
                     <Typography
                       color="blue-gray"
                       className="font-semibold w-100% sm:w-[50%] whitespace-nowrap sm:whitespace-pre-line"
                     >
-                      CÂY HOA CHUỐI MỎ KÉT
+                      {plant.name}
                     </Typography>
-                    {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
                   </div>
                 </CardBody>
               </Card>
             </div>
-            <div className=" sm:w-1/2">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
-                <CardHeader
-                  shadow={false}
-                  floated={false}
-                  className="h-[370px]"
-                >
-                  <img
-                    src="./assets/plant_product_8.jpg"
-                    alt="card-image"
-                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
-                  />
-                </CardHeader>
-                {/* <div className="flex justify-center items-center">
-                    <img
-                      className="w-44"
-                      src="./assets/liner_flower_products_3.jpg"
-                      alt=""
-                    />
-                  </div> */}
-                <CardBody>
-                  <div className="mb-2 text-center flex justify-center">
-                    <Typography
-                      color="blue-gray"
-                      className="font-semibold w-100% sm:w-[50%] whitespace-nowrap sm:whitespace-pre-line"
-                    >
-                      CÂY HOA GIẤY CẨM THẠCH
-                    </Typography>
-                    {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
-                  </div>
-                </CardBody>
-              </Card>
-            </div>
-          </div>
-
-          <div className=" lg:w-[50%] sm:flex gap-5 mb-5  ">
-            <div className=" sm:w-1/2 mb-5 sm:mb-0">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
-                <CardHeader
-                  shadow={false}
-                  floated={false}
-                  className="h-[370px]"
-                >
-                  <img
-                    src="./assets/plant_product_9.jpg"
-                    alt="card-image"
-                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
-                  />
-                </CardHeader>
-                {/* <div className="flex justify-center items-center">
-                    <img
-                      className="w-44"
-                      src="./assets/liner_flower_products_3.jpg"
-                      alt=""
-                    />
-                  </div> */}
-                <CardBody>
-                  <div className="mb-2 text-center flex justify-center">
-                    <Typography
-                      color="blue-gray"
-                      className="font-semibold w-100% sm:w-[50%] whitespace-nowrap sm:whitespace-pre-line"
-                    >
-                      CÂY ỔI CẨM THẠCH
-                    </Typography>
-                    {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
-                  </div>
-                </CardBody>
-              </Card>
-            </div>
-            <div className=" sm:w-1/2">
-              <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
-                <CardHeader
-                  shadow={false}
-                  floated={false}
-                  className="h-[370px]"
-                >
-                  <img
-                    src="./assets/plant_product_10.jpg"
-                    alt="card-image"
-                    className="cursor-pointer h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"
-                  />
-                </CardHeader>
-                {/* <div className="flex justify-center items-center">
-                    <img
-                      className="w-44"
-                      src="./assets/liner_flower_products_3.jpg"
-                      alt=""
-                    />
-                  </div> */}
-                <CardBody>
-                  <div className="mb-2 text-center flex justify-center">
-                    <Typography
-                      color="blue-gray"
-                      className="font-semibold w-100% sm:w-[50%] whitespace-nowrap sm:whitespace-pre-line"
-                    >
-                      NGŨ GIA BÌ
-                    </Typography>
-                    {/* <Typography color="blue-gray" className="font-semibold">
-                        $95.00
-                      </Typography> */}
-                  </div>
-                </CardBody>
-              </Card>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -712,4 +550,5 @@ const DashboardComponent = () => {
     </div>
   );
 };
+
 export default DashboardComponent;

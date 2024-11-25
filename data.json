@@ -1,7 +1,7 @@
 {
     "plants": [
       {
-        "category": "green tree",
+        "category": "green-tree",
         "items": [
           {
             "id": 1,
@@ -11,6 +11,7 @@
             "origin": "Ấn Độ",
             "characteristics": "Cây Bằng Lăng là cây thân gỗ, tán dày, lá xanh hình oval, dài 8-15 cm, rụng vào mùa thu. Hoa tím hoặc tím nhạt, mọc thành chùm dài 20-30 cm, nở rộ vào mùa hè, mỗi bông 6 cánh mỏng. Quả hình cầu, đường kính 1,5-2 cm, chuyển từ tím nhạt sang nâu cứng khi chín. Ngoài hoa tím, còn có các giống hoa màu hồng, tím sậm, tím trắng.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "Cây Bằng Lăng là cây thân gỗ, tán dày, lá xanh hình oval, dài 8-15 cm, rụng vào mùa thu. Hoa tím hoặc tím nhạt, mọc thành chùm dài 20-30 cm, nở rộ vào mùa hè, mỗi bông 6 cánh mỏng. Quả hình cầu, đường kính 1,5-2 cm, chuyển từ tím nhạt sang nâu cứng khi chín. Ngoài hoa tím, còn có các giống hoa màu hồng, tím sậm, tím trắng.",
             "careInstructions": {
               "step1": "Đặc thù của cây bằng lăng là sống ngoài trời, thích hợp với nơi có nhiều ánh sáng mặt trời. Nó sinh trưởng tốt trên đất tơi xốp, thoáng khí và dễ thoát nước. Trước khi trồng cây bằng lăng tầm 1 tháng, bạn nên bón phân cho đất trồng. Mục đích của việc này là cung cấp nguồn dinh dưỡng cần thiết cho cây bằng lăng (ngay khi nó được trồng).",
@@ -32,6 +33,7 @@
             "origin": "Việt Nam",
             "characteristics": "Cây Hoa Mai là loại cây thân gỗ, cành mềm, lá màu xanh đậm, hình bầu dục nhọn đầu. Hoa màu vàng rực rỡ, 5 cánh, thường nở rộ vào dịp Tết Nguyên Đán. Quả màu đen bóng khi chín, hình bầu dục nhỏ.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "Hoa Mai được coi là biểu tượng của may mắn, tài lộc trong văn hóa Việt Nam. Thường được dùng để trang trí trong dịp Tết.",
             "careInstructions": {
               "step1": "Trồng cây mai ở nơi có ánh sáng đầy đủ. Đất trồng cần tơi xốp và thoát nước tốt. Thời điểm thích hợp để trồng cây là đầu mùa mưa.",
@@ -54,6 +56,7 @@
             "origin": "Ấn Độ",
             "characteristics": "Cây chuông vàng là loài thân gỗ nhỏ. Thân cây màu xám trắng; thân có lằn sọc. Chiều cao phổ biến của cây trưởng thành thường từ 5-8m. Nếu được chăm sóc tốt, có những cây có thể phát triển đến 15m Tốc độ sinh trưởng của cây khá nhanh; lại ít sâu bệnh. Loài cây này ưa sáng; có bộ rễ khỏe mạnh nên hấp thu tốt chất dinh dưỡng và nước từ đất. Ở nước ta, thời gian lý tưởng nhất để trồng cây Chuông Vàng là vào mùa xuân – đối với các tỉnh phía Bắc và bắt đầu mùa mưa (tháng tư)  đối với các tỉnh phía Nam.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "...",
             "careInstructions": {
               "step1": "Cây thích hợp với môi trường có ánh sáng (nhưng không quá nắng). Chính vì vậy, người ta thường trồng hoa chuông đan xen với những giống cây xanh khác. Về chế độ nước, bạn nên tưới nước cho cây 1-2 lần/1 ngày. Lưu ý lượng nước vừa đủ, không quá nhiều. Khi tưới cây, bạn chọn khoảng cách thích hợp để phun nước. Tốt nhất nên phun nước cách xa hoa và lá cây chừng 10cm. Nếu phun nước quá gần, hoa chuông vàng có thể bị nát.",
@@ -76,6 +79,7 @@
             "origin": "Australia",
             "characteristics": "Đặc điểm hình thái của cau đuôi chồn là loại cây thân trụ, xơ dừa và sống đơn độc lâu năm. Thân cây tròn dài, có từng đốt rõ ràng và màu xanh xám nhẵn. Cau đuôi chồn có lá xếp vòng, tủa ra giống như một chiếc đuôi chồn và có màu xanh sẫm, mỗi tán lá dài tầm 3m – 4m, các lá phụ buông dài. Hoa cau đuôi chồn có màu trắng mọc thành từng chùm.Khi nhỏ, hoa ẩn sau các bẹ lá nhưng khi lớn dần lên thì hoa cau đuôi chồn thò ra khỏi bẹ và rủ xuống. Chúng thường mọc ở các bẹ cuối cùng, mỗi chùm hoa có chiều dài khoảng 0,5-1m. Hoa cây cau đuôi chồn thuộc loại hoa đơn tính, hoa đực có kích thước lớn hơn hoa cái. Quả cây có hình bầu dục khi còn non có màu xanh thẫm và chuyển sang màu đỏ nâu khi chín.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "...",
             "careInstructions": {
               "step1": "Là loại cây ưa sáng nên bạn cần trồng cây chỗ có nhiều ánh nắng mặt trời. Cau Đuôi Chồn thích hợp với đất thịt pha cát. Là cây có khả năng giữ ẩm và thoát hơi nước tốt lên đất thịt pha cát rất phù hợp với cây. Trồng cây trên đất này thì cây sẽ phát triển mạnh mẽ và ít sâu bệnh. Như các loại cây khác kỹ thuật trồng cây Cau Đuôi Chồn cũng cần chú ý tới đào hố. Hố nên đào hình vuông và bón lót trước khi trồng cây. Bạn có thể bón phân chuồng, phân hữu cơ kết hợp bón vôi để phòng sâu bệnh. Khi trồng xuống đất ta lên đặt phần cổ rễ cao hơn so với miệng hố như vậy cây sẽ trồi rễ mới và phát triển nuôi cây. Dùng cọc cố định cây sau khi trồng.",
@@ -98,6 +102,7 @@
             "origin": "Từ rừng tự nhiên khu vực Đông Nam Á",
             "characteristics": "Muồng hoa đào là cây gỗ nhỡ, cao từ 10 đến 20 m, đường kính thân khoảng 60 cm. Cây có tán lá hình ô rộng, vỏ thân màu nâu xám, không nứt và có nhiều lỗ bi. Cành non có lông, lá kép lông chim chẵn, cuống dài 10-15 cm. Lá nhỏ, dài 6-10 cm, đỉnh tù hoặc hơi nhọn. Cụm hoa lớn, dài đến 15 cm, cuống hoa có lông, cánh hoa màu hồng tươi, nhị 10, không đều.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "Cây muồng hoa đào có hoa đẹp, tán rộng, mọc nhanh, rễ bám chắc và ít gãy đổ khi mưa bão, thích hợp làm cây cảnh quan đô thị. Cây giúp cải thiện môi trường và thanh lọc không khí. Gỗ muồng hoa đào màu vàng, nhẹ, kém chịu mối mọt nhưng vẫn được dùng làm đồ nội thất và đồ gia dụng.",
             "careInstructions": {
               "step1": "Cây Muồng Hoa Đào cần ánh sáng toàn phần, vì vậy bạn nên trồng cây ở nơi có khả năng đón nhiều ánh nắng. Ánh sáng là điều kiện cần để cây quang hợp và hấp thụ dinh dưỡng tốt hơn, ra hoa nhiều và đẹp hơn. Cây có khả năng sinh trưởng nhanh, phát triển cành nhánh liên tục nên nhu cầu dinh dưỡng cao. Bạn cần bón phân định kỳ 1 – 2 tháng/lần, sử dụng khoảng 150 – 200g phân NPK (đây là lượng bón cho 1 cây). Có thể kết hợp thêm phân hữu cơ để bón cho cây. Hàng năm định kỳ 6 tháng/lần bạn cần tiến hành dọn cỏ, bón phân và vun gốc. Dọn cỏ và cắt tỉa cây định kỳ",
@@ -120,6 +125,7 @@
             "origin": "Brazil, Bôlivia và được trồng phổ biến ở châu Phi, Nam Mỹ, Châu Đại Dương",
             "characteristics": "Đây là cây thân gỗ nhỏ, chiều cao cây lên tới 15-20m. Cành nhánh của cây rộng và thưa, đường kính lên tới 3-7m. Điểm nhận biết phượng tím là ở sắc hoa màu tím, và kiểu dáng quyến rũ của hoa. Hoa của cây phượng tím dáng dài 4-5cm, hình chuông khác với cánh hoa xòe của phượng vỹ màu đỏ. Miệng hoa xòe và cong lên, lông tơ của hoa mềm mại. Các bông hoa mọc thành chùm dày đặc, khi nở tạo nên không gian ngập tràn sắc tím. Thời gian nở hoa là vào mùa đông đến hết mùa xuân. Sau 3-5 ngày nở là hoa tàn để nở hoa mới ở chụy đầu cành. Cứ như vậy trong khoảng 4-5 tháng là hoa nở thường xuyên. Lá của phượng tím cũng là loại lá kép giống phượng vỹ, cánh lá nhỏ màu xanh đậm.",
             "categoryType": "Cây xanh",
+            "category": "green-tree",
             "usage": "...",
             "careInstructions": {
               "step1": "Nhiệt độ và loại đất: Yêu cầu nhiệt độ  ban đêm từ 16 – 18oC, khi cây lớn có thể phát triển ở 27 – 3oC, Nhiệt độ cây  hoa phượng tím có thể chịu được và vẫn có thể phát triển có thể lên tới 40 độ trong giai đoạn nghỉ đông cần có nhiệt độ thấp để cây tích lũy dưỡng liệu cho mùa xuân đến, nở hoa kết quả. Tuy nhiên đây chỉ là những kết quả thực nghiệm ở Nam bán cầu, ở nước ta có lẽ còn có những sai khác. Lập địa nên trồng ở nơi không khí thoáng sạch, mát mẻ và có ánh sáng tốt. Cây không kén đất, kể cả đất kiềm, chua hoặc đất sỏi sạn. Với đất trồng có nhiều dinh dưỡng thì cây sẽ phát triển nhanh hơn , cành lá hoa xum xuê hơn",
@@ -138,12 +144,182 @@
         ]
       },
       {
-        "category": "Cây kiểng",
-        "items": []
+        "category": "decorativeplant",
+        "items": [
+          {
+            "id": 1,
+            "name": "CÂY HOA GIẤY CẨM THẠCH",
+            "otherNames": ["Bông giấy cẩm thạch"],
+            "scientificName": "Alternanthera tenella",
+            "origin": "Từ Brazil nơi có khí hậu nhiệt đới nên sinh trưởng và thích nghi tốt với khí hậu Việt Nam",
+            "characteristics": "Khác với cây hoa giấy bình thường, cây hoa giấy cẩm thạch được du nhập vào Việt Nam với những tính năng nổi bật như sau: Thân cây thuộc cây thân gỗ đặc biệt là leo bò trườn, được phân thành nhiều nhánh. Hoa giấy có nhiều nhánh, thường ở trên đỉnh, mọc cao từ 1-12m. Hoa thật sự của cây hoa giấy cẩm thạch thường có màu trắng và nhỏ nhắn, nhưng mỗi cụm sẽ có 3 hoa được bao quanh bằng 3 hay 6 lá bắc với nhiều màu sắc rực rỡ và bắt mắt như hồng, đỏ, tím tía,…+ Hoa nở rộ, sai bông mà không dùng thuốc kích thích, tăng trưởng.+ Ra hoa quanh năm, thời gian nở hoa kéo dài đến 2 tháng.+ Dễ trồng, dễ chăm sóc và đặc biệt phù hợp với khí hậu Việt Nam, chịu được đất đai khô cằn, chịu nóng rất tốt và không ưa lạnh. Vì thế mà kỹ thuật chăm sóc cây tương đối đơn giản và dễ dàng.",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Trồng cây này theo phương thức giâm cành. Người trồng cây này nên đặt chúng ở nơi có đủ ánh sáng và có điều kiện thoát nước tốt. Thời điểm thích hợp nhất để trồng cây là tháng 4 và tháng 9, lúc này thời tiết, độ ẩm không khí, ánh sáng hài hòa làm quá trình phát triển của cây diễn ra hiệu quả nhất.Cây với tốc độ tăng trưởng khá nhanh sau 1 năm, chúng ta nên chuyển gốc cây sang một chậu khác lớn hơn mà không bị ảnh hưởng đến chất lượng cũng như sự phát triển của cây. Tuy nhiên, rễ cây ra khỏi mặt đất, không thực hiện được cung cấp chất dinh dưỡng cho cây nên chúng ta nên cẩn thận, thao tác phải linh hoạt và tỉ mỉ.",
+              "step2": "Khi chúng ta trồng cây hoa giấy cẩm thạch vào chậu, sau từng đợt hoa nở, chúng ta nên tưới thêm nước phân thúc vào gốc cây.Vì trồng trong chậu, đất ở đây sẽ ít dinh dưỡng, hạn chế hơn nên tầm 1 năm chúng ta nên đổ đất trong chậu ra ngoài, thay vào đó một lớp đất khác cung cấp chất dinh dưỡng, thức ăn cho cây.Cây đã trưởng thành, lá cây rậm rạp, quá nhiều thì chúng ta nên cắt tỉa để đảm bảo chất dinh dưỡng được cung cấp cho hoa giúp cho cây nhiều hoa hơn, đẹp hơn."
+            },
+            "images": [
+              "/assets/cayhoagiaycamthach_side_1.jpg",
+              "/assets/cayhoagiaycamthach_side_2.jpg",
+              "/assets/cayhoagiaycamthach.jpg"
+            ],
+            "video": "/assets/cayhoagiaycamthachvideo.mp4",
+            "typical products": 70
+          },
+          {
+            "id": 2,
+            "name": "MONSTERA ĐỘT BIẾN",
+            "otherNames": ["MONSTERA"],
+            "scientificName": "MONSTERA",
+            "origin": "Từ Châu Mỹ, có nhiều ở vùng rừng rậm nhất là vùng nhiệt đới phía nam Mexico.",
+            "characteristics": "Monstera là tên của 1 chi thực vật gồm khoảng 50 loài (nhưng hiện tại biến thể lên hơn trăm loại khác nhau). Borsigiana 1 loài mới (hình như chưa được cập nhật vào chi Monstera) phân biệt với Monstera Deliciosa bằng thân (dài hơn và cần được leo trèo), cuốn lá, dáng lá,….Variegata gọi sang sang là đột biến, còn dân giả như mình thì là chiếc lá 2,3 màu cứ gọi là Var",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "Lá của loại cây này có rãnh hình cánh và tròn, nó có ý nghĩa mang lại may mắn cho gia chủ cho nên thường được dùng để trang trí trong việc cắm hoa, cây trầu bà Nam Mỹ đột biến rất dễ thích nghi và có thể chịu lạnh kể cả những nơi thiếu ánh sáng vô cùng tốt.",
+            "careInstructions": {
+              "step1": "Nên đặt cây ở những nơi có nhiều ánh sáng càng tốt: Cây Monstera là giống cây ưa sáng cho nên cây sẽ phát triển tốt nhất khi nhận đủ ánh sáng, tuy nhiên không nên để cây tiếp xúc trực tiếp với ánh nắng mặt trời bởi vì sẽ dễ khiến cây bị cháy lá hoặc vàng lá. Giữ sạch lá :Để cây monstera có thể phát triển nhanh hơn bạn cần giữ cho lá sạch sẽ. Ngoài ra bạn cũng có thể dùng thêm dầu Neem – một loại dầu có tác dụng làm sạch cho rau trồng, bằng cách xịt trực tiếp vào lá để làm sạch bụi bẩn, điều này sẽ giúp cây trầu Nam Mỹ đột biến phát triển nhanh hơn.",
+              "step2": "Nên cung cấp nhiều độ ẩm cho cây: Phương pháp thực hiện đó là bạn nên đặt các viên sỏi vào khay đổ đầy nước và đặt chậu monstera lên, những viên đá này sẽ giữ cho bình Monstera của bạn trên mặt nước, nước từ khay lát đá sẽ bay hơi từ đó làm tăng độ ẩm xung quanh cây trầu bà Nam Mỹ đột biến của bạn. Một phương pháp tăng độ ẩm khác nữa là dùng máy tạo độ ẩm, máy có công nghệ UV nên có thể tiêu diệt 99.9% vi khuẩn trong nước, tránh gây hại cho cây. và  Nên bổ sung thêm chất dinh dưỡng cho cây  phân hữu cơ, phân urê,… Và khi đất khô thấy dấu hiệu nứt nẻ thì nên tưới nước cho cây. Nên tưới nước cho đến khi nước chảy ra những lỗ thoát nước thì dừng lại, bên cạnh đó cần giữ cho đất không quá khô và cũng không quá ướt."
+            },
+            "images": [
+              "/assets/monsteradotbien_side_1.jpg",
+              "/assets/monsteradotbien_side_2.jpg",
+              "/assets/monsteradotbien.jpg"
+            ],
+            "video": "/assets/monsteradotbienvideo.mp4",
+            "typical products": 60
+
+          },
+          {
+            "id": 3,
+            "name": "CÂY ỔI CẨM THẠCH",
+            "otherNames": ["Cây ổi đột biến", " cây ổi Var"],
+            "scientificName": "Psidium guajava (Var)",
+            "origin": "Thái Lan",
+            "characteristics": "Ổi Cẩm Thạch là giống cây thân gỗ sống lâu năm, vừa đẹp vừa cho quả ngon, rất được ưa chuộng để trồng trang trí trong các khu vườn gia đình. Cây có thân nhẵn màu xám, cành non màu xanh nhạt, càng già thân càng tròn. Lá cây thuôn dài với viền trắng bạc lượn sóng độc đáo, tán lá cao và phân tán mạnh. Hoa nhỏ màu trắng mọc thành chùm ở nách lá, tạo điểm nhấn nhẹ nhàng. Quả ổi có hình tròn hơi dài, vỏ xanh xen trắng tạo sọc đẹp mắt, ruột màu hồng đào ít hạt, vị ngọt, giòn và thơm. Đây là giống cây dễ trồng, thích nghi tốt với nhiều điều kiện khí hậu, cho quả quanh năm nếu được chăm sóc kỹ lưỡng.",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Ổi Cẩm Thạch có thể được trồng vào bất kỳ thời điểm nào trong năm. Trước khi trồng, cần đào hố với kích thước phù hợp, nếu trồng nhiều cây nên đảm bảo mật độ hợp lý để cây phát triển tốt. Sau khi đào hố, cho một ít phân chuồng hoai mục và phân NPK, rồi lấp một lớp đất mỏng lên trên. Trước khi đặt cây vào hố, cắt tỉa hết các mầm dại mọc ở gốc, rạch bỏ túi bầu và đặt cây ngay ngắn chính giữa hố, sau đó lấp đất chặt. Cuối cùng, tưới nước ngay sau khi trồng để tránh cây bị mất nước và giúp cây nhanh thích nghi.",
+              "step2": "Khi cây ổi cẩm thạch cao khoảng 1m, cần thường xuyên cắt tỉa cành và tạo tán, chỉ để tối đa 10 cành mọc hai bên, đồng thời loại bỏ các mầm mọc dại quanh gốc. Đây là loại cây ưa ẩm, cần tưới nước đầy đủ, nhưng trong trường hợp mưa to cần xẻ rãnh thoát nước để tránh ngập úng. Để cây nhanh ra quả và đạt kích thước lớn, cần bổ sung phân bón đúng cách, với hai thời điểm quan trọng là bón lót trước khi trồng và khi cây bắt đầu ra hoa. Ngoài ra, việc thường xuyên theo dõi sâu bệnh và xử lý kịp thời cũng rất cần thiết để đảm bảo cây phát triển khỏe mạnh"
+            },
+            "images": [
+              "/assets/cayoicamthach_side_1.jpg",
+              "/assets/cayoicamthach_side_2.jpg",
+              "/assets/cayoicamthach.jpg"
+            ],
+            "video": "/assets/cayoicamthachvideo.mp4",
+            "typical products": 90
+
+          },
+          {
+            "id": 4,
+            "name": "NGŨ GIA BÌ",
+            "otherNames": [" Cây Chân Chim Vằn"],
+            "scientificName": "Schefflera arboricola",
+            "origin": "Đài Loan, Nam Trung Quốc",
+            "characteristics": "Cây ngũ gia bì có lá kép hình lòng bàn tay với 8 lá chét elip, mép nguyên, đôi khi có răng cưa khi non. Lá cẩm thạch nổi bật nhờ màu xanh pha đốm vàng, khác biệt với lá xanh thông thường. Hoa nhỏ màu trắng, gồm 5–6 cánh, mọc thành chùm ở đầu cành. Quả mọng nhỏ, đen, hình cầu, chứa 5–6 hạt.",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Ánh sáng, nước và cắt tỉa: Cây ngũ gia bì cần ánh sáng mạnh nhưng gián tiếp; ánh sáng quá ít sẽ khiến cành vươn dài, còn ánh sáng trực tiếp có thể làm cháy lá. Để tưới nước đúng cách, chờ đất khô rồi mới tưới đẫm, tránh tưới liên tục khi đất chưa khô, vì có thể làm cây chết. Lá vàng rụng là dấu hiệu tưới quá nhiều. Việc cắt tỉa giúp cây duy trì hình dáng gọn gàng và kích thích sinh trưởng mới khỏe mạnh hơn.",
+              "step2": "Phân bón, độc tính và sâu bệnh: Cây không cần nhiều dinh dưỡng, nhưng có thể bón phân hòa tan loãng mỗi năm một lần. Tuy nhiên, cây ngũ gia bì cẩm thạch gây độc cho người và động vật nếu ăn phải, gây nóng rát, sưng, khó nuốt và có thể khó thở trong trường hợp nghiêm trọng. Cây ít bị sâu bệnh nhưng vẫn cần theo dõi để xử lý kịp thời nếu xảy ra."
+            },
+            "images": [
+              "/assets/cayngugiabi_side_1.jpg",
+              "/assets/cayngugiabi_side_2.jpg",
+              "/assets/cayngugiabi.jpg"
+            ],
+            "video": "/assets/cayngugiabivideo.mp4",
+            "typical products": 30
+
+          },
+          {
+            "id": 5,
+            "name": "CÂY THÀI LÀI VAR",
+            "otherNames": [" Cây thài lài var","cây thài lài cẩm thạch"], 
+            "scientificName": " Tradescantia fluminensis aureovariegata ",
+            "origin": "Trung Nam châu Mỹ, Mexico",
+            "characteristics": "Cây thài lài là loại cây có phần lá và thân mọng nước, thường phát triển bò lan trên mặt đất. Nếu được trồng ở điều kiện thích hợp và sinh trưởng tốt, cây có thể đạt chiều cao từ 15-25cm trở lên. Lá cây thài lài thường dài, nhọn ở phần đầu, với mặt trên và mặt dưới có màu trắng xanh đặc trưng. Loài cây này thường nở hoa vào buổi sáng khi thời tiết mát mẻ, đặc biệt vào thời điểm sương chưa tan hết, tạo nên một vẻ đẹp nhẹ nhàng và tươi mới.",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "Cây thài lài var thường được trồng trang trí trong vườn, chậu cảnh hoặc đặt trong nhà, giúp cải thiện không khí nhờ khả năng lọc chất ô nhiễm qua quá trình phytoremediation. Trong Đông y, cây có tính hàn, vị ngọt, hơi độc, và được sử dụng làm thuốc chữa các bệnh như kiết lỵ, tiểu buốt, táo bón, ho, đau mắt đỏ, bỏng, mụn nhọt,... Có thể dùng cây tươi giã đắp vết thương hoặc phơi khô sắc nước uống để hỗ trợ điều trị.",
+            "careInstructions": {
+              "step1": "Bạn có thể trồng cây thài lài bằng cách gieo hạt hay tách nhánh đều được. Khi trồng bằng cách tách nhánh, bạn nên chọn cây khỏe mạnh và cắm vào đất ẩm là cây sẽ mọc rễ sống được. Nhiệt độ để cây ra rễ tốt nhất là khoảng 25 độ C, trên 25 độ C thì vết cắt sẽ dễ bị thối, còn dưới 18 độ C thì rễ sẽ ra chậm hơn thông thường.",
+              "step2": "Cây thài lài ưa ẩm nhưng vẫn chịu được khô hạn, tuy nhiên để cây tươi tốt, bạn cần tưới nước thường xuyên vào sáng sớm. Cây phát triển tốt nhất ở nơi có nhiều ánh nắng mặt trời, nhưng cũng có thể sống tốt ở bóng râm. Cây thích hợp với đất cát hoặc đất đá san hô, nếu có thể, bạn có thể trồng trong đất thịt kết hợp với xơ dừa và phân hữu cơ để giúp cây sinh trưởng tốt hơn. Nhiệt độ lý tưởng cho cây là từ 18-25 độ C, và độ ẩm cần duy trì ở mức cao từ 65%-80%. Cần bón phân cho cây mỗi tháng một lần, pha phân với nước để cây dễ hấp thụ. Cây thường gặp các loại sâu ăn lá và kiến, nên cần dọn cỏ xung quanh và phun thuốc, bắt sâu. Khi cây phát triển quá dày, nên cắt tỉa nhánh già và sâu bệnh để không gian thoáng và giúp cây phát triển khỏe mạnh.g"
+            },
+            "images": [
+              "/assets/caythailaivar_side_1.jpg",
+              "/assets/caythailaivar_side_2.jpg",
+              "/assets/caythailaivar.jpg"
+            ],
+            "video": "/assets/caythailaivarvideo.mp4",
+            "typical products": 40
+
+          },
+          {
+            "id": 6,
+            "name": "CÂY BÀNG CẨM THẠCH",
+            "otherNames": ["Cây bàng Nhật Bản"," bàng Nhật cẩm thạch"],
+            "scientificName": "Ficus deltoidea Jack f. Variegata",
+            "origin": "Mexico, Trung Mỹ, Caribe và Bắc Nam Mỹ",
+            "characteristics": "Cây Bàng Cẩm Thạch là loài cây có chiều cao khoảng tầm 20m nếu cây được trồng ở ngoài đất, cây có thân thẳng đứng, Vỏ cây có màu nâu nhạt, bao phủ với các đường ngấn sáng màu. Cây Bàng Cẩm Thạch có tán cây phân đều và tự nhiên, với các cành cây vòm lại tạo thành nhiều tầng. Lá cây có hình xiên hoặc obovate, với màu sắc đặc biệt: bên ngoài là màu nâu nhạt, còn bên trong là màu xanh lá cây, tạo ra sự tương phản thú vị. Mỗi nhánh lá thường mọc thành chùm, gồm từ 6-10 lá với kích thước khác nhau. Cây có khả năng chịu được mọi loại thời tiết và rất dễ chăm sóc, không cần quá tỉ mỉ. Cây phát triển nhanh trên đất sét, đặc biệt là trong điều kiện thời tiết nắng và khi có đủ nguồn nước tưới tiêu.",
+            "categoryType": "Cây kiểng",
+            "category": "decorativeplant",
+            "usage": "...",
+            "careInstructions": {
+              "step1": "Bàng Cẩm Thạch thuộc họ Bàng vì thế cách trồng cũng phải áp dụng đúng quy trình và phát triển chậm nên cần được chăm sóc tốt. Khi trồng nên lưu ý chọn nơi cao ráo, không ẩm ướt ngập sâu, nếu trồng cây trong chậu nên tìm loại chậu lớn dưới có lỗ thoát nước để cây có thể phát triển được tốt hơn. Cây bàng có thể trồng dạng gieo hạt hoặc nhân giống. Nhưng gieo hạt thì đợi trong thời gian khá dài, chính vì thế để tiết kiệm được thời gian, người trồng thường sử dụng phương pháp nhân giống ngâm xuống nước khoảng 1 tiếng rồi cho cây nằm ngang với đất khoảng một thời gian cây sẽ lên mầm.",
+              "step2": "Chăm sóc cây Bàng Cẩm Thạch không quá phức tạp nếu bạn tuân thủ những bước đơn giản. Đầu tiên, đất trồng cần phải tơi xốp để khi tưới, nước dễ dàng thoát hơn. Về nước tưới, chỉ cần tưới đủ lượng cần thiết, nếu đất vẫn còn ẩm thì không cần tưới thêm. Khi cây lớn, bạn nên thay chậu để giúp cây có không gian phát triển. Cây Bàng Cẩm Thạch ưa ánh sáng, nên đặt cây ở nơi có ánh sáng trực tiếp chiếu vào vì cây không ưa bóng mát. Về phân bón, cây rất dễ chăm sóc và có thể bón các loại phân rẻ tiền. Thêm vào đó, vì cây là loại thân gỗ, nên rất ít khi bị sâu bệnh tấn công."
+
+            },
+            "images": [
+              "/assets/caybangcamthach_side_1.jpg",
+              "/assets/caybangcamthach_side_2.jpg",
+              "/assets/caybangcamthach.jpg"
+            ],
+            "video": "/assets/caybangcamthachvideo.mp4",
+            "typical products": 40
+
+          }
+        ]
       },
       {
-        "category": "Thuốc trừ sâu",
-        "items": []
+        "category": "pesticide",
+        "items": [
+          {
+            "id": 1,
+            "name": "CHEESTAR 50WG",
+            "origin": "Hàn Quốc.",
+            "characteristics": "CHEESTAR 50WG có thành phần Pymetrozine 500 g/kg. CHEESTAR 50WG là thuốc trừ sâu tác động nội hấp, thấm sâu. CHEESTAR 50WG phòng trừ rầy nâu hại lúa, rầy bông hại xoài, rầy xanh hại chè.",
+            "categoryType": "Thuốc bảo vệ thực vật",
+            "category": "pesticide",
+            "usage": "CHEESTAR 50WG có thành phần chính là Pymetrozine 500 g/kg, là thuốc trừ sâu tác động nội hấp, thấm sâu vào cây. Thuốc này được sử dụng để phòng trừ các loại rầy hại cây trồng, bao gồm rầy nâu hại lúa, rầy bông hại xoài, và rầy xanh hại chè. CHEESTAR 50WG hoạt động bằng cách ức chế khả năng ăn và tiêu hoá của rầy, khiến rầy ngừng ăn và chết đói. Đây là thuốc đặc trị hiệu quả cho các loài rầy rệp, đặc biệt là rầy nâu hại lúa, giúp phòng trừ các rầy đã kháng thuốc khác và hạn chế sự lây lan bệnh vàng lùn, lùn xoắn lá do rầy truyền bệnh.",
+            "images": [
+              "/assets/cheestar50wg_side_1.jpg",
+              "/assets/cheestar50wg_side_1.jpg",
+              "/assets/cheestar50wg.jpg"
+            ],
+            "typical products": 50
+          },
+          {
+            "id": 2,
+            "name": "NIRED 3EC",
+            "origin": "Việt Nam.",
+            "characteristics": "NIRED 3EC có thành phần Acetamiprid 30 g/L. NIRED 3EC có tác động tiếp xúc và vị độc.",
+            "categoryType": "Thuốc bảo vệ thực vật",
+            "category": "pesticide",
+            "usage": "NIRED 3EC là thuốc trừ sâu có thành phần Acetamiprid 30 g/L. Thuốc có tác động tiếp xúc và vị độc, với phổ tác dụng rộng, giúp diệt nhiều loại sâu hại ở cả giai đoạn trưởng thành, trứng và sâu non. NIRED 3EC đặc biệt hiệu quả trong việc trừ bọ trĩ và rầy nâu hại lúa, giúp bảo vệ cây trồng khỏi những loài sâu hại này.",
+            "images": [
+              "/assets/nired3ec_side_1.jpg",
+              "/assets/nired3ec_side_1.jpg",
+              "/assets/nired3ec.jpg"
+            ],
+            "typical products": 40
+          }
+        ]
       }
     ]
   }

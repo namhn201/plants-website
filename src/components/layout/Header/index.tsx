@@ -30,6 +30,10 @@ import {
   Cog6ToothIcon,
   InboxIcon,
   PowerIcon,
+  BookOpenIcon,
+  BuildingOffice2Icon,
+  TagIcon,
+  BellIcon,
 } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import React from "react";
@@ -193,7 +197,16 @@ const Header = () => {
               />
             }
           >
-            <ListItem className="p-0" selected={open === 1}>
+            <Link href={routerName.Products}>
+              <ListItem>
+                <ListItemPrefix>
+                  <TagIcon className="h-5 w-5" />
+                </ListItemPrefix>
+                Sản phẩm
+              </ListItem>
+            </Link>
+
+            {/* <ListItem className="p-0" selected={open === 1}>
               <AccordionHeader
                 onClick={() => handleOpen(1)}
                 className="border-b-0 p-3"
@@ -227,24 +240,27 @@ const Header = () => {
                   Thuốc bảo vệ thực vật
                 </ListItem>
               </List>
-            </AccordionBody>
+            </AccordionBody> */}
           </Accordion>
 
-          <ListItem>
-            <ListItemPrefix>
-              <InboxIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Liên hệ
-            <ListItemSuffix>
-              <Chip
-                value="14"
-                size="sm"
-                variant="ghost"
-                color="blue-gray"
-                className="rounded-full"
-              />
-            </ListItemSuffix>
-          </ListItem>
+          <Link href={routerName.Contact}>
+            <ListItem>
+              <ListItemPrefix>
+                <InboxIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Liên hệ
+              <ListItemSuffix>
+                <Chip
+                  value="0"
+                  size="sm"
+                  variant="ghost"
+                  color="blue-gray"
+                  className="rounded-full"
+                />
+              </ListItemSuffix>
+            </ListItem>
+          </Link>
+
           {/* <Accordion
             open={open === 2}
             icon={
@@ -286,42 +302,45 @@ const Header = () => {
               </List>
             </AccordionBody>
           </Accordion> */}
-          <ListItem>
-            <ListItemPrefix>
-              <UserCircleIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Cơ cấu tổ chức
-          </ListItem>
-          <ListItem>
-            <ListItemPrefix>
-              <UserCircleIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Lịch sử hình thành
-          </ListItem>
-          <ListItem>
-            <ListItemPrefix>
-              <UserCircleIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Tuyển dụng
-          </ListItem>
-          <ListItem>
-            <ListItemPrefix>
-              <UserCircleIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Profile
-          </ListItem>
+          <Link href={routerName.Team}>
+            <ListItem>
+              <ListItemPrefix>
+                <BuildingOffice2Icon className="h-5 w-5" />
+              </ListItemPrefix>
+              Cơ cấu tổ chức
+            </ListItem>
+          </Link>
+
+          <Link href={routerName.History}>
+            <ListItem>
+              <ListItemPrefix>
+                <BookOpenIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Lịch sử hình thành
+            </ListItem>
+          </Link>
+
+          <Link href={routerName.Careers}>
+            <ListItem>
+              <ListItemPrefix>
+                <BellIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Tuyển dụng
+            </ListItem>
+          </Link>
+
           {/* <ListItem>
             <ListItemPrefix>
               <Cog6ToothIcon className="h-5 w-5" />
             </ListItemPrefix>
             Settings
           </ListItem> */}
-          <ListItem>
+          {/* <ListItem>
             <ListItemPrefix>
               <PowerIcon className="h-5 w-5" />
             </ListItemPrefix>
             Log Out
-          </ListItem>
+          </ListItem> */}
         </List>
       </Card>
     </div>
@@ -335,15 +354,14 @@ const Header = () => {
       />
     </Link>
   );
-  //xu ly cuọn header
 
   return (
     <header id="header" className="">
       <div className="header_main flex h-[90px] md:h-[100px] justify-center border-t border-solid border-[#F2F2F2] ">
         <div className="header-top h-full w-[93%] ">
-          <div className="header_container h-full items-center justify-between flex">
+          <div className="relative header_container h-full items-center justify-between flex">
             <div className="header_left w-[16%]">
-              <div className="Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
+              <div className=" Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
                 {!isScreen && renderMenuIcon()}
                 {Logo()}
               </div>

@@ -48,11 +48,16 @@ const ProductDetailsComponent = (dataPlant: any) => {
           </li>
           <li>
             <Link href={routerName.Products}>
-              <p>Trang chủ /</p>
+              <p>Sản phẩm /</p>
             </Link>
           </li>
+          {/* <li>
+            <Link href={routerName.GreenTree}>
+              <p>{plantDetails.categoryType} /</p>
+            </Link>
+          </li> */}
           <li>
-            <a href="#URL">Cây xanh</a>
+            <a href="#URL">{plantDetails.name}</a>
           </li>
           {/* <li>Current Page</li> */}
         </ul>
@@ -66,7 +71,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                 <div className="w-full h-full lg:flex gap-5">
                   <div className="lg:w-[70%]  h-full">
                     <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
-                      <div className="w-[30%]  rounded-2xl">
+                      <div className={`w-[30%]  rounded-2xl ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
                         <div className="h-[30%] rounded-2xl">
                           <img
                             className="w-full h-full object-cover rounded-2xl pb-5"
@@ -77,7 +82,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                         <div className="h-[70%] rounded-2xl">
                           <div className="relative w-full h-full overflow-hidden ">
                             <video
-                              className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
+                              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
                               controls
                               autoPlay
                               muted
@@ -90,22 +95,17 @@ const ProductDetailsComponent = (dataPlant: any) => {
                               Loading...
                             </video>
                           </div>
-                          {/* <img
-                  className="w-full h-full object-cover rounded-2xl"
-                  src="/assets/caybanglang_side_2.jpg"
-                  alt="image_product_right"
-                /> */}
                         </div>
                       </div>
-                      <div className="w-[70%] h-full bg-green-300 rounded-2xl">
+                      <div className={` ${!plantDetails?.careInstructions ? "w-[100%]":"w-[70%]"}  h-full bg-green-300 rounded-2xl`}>
                         <img
                           className="w-full h-full object-cover rounded-2xl"
-                          src={plantDetails.images[0]}
+                          src={plantDetails.images[2]}
                           alt="image_main_products"
                         />
                       </div>
                     </div>
-                    <div className="w-full h-full bg-brown-500 rounded-2xl flex-col">
+                    <div className={`w-full h-full bg-brown-500 rounded-2xl flex-col ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
                       <div className="h-[380px]">
                         <img
                           className="w-full h-full object-cover rounded-2xl"
@@ -157,16 +157,16 @@ const ProductDetailsComponent = (dataPlant: any) => {
                 </div>
               </div>
 
-              <div className="w-full] bg-[#EDEDED] rounded-2xl mt-5 p-10">
-                <p className="text-2xl mb-3 font-semibold">
+              <div
+                className={`w-full bg-[#EDEDED] rounded-2xl mt-5 p-10 ${
+                  !plantDetails?.careInstructions ? "hidden" : ""
+                }`}
+              >
+                <p className="text-2xl mb-3 font-semibold ">
                   HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY BẰNG LĂNG
                 </p>
-                <p>
-                  {plantDetails.careInstructions.step1}
-                </p>
-                <p>
-                {plantDetails.careInstructions.step2}
-                </p>
+                <p className="pl-1">- {plantDetails.careInstructions?.step1}</p>
+                <p className="pl-1">- {plantDetails.careInstructions?.step2}</p>
               </div>
             </div>
           </div>

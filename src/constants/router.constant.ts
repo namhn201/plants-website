@@ -1,4 +1,3 @@
-
 export const routerName = {
   DashBoard:'/dashboard',
   About:'/about',
@@ -8,4 +7,8 @@ export const routerName = {
   Products:'/products',
   Team:'/team',
   GreenTree:'/greentree',
+  Decorativeplant:'/decorativeplant',
+  PlantProtect:'/plantprotect',
+
+
 }

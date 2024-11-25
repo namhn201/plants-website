@@ -53,15 +53,12 @@ export const getStaticProps = async () => {
 
     console.log("I'm in serverrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
 
-    // Gọi hàm handler
     const data = await handler(req, res);
 
-    // Kiểm tra nếu có lỗi
     if (!data) {
       throw new Error('No data returned from handler');
     }
 
-    // Kiểm tra kiểu dữ liệu của data
     console.log("Data:", data);
 
     const filteredProducts = data.plants.flatMap((plant: any) => 

@@ -13,8 +13,8 @@ const CareersComponent = () => {
             </Link>
           </li>
           <li>
-            <Link href={routerName.History}>
-              <p>/ Lịch sử hình thành </p>
+            <Link href={routerName.Careers}>
+              <p>/ T  uyển dụng </p>
             </Link>
           </li>
           {/* <li>

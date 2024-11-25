@@ -19,9 +19,9 @@ const ProductComponent = (dataPlants: any) => {
     dataPlants.props.filteredProducts
   );
   const [isRender, setisRender] = useState(false);
-  const handleNavigation = () => {
-    router.push(routerName.GreenTree);
-  };
+  // const handleNavigation = () => {
+  //   router.push(routerName.GreenTree);
+  // };
   const settings = {
     accessibility: true,
     dots: true,
@@ -108,18 +108,22 @@ const ProductComponent = (dataPlants: any) => {
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-5">
         <div className="flex md:w-[50%] justify-evenly gap-5 font-semibold">
-          <button
-            onClick={handleNavigation}
-            className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]"
-          >
-            Cây Xanh
-          </button>
-          <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
-            Cây Cảnh
-          </button>
-          <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
-            Thuốc
-          </button>
+          <Link href={routerName.GreenTree}>
+            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+              Cây Xanh
+            </button>
+          </Link>
+
+          <Link href={routerName.Decorativeplant}>
+            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+              Cây Cảnh
+            </button>
+          </Link>
+          <Link href={routerName.PlantProtect}>
+            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+              Thuốc
+            </button>
+          </Link>
         </div>
       </div>
       {/* Line ngăng giữa */}
@@ -166,7 +170,9 @@ const ProductComponent = (dataPlants: any) => {
                   {/* <Typography color="white" className="text-sm pl-5 text-white">
                     Chi tiết: {plantTypical.characteristics}
                   </Typography> */}
-                  <Link href={`/products/${plantTypical.id}`}>
+                  <Link
+                    href={`/products/${plantTypical.category}/${plantTypical.id}`}
+                  >
                     <Button
                       variant="text"
                       className="flex items-center gap-2 text-white"
