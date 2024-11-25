@@ -546,7 +546,7 @@ const DashboardComponent = (decorativeplant: any) => {
           </div>
         </div>
       </div>
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </div>
   );
 };
