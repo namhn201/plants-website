@@ -46,13 +46,13 @@ const DecorativeplantComponent = (dataplants: any) => {
           <div className="relative w-full h-[90dvh]">
             <img
               className="w-full h-full object-cover rounded-2xl"
-              src="/assets/greentree_bg_1.jpg"
+              src="/assets/decorativeplant_bg_1.jpg"
               alt=""
             />
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[80%] text-center">
-                  <p>Cây CẢNH</p>
+                <div className="w-[80%] text-center shadow-md bg-gray-800 bg-opacity-40 p-1 rounded-2xl mb-40">
+                  <p>CÂY CẢNH</p>
                   <p>BỘ SƯU TẬP CÂY CẢNH ĐỘT BIẾN</p>
                 </div>
               </div>

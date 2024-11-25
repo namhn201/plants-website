@@ -51,7 +51,7 @@ const PlantProtectComponent = (dataplants: any) => {
             />
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[80%] text-center">
+                <div className="w-[80%] text-center bg-gray-800 bg-opacity-40 p-1 rounded-2xl mb-40">
                   <p>Thuốc bảo vệ thực vật</p>
                   {/* <p>CÂY XANH CÔNG TRÌNH</p> */}
                 </div>

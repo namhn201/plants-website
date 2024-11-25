@@ -2,8 +2,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useEffect, useState } from "react";
 
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [showHeader, setShowHeader] = useState(false);
+  // const [showHeader, setShowHeader] = useState(false);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -25,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   //   };
   // }, []);
   return (
-    <div className="h-[100dvh] min-w-[250px] overflow-x-hidden">
+    <div className="h-[100dvh] min-w-[250px] overflow-x-hidden ${myFont.className}">
       <Header />
       <section className=" relative Layout flex flex-1 flex-col items-center gap-x-10 sm:p-0">
         <div className="w-full z-10">{children}</div>

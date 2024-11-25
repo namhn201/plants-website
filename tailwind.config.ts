@@ -72,6 +72,9 @@ module.exports = withMT({
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			'helvetica': ['"Helvetica Neue"', 'sans-serif'],
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

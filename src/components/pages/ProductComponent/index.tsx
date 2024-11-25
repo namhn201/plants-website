@@ -107,20 +107,20 @@ const ProductComponent = (dataPlants: any) => {
       </div>
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-5">
-        <div className="flex md:w-[50%] justify-evenly gap-5 font-semibold">
+        <div className="flex md:w-[50%] justify-evenly gap-3 sm:gap-5 font-semibold">
           <Link href={routerName.GreenTree}>
-            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
               Cây Xanh
             </button>
           </Link>
 
           <Link href={routerName.Decorativeplant}>
-            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
               Cây Cảnh
             </button>
           </Link>
           <Link href={routerName.PlantProtect}>
-            <button className="w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
               Thuốc
             </button>
           </Link>

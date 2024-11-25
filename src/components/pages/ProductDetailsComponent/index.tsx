@@ -62,6 +62,9 @@ const ProductDetailsComponent = (dataPlant: any) => {
           {/* <li>Current Page</li> */}
         </ul>
       </nav>
+      <div className="w-full text-center text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 text-">
+        <p>Thông tin chi tiết</p>
+      </div>
       <div className="w-full h-full flex justify-center">
         <div className="w-[93%] h-full flex-col ">
           {/* Sản phẩm 1 */}
@@ -69,9 +72,19 @@ const ProductDetailsComponent = (dataPlant: any) => {
             <div className="w-full h-full p-5">
               <div className="w-full h-full flex justify-center">
                 <div className="w-full h-full lg:flex gap-5">
-                  <div className="lg:w-[70%]  h-full">
+                  <div
+                    className={`${
+                      !plantDetails?.careInstructions
+                        ? "lg:w-[60%]"
+                        : "lg:w-[70%]"
+                    }  h-full`}
+                  >
                     <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
-                      <div className={`w-[65%] sm:w-[30%]  rounded-2xl ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
+                      <div
+                        className={`w-[65%] sm:w-[30%]  rounded-2xl ${
+                          !plantDetails?.careInstructions ? "hidden" : ""
+                        }`}
+                      >
                         <div className="h-[30%] rounded-2xl hidden sm:block">
                           <img
                             className="w-full h-full object-cover rounded-2xl pb-5"
@@ -97,15 +110,29 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${!plantDetails?.careInstructions ? "w-[100%]":"w-[35%] sm:w-[70%]"}  h-full bg-green-300 rounded-2xl`}>
+                      <div
+                        className={` ${
+                          !plantDetails?.careInstructions
+                            ? "flex justify-center w-[100%]"
+                            : "w-[35%] sm:w-[70%]"
+                        }  h-full rounded-2xl`}
+                      >
                         <img
-                          className="w-full h-full object-cover rounded-2xl"
+                          className={`${
+                            !plantDetails?.careInstructions
+                              ? "sm:w-[70%]"
+                              : "w-full"
+                          }  h-full object-cover rounded-2xl`}
                           src={plantDetails.images[2]}
                           alt="image_main_products"
                         />
                       </div>
                     </div>
-                    <div className={`w-full h-full bg-brown-500 rounded-2xl flex-col ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
+                    <div
+                      className={`w-full h-full bg-brown-500 rounded-2xl flex-col ${
+                        !plantDetails?.careInstructions ? "hidden" : ""
+                      }`}
+                    >
                       <div className="h-[380px]">
                         <img
                           className="w-full h-full object-cover rounded-2xl"
@@ -116,7 +143,13 @@ const ProductDetailsComponent = (dataPlant: any) => {
                     </div>
                   </div>
 
-                  <div className="lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0">
+                  <div
+                    className={`${
+                      !plantDetails?.careInstructions
+                        ? "lg:w-[40%] "
+                        : "lg:w-[30%] "
+                    } lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0`}
+                  >
                     <div className=" p-5 h-[20%] w-full border-b border-solid">
                       <p className="font-semibold text-2xl">
                         {plantDetails.name}
