@@ -43,7 +43,7 @@ const GreenTreeComponent = (dataplants: any) => {
       </nav>
       <div className="w-full flex justify-center ">
         <div className="md:w-[80%]">
-          <div className="relative w-full h-[90dvh]">
+          <div className="relative w-full h-[100dvh]">
             <img
               className="w-full h-full object-cover rounded-2xl"
               src="/assets/greentree_bg_1.jpg"
