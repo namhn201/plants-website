@@ -64,7 +64,7 @@ const GreenTreeComponent = (dataplants: any) => {
       <div className="flex justify-center">
         <div className="w-[90%] md:w-[70%] flex justify-center">
           <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center mt-10 w-full max-w-[1000px]">
-            {dataplants.props.data.plants[2].items.map(
+            {dataplants.props.data.plants[0].items.map(
               (plant: any, index: any) => (
                 <div
                   key={index}
