@@ -71,7 +71,7 @@ const ProductComponent = (dataPlants: any) => {
   return (
     <div className="h-full w-full">
       <nav className="flex justify-center mb-5">
-        <ul className="flex gap-2 w-[93%]">
+        <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
           <li>
             <Link href={routerName.DashBoard}>
               <p>Trang chủ</p>

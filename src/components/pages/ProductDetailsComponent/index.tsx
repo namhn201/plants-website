@@ -39,8 +39,8 @@ const ProductDetailsComponent = (dataPlant: any) => {
   }, []);
   return (
     <div>
-      <nav className="flex justify-center mb-5">
-        <ul className="flex gap-1 w-[93%]">
+      <nav className="flex justify-center mb-5 w-full">
+        <ul className="flex gap-1 w-[93%] text-xs sm:text-base">
           <li>
             <Link href={routerName.DashBoard}>
               <p>Trang chủ /</p>
@@ -71,15 +71,15 @@ const ProductDetailsComponent = (dataPlant: any) => {
                 <div className="w-full h-full lg:flex gap-5">
                   <div className="lg:w-[70%]  h-full">
                     <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
-                      <div className={`w-[30%]  rounded-2xl ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
-                        <div className="h-[30%] rounded-2xl">
+                      <div className={`w-[65%] sm:w-[30%]  rounded-2xl ${!plantDetails?.careInstructions ? "hidden" : "" }`}>
+                        <div className="h-[30%] rounded-2xl hidden sm:block">
                           <img
                             className="w-full h-full object-cover rounded-2xl pb-5"
                             src={plantDetails.images[0]}
                             alt="image_product_left"
                           />
                         </div>
-                        <div className="h-[70%] rounded-2xl">
+                        <div className="h-full sm:h-[70%] rounded-2xl">
                           <div className="relative w-full h-full overflow-hidden ">
                             <video
                               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
@@ -97,7 +97,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           </div>
                         </div>
                       </div>
-                      <div className={` ${!plantDetails?.careInstructions ? "w-[100%]":"w-[70%]"}  h-full bg-green-300 rounded-2xl`}>
+                      <div className={` ${!plantDetails?.careInstructions ? "w-[100%]":"w-[35%] sm:w-[70%]"}  h-full bg-green-300 rounded-2xl`}>
                         <img
                           className="w-full h-full object-cover rounded-2xl"
                           src={plantDetails.images[2]}

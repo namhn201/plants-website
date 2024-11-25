@@ -164,14 +164,12 @@ const DashboardComponent = (decorativeplant: any) => {
                     gần gũi với thiên nhiên
                   </p>
                 </div>
-
-                <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
-                  Liên hệ
-                </Button>
+                <Link href={routerName.Contact}>
+                  <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
+                    Liên hệ
+                  </Button>
+                </Link>
               </div>
-              {/* <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
-                Liên hệ
-              </Button> */}
             </div>
           </div>
 
@@ -195,9 +193,11 @@ const DashboardComponent = (decorativeplant: any) => {
                 nhất, không chỉ giúp không gian sống thêm tươi mới mà còn góp
                 phần bảo vệ môi trường.
               </p>
-              <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
-                Liên hệ
-              </Button>
+              <Link href={routerName.Contact}>
+                <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
+                  Liên hệ
+                </Button>
+              </Link>
             </div>
           </div>
         </Carousel>
@@ -218,9 +218,11 @@ const DashboardComponent = (decorativeplant: any) => {
                 <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Cung cấp các loại cây xanh
                 </p>
-                <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                  XEM THÊM
-                </button>
+                <Link href={routerName.GreenTree}>
+                  <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                    XEM THÊM
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -249,12 +251,14 @@ const DashboardComponent = (decorativeplant: any) => {
                 >
                   Xem thêm
                 </Button> */}
-                <button
-                  className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  type="button"
-                >
-                  XEM THÊM
-                </button>
+                <Link href={routerName.Decorativeplant}>
+                  <button
+                    className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                  >
+                    XEM THÊM
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -273,9 +277,11 @@ const DashboardComponent = (decorativeplant: any) => {
                 <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
                   Và các loại Thuốc bảo vệ thực vật
                 </p>
-                <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                  XEM THÊM
-                </button>
+                <Link href={routerName.PlantProtect}>
+                  <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                    XEM THÊM
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
