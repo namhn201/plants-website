@@ -46,7 +46,7 @@ const PlantProtectComponent = (dataplants: any) => {
           <div className="relative w-full h-[90dvh]">
             <img
               className="w-full h-full object-cover rounded-2xl"
-              src="/assets/greentree_bg_1.jpg"
+              src="/assets/plantprotect_bg_1.jpg"
               alt=""
             />
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
