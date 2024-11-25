@@ -133,7 +133,7 @@ const DashboardComponent = (decorativeplant: any) => {
       </div>
 
       {/* Slider */}
-      <div className="image_slider h-[100dvh]">
+      <div className="image_slider h-[100vh]">
         <Carousel
           // autoplay={true}
           loop={true}
