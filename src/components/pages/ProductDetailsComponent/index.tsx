@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/breadcrumb";
 import { routerName } from "@/constants/router.constant";
-import { Button } from "@material-tailwind/react";
+import { Button, Carousel } from "@material-tailwind/react";
 import { AnyNaptrRecord } from "dns";
 import { div } from "framer-motion/client";
 import Link from "next/link";
@@ -79,23 +79,24 @@ const ProductDetailsComponent = (dataPlant: any) => {
                         : "lg:w-[70%]"
                     }  h-full`}
                   >
-                    <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
+                    <div className="w-full h-full rounded-2xl flex flex-col-reverse sm:flex sm:flex-row gap-5 mb-5">
+                      {/* ảnh và video */}
                       <div
-                        className={`w-[65%] sm:w-[30%]  rounded-2xl ${
+                        className={`w-[100%] sm:w-[45%]  rounded-2xl ${
                           !plantDetails?.careInstructions ? "hidden" : ""
                         }`}
                       >
-                        <div className="h-[30%] rounded-2xl hidden sm:block">
+                        <div className="ImageSide1 h-[45%] rounded-2xl hidden sm:block">
                           <img
-                            className="w-full h-full object-cover rounded-2xl pb-5"
+                            className="w-full h-full max-h-[300px] object-cover rounded-2xl pb-5"
                             src={plantDetails.images[0]}
                             alt="image_product_left"
                           />
                         </div>
-                        <div className="h-full sm:h-[70%] rounded-2xl">
-                          <div className="relative w-full h-full overflow-hidden ">
+                        <div className="Video h-full sm:h-[55%] rounded-2xl">
+                          <div className="relative w-full h-full overflow-hidden mb-5">
                             <video
-                              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
+                              className="sm:absolute sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:min-w-full sm:min-h-full object-cover h-full max-h-[350px] w-full rounded-2xl"
                               controls
                               autoPlay
                               muted
@@ -110,22 +111,39 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           </div>
                         </div>
                       </div>
+                      {/* ảnh chính */}
                       <div
-                        className={` ${
+                        className={`ImageMain ${
                           !plantDetails?.careInstructions
                             ? "flex justify-center w-[100%]"
-                            : "w-[35%] sm:w-[70%]"
+                            : "w-[100%] sm:w-[55%]"
                         }  h-full rounded-2xl`}
                       >
-                        <img
-                          className={`${
-                            !plantDetails?.careInstructions
-                              ? "sm:w-[70%]"
-                              : "w-full"
-                          }  h-full object-cover rounded-2xl`}
-                          src={plantDetails.images[2]}
-                          alt="image_main_products"
-                        />
+                        <Carousel
+                          // autoplay={true}
+                          loop={true}
+                          autoplayDelay={6000}
+                          className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
+                        >
+                          <img
+                            className={`${
+                              !plantDetails?.careInstructions
+                                ? "sm:w-[70%]"
+                                : "w-full"
+                            }  h-full max-h-[650px] object-cover rounded-2xl`}
+                            src={plantDetails.images[2]}
+                            alt="image_main_products"
+                          />
+                           <img
+                            className={`${
+                              !plantDetails?.careInstructions
+                                ? "sm:w-[70%]"
+                                : "w-full"
+                            }  h-full max-h-[650px] object-cover rounded-2xl`}
+                            src={plantDetails.images[2]}
+                            alt="image_main_products"
+                          />
+                        </Carousel>
                       </div>
                     </div>
                     <div
