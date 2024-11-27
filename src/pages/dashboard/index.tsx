@@ -5,9 +5,9 @@ import handler from "@/pages/api/data";
 const DashBoard = (props:any) => {
     return (
       <div>
-        {/* <Layout> */}
+        <Layout>
           <DashboardComponent props={props} />
-        {/* </Layout> */}
+        </Layout>
       </div>
     )
   }

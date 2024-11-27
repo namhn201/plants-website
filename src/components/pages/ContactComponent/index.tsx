@@ -8,7 +8,7 @@ import { routerName } from "@/constants/router.constant";
 
 const ContactComponent = () => {
   return (
-    <div className="h-full">
+    <div className="h-full mt-24">
       <nav className="flex justify-center mb-5">
         <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
           <li>

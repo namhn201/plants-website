@@ -38,7 +38,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
     }
   }, []);
   return (
-    <div>
+    <div className="mt-24">
       <nav className="flex justify-center mb-5 w-full">
         <ul className="flex gap-1 w-[93%] text-xs sm:text-base">
           <li>

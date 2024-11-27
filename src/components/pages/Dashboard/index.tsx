@@ -114,7 +114,7 @@ const DashboardComponent = (decorativeplant: any) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [showHeader]);
 
   // xử lý click ảnh
   // const handleClickImg = () => {
@@ -123,14 +123,14 @@ const DashboardComponent = (decorativeplant: any) => {
   return (
     <div className="h-full">
       {/* <Breadcrumb /> */}
-      <div
+      {/* <div
         className={`transition-all duration-500 ${
           showHeader ? "bg-[#fff]" : "bg-transparent"
         } fixed top-0 left-0 w-full z-50`}
         id="header"
       >
         <Header />
-      </div>
+      </div> */}
 
       {/* Slider */}
       <div className="image_slider h-[100vh]">
@@ -552,7 +552,7 @@ const DashboardComponent = (decorativeplant: any) => {
           </div>
         </div>
       </div>
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </div>
   );
 };

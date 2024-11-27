@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TeamComponent = () => {
   return (
-    <div>
+    <div className="mt-24">
       <nav className="flex justify-center mb-5">
         <ul className="flex gap-2 w-[93%]">
           <li>

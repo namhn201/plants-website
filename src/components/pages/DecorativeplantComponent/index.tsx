@@ -20,7 +20,7 @@ const DecorativeplantComponent = (dataplants: any) => {
   // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
   // console.log("làm tròn", half);
   return (
-    <div className=" w-full">
+    <div className=" w-full mt-24">
       <nav className="flex justify-center mb-5 w-full">
         <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
           <li>
@@ -78,7 +78,7 @@ const DecorativeplantComponent = (dataplants: any) => {
                     src={plant.images[2] ? plant.images[2] : plant.images[0]}
                     alt="Sản phẩm 1"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xls"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div>
                   <div className="absolute bottom-0 content p-5 w-full">
                     <p className=" text-xl font-semibold text-white shadow-md p-1 rounded-2xl mb-2 w-full text-center">
                       {plant.name}

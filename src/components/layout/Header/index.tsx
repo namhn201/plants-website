@@ -37,6 +37,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import React from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
   // console.log("Listening from HeaderComponent", showHeader);
@@ -354,9 +355,35 @@ const Header = () => {
       />
     </Link>
   );
+  const [showHeader, setShowHeader] = useState(false);
+  const router = useRouter();
+
+
+  useEffect(() => {
+     console.log("Vừa được mount ")
+    const handleScroll = () => {
+      console.log("đang chạy handleScroll nè")
+      if (window.scrollY > 50) {
+        setShowHeader(true); 
+      } else {
+        setShowHeader(false); 
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    console.log("Sự kiện scroll đã được thêm vào window"); // Kiểm tra sự kiện đã add hay chưa
+
+    
+  }, []);
 
   return (
-    <header id="header" className="">
+    <div
+    className={`transition-all duration-500 ${
+      showHeader ? "bg-[#fff]" : "bg-transparent"
+    } fixed top-0 left-0 w-full z-50`}
+    id="header"
+  >
+     <header id="header" className="">
       <div className="header_main flex h-[90px] md:h-[100px] justify-center border-t border-solid border-[#F2F2F2] ">
         <div className="header-top h-full w-[93%] ">
           <div className="relative header_container h-full items-center justify-between flex">
@@ -376,6 +403,9 @@ const Header = () => {
       {/* </div> */}
       {sideBar()}
     </header>
+  </div>
+
+   
   );
 };
 
