@@ -37,7 +37,6 @@ import {
 } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import React from "react";
-import { useRouter } from "next/router";
 
 const Header = () => {
   // console.log("Listening from HeaderComponent", showHeader);
@@ -356,9 +355,6 @@ const Header = () => {
     </Link>
   );
   const [showHeader, setShowHeader] = useState(false);
-  const router = useRouter();
-
-
   useEffect(() => {
      console.log("Vừa được mount ")
     const handleScroll = () => {
@@ -371,7 +367,7 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    console.log("Sự kiện scroll đã được thêm vào window"); // Kiểm tra sự kiện đã add hay chưa
+    console.log("Sự kiện scroll đã được thêm vào window");
 
     
   }, []);
