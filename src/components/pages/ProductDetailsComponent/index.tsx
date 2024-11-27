@@ -66,7 +66,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
         <p>Thông tin chi tiết</p>
       </div>
       <div className="w-full h-full flex justify-center">
-        <div className="w-[93%] h-full flex-col max-w-[1280px]">
+        <div className="w-[93%] h-full flex-col max-w-[1400px]">
           {/* Sản phẩm 1 */}
           <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10">
             <div className="w-full h-full p-5">
@@ -75,7 +75,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                   <div
                     className={`${
                       !plantDetails?.careInstructions
-                        ? "lg:w-[50%]"
+                        ? "lg:w-[45%]"
                         : "lg:w-[70%]"
                     }  h-full`}
                   >
@@ -139,7 +139,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[2]}
                             alt="image_main_products"
                           />
-                          <img
+                            <img
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -148,7 +148,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[3]}
                             alt="image_main_products"
                           />
-                          <img
+                              <img
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -157,6 +157,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[4]}
                             alt="image_main_products"
                           />
+                          
                         </Carousel>
                       </div>
                     </div>
@@ -178,7 +179,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                   <div
                     className={`${
                       !plantDetails?.careInstructions
-                        ? "lg:w-[50%] "
+                        ? "lg:w-[55%] "
                         : "lg:w-[30%] "
                     } lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0`}
                   >
