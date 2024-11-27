@@ -108,21 +108,32 @@ const ProductComponent = (dataPlants: any) => {
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-5">
         <div className="flex md:w-[50%] justify-evenly gap-3 sm:gap-5 font-semibold">
-          <Link href={routerName.GreenTree}>
-            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+          <Link href={routerName.GreenTree} className=" active:border-[#014e37] hover:text-[#014e37]">
+            <div className="flex justify-center">
+              <img src="/assets/icon-cayxanh.svg" alt="" />
+            </div>
+            <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg  active:border-[#014e37] hover:text-[#014e37]">
               Cây Xanh
-            </button>
+            </div>
           </Link>
 
-          <Link href={routerName.Decorativeplant}>
-            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+          <Link href={routerName.Decorativeplant} className=" active:border-[#014e37] hover:text-[#014e37]" >
+            <div className="flex justify-center">
+              <img src="/assets/icon-caycanh.svg" alt="" />
+            </div>
+            <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg  hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
               Cây Cảnh
-            </button>
+            </div>
+            {/* <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+            </button> */}
           </Link>
-          <Link href={routerName.PlantProtect}>
-            <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
-              Thuốc
-            </button>
+          <Link href={routerName.PlantProtect} className=" hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+            <div className="flex justify-center">
+              <img src="/assets/icon-thuoc.svg" alt="" />
+            </div>
+            <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg ">
+              Thuốc trừ sâu
+            </div>
           </Link>
         </div>
       </div>
@@ -149,7 +160,7 @@ const ProductComponent = (dataPlants: any) => {
         <div className="flex w-full max-w-[90vw] h-full justify-center">
           <Slider arrows={false} {...settings} className="w-full">
             {dataPlants.props.filteredProducts.map((plantTypical: any) => (
-              <Card className="relative w-64 h-full border-solid border border-[#E5E5E5] rounded-lg overflow-hidden group">
+              <Card className="relative w-64 h-full border-solid border border-[#E5E5E5] rounded-lg overflow-hidden group cursor-pointer">
                 {/* Gradient Effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#014e37]/10 to-[#014e37]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
                 {/* Hover Content */}

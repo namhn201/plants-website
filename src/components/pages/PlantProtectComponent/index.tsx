@@ -13,7 +13,10 @@ import { useEffect } from "react";
 
 const PlantProtectComponent = (dataplants: any) => {
   console.log("Listening from PlantProtectComponent");
-  console.log("propssssssssss from PlantProtectComponent", dataplants.props.data.plants[2]);
+  console.log(
+    "propssssssssss from PlantProtectComponent",
+    dataplants.props.data.plants[2]
+  );
   // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
   // console.log("làm tròn", half);
   return (
@@ -43,7 +46,7 @@ const PlantProtectComponent = (dataplants: any) => {
       </nav>
       <div className="w-full flex justify-center ">
         <div className="md:w-[80%]">
-          <div className="relative w-full h-[100vh]">
+          <div className="relative w-full h-[70vh]">
             <img
               className="w-full h-full object-cover rounded-2xl"
               src="/assets/plantprotect_bg_1.jpg"
@@ -75,12 +78,14 @@ const PlantProtectComponent = (dataplants: any) => {
                     src={plant.images[2] ? plant.images[2] : plant.images[0]}
                     alt="Sản phẩm 1"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xls"></div>
+
                   <div className="absolute bottom-0 content p-5 w-full">
-                    <p className=" text-xl font-semibold text-white shadow-md bg-black bg-opacity-40 p-1 rounded-2xl mb-2 w-full text-center">
+                    <p className=" text-xl font-semibold text-white shadow-md p-1 rounded-2xl mb-2 w-full text-center">
                       {plant.name}
                     </p>
                     <Link href={`/products/${plant.category}/${plant.id}`}>
-                    <Button className="rounded-full bg-white text-black hover:bg-gray-400 w-full">
+                      <Button className="rounded-full bg-white text-black hover:bg-gray-400 w-full">
                         Xem thêm
                       </Button>
                     </Link>

@@ -62,11 +62,11 @@ const ProductDetailsComponent = (dataPlant: any) => {
           {/* <li>Current Page</li> */}
         </ul>
       </nav>
-      <div className="w-full text-center text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 text-">
+      <div className="w-full text-center text-3xl sm:text-4xl md:text-4xl font-semibold mb-3 text-">
         <p>Thông tin chi tiết</p>
       </div>
       <div className="w-full h-full flex justify-center">
-        <div className="w-[93%] h-full flex-col ">
+        <div className="w-[93%] h-full flex-col max-w-[1280px]">
           {/* Sản phẩm 1 */}
           <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10">
             <div className="w-full h-full p-5">
@@ -75,7 +75,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                   <div
                     className={`${
                       !plantDetails?.careInstructions
-                        ? "lg:w-[60%]"
+                        ? "lg:w-[50%]"
                         : "lg:w-[70%]"
                     }  h-full`}
                   >
@@ -112,6 +112,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                         </div>
                       </div>
                       {/* ảnh chính */}
+
                       <div
                         className={`ImageMain ${
                           !plantDetails?.careInstructions
@@ -123,24 +124,37 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           // autoplay={true}
                           loop={true}
                           autoplayDelay={6000}
-                          className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
+                          className={` ${
+                            !plantDetails?.careInstructions
+                              ? " md:w-[80%] lg:w-[100%]"
+                              : "w-full "
+                          }  h-full `}
                         >
                           <img
                             className={`${
                               !plantDetails?.careInstructions
-                                ? "sm:w-[70%]"
-                                : "w-full"
-                            }  h-full max-h-[650px] object-cover rounded-2xl`}
+                                ? "w-full sm:h-[700px] object-cover sm:object-fill"
+                                : "w-full max-h-[650px] object-cover"
+                            }  h-full  rounded-2xl`}
                             src={plantDetails.images[2]}
                             alt="image_main_products"
                           />
-                           <img
+                          <img
                             className={`${
                               !plantDetails?.careInstructions
-                                ? "sm:w-[70%]"
-                                : "w-full"
-                            }  h-full max-h-[650px] object-cover rounded-2xl`}
-                            src={plantDetails.images[2]}
+                                ? "w-full sm:h-[700px] object-cover sm:object-fill"
+                                : "w-full max-h-[650px] object-cover"
+                            }  h-full  rounded-2xl`}
+                            src={plantDetails.images[3]}
+                            alt="image_main_products"
+                          />
+                          <img
+                            className={`${
+                              !plantDetails?.careInstructions
+                                ? "w-full sm:h-[700px] object-cover sm:object-fill"
+                                : "w-full max-h-[650px] object-cover"
+                            }  h-full  rounded-2xl`}
+                            src={plantDetails.images[4]}
                             alt="image_main_products"
                           />
                         </Carousel>
@@ -164,7 +178,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                   <div
                     className={`${
                       !plantDetails?.careInstructions
-                        ? "lg:w-[40%] "
+                        ? "lg:w-[50%] "
                         : "lg:w-[30%] "
                     } lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0`}
                   >

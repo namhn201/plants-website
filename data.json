@@ -20,7 +20,9 @@
             "images": [
               "/assets/caybanglang_side_1.jpg",
               "/assets/caybanglang_side_2.jpg",
-              "/assets/caybanglang.jpg"
+              "/assets/caybanglang.jpg",
+              "/assets/caybanglang_2.jpg",
+              "/assets/caybanglang_3.jpg"
             ],
             "video": "/assets/caybanglangvideo_2.mp4",
             "typical products": 80
@@ -42,7 +44,10 @@
             "images": [
               "/assets/cayhoamai_side_1.jpg",
               "/assets/cayhoamai_side_2.jpg",
-              "/assets/cayhoamai.jpg"
+              "/assets/cayhoamai.jpg",
+              "/assets/cayhoamai_2.jpg",
+              "/assets/cayhoamai_3.jpg"
+
             ],
             "video": "/assets/cayhoamaivideo.mp4",
             "typical products": 60
@@ -65,7 +70,11 @@
             "images": [
               "/assets/caychuongvang_side_1.jpg",
               "/assets/caychuongvang_side_2.jpg",
-              "/assets/caychuongvang.jpg"
+              "/assets/caychuongvang.jpg",
+              "/assets/caychuongvang_2.jpg",
+              "/assets/caychuongvang_3.jpg"
+
+
             ],
             "video": "/assets/caychuongvangvideo.mp4",
             "typical products": 90
@@ -88,7 +97,11 @@
             "images": [
               "/assets/caycauduoichon_side_1.jpg",
               "/assets/caycauduoichon_side_2.jpg",
-              "/assets/caycauduoichon.jpg"
+              "/assets/caycauduoichon.jpg",
+              "/assets/caycauduoichon_2.jpg",
+              "/assets/caycauduoichon_3.jpg"
+
+
             ],
             "video": "/assets/caycauduoichonvideo.mp4",
             "typical products": 30
@@ -111,7 +124,9 @@
             "images": [
               "/assets/caymuonghoadao_side_1.jpg",
               "/assets/caymuonghoadao_side_2.jpg",
-              "/assets/caymuonghoadao.jpg"
+              "/assets/caymuonghoadao.jpg",
+              "/assets/caymuonghoadao_2.jpg",
+              "/assets/caymuonghoadao_3.jpg"
             ],
             "video": "/assets/caymuonghoadaovideo.mp4",
             "typical products": 70
@@ -135,7 +150,9 @@
             "images": [
               "/assets/cayphuongtim_side_1.jpg",
               "/assets/cayphuongtim_side_2.jpg",
-              "/assets/cayphuongtim.jpg"
+              "/assets/cayphuongtim.jpg",
+              "/assets/cayphuongtim_2.jpg",
+              "/assets/cayphuongtim_3.jpg"
             ],
             "video": "/assets/cayphuongtimvideo.mp4",
             "typical products": 50
@@ -163,7 +180,11 @@
             "images": [
               "/assets/cayhoagiaycamthach_side_1.jpg",
               "/assets/cayhoagiaycamthach_side_2.jpg",
-              "/assets/cayhoagiaycamthach.jpg"
+              "/assets/cayhoagiaycamthach.jpg",
+              "/assets/cayhoagiaycamthach_2.jpg",
+              "/assets/cayhoagiaycamthach_3.jpg"
+
+
             ],
             "video": "/assets/cayhoagiaycamthachvideo.mp4",
             "typical products": 70
@@ -185,7 +206,10 @@
             "images": [
               "/assets/monsteradotbien_side_1.jpg",
               "/assets/monsteradotbien_side_2.jpg",
-              "/assets/monsteradotbien.jpg"
+              "/assets/monsteradotbien.jpg",
+              "/assets/monsteradotbien_2.jpg",
+              "/assets/monsteradotbien_3.jpg"
+
             ],
             "video": "/assets/monsteradotbienvideo.mp4",
             "typical products": 60
@@ -208,7 +232,11 @@
             "images": [
               "/assets/cayoicamthach_side_1.jpg",
               "/assets/cayoicamthach_side_2.jpg",
-              "/assets/cayoicamthach.jpg"
+              "/assets/cayoicamthach.jpg",
+              "/assets/cayoicamthach_2.jpg",
+              "/assets/cayoicamthach_3.jpg"
+
+
             ],
             "video": "/assets/cayoicamthachvideo.mp4",
             "typical products": 90
@@ -231,7 +259,10 @@
             "images": [
               "/assets/cayngugiabi_side_1.jpg",
               "/assets/cayngugiabi_side_2.jpg",
-              "/assets/cayngugiabi.jpg"
+              "/assets/cayngugiabi.jpg",
+              "/assets/cayngugiabi_2.jpg",
+              "/assets/cayngugiabi_3.jpg"
+
             ],
             "video": "/assets/cayngugiabivideo.mp4",
             "typical products": 30
@@ -254,7 +285,9 @@
             "images": [
               "/assets/caythailaivar_side_1.jpg",
               "/assets/caythailaivar_side_2.jpg",
-              "/assets/caythailaivar.jpg"
+              "/assets/caythailaivar.jpg",
+              "/assets/caythailaivar_2.jpg",
+              "/assets/caythailaivar_3.jpg"
             ],
             "video": "/assets/caythailaivarvideo.mp4",
             "typical products": 40
@@ -278,7 +311,11 @@
             "images": [
               "/assets/caybangcamthach_side_1.jpg",
               "/assets/caybangcamthach_side_2.jpg",
-              "/assets/caybangcamthach.jpg"
+              "/assets/caybangcamthach.jpg",
+              "/assets/caybangcamthach_2.jpg",
+              "/assets/caybangcamthach_3.jpg"
+
+
             ],
             "video": "/assets/caybangcamthachvideo.mp4",
             "typical products": 40
@@ -315,7 +352,9 @@
             "images": [
               "/assets/nired3ec_side_1.jpg",
               "/assets/nired3ec_side_1.jpg",
-              "/assets/nired3ec.jpg"
+              "/assets/nired3ec.jpg",
+              "/assets/nired3ec_side_1.jpg",
+              "/assets/nired3ec_side_1.jpg"
             ],
             "typical products": 40
           }
