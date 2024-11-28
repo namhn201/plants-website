@@ -135,7 +135,7 @@ const FooterComponent = () => {
                 <div className="Logo cursor-pointer">
                   <img
                     className="bg-transparent"
-                    src="./assets/LogoPlant_removeBG.png"
+                    src="/assets/LogoPlantPng_3.png"
                     alt=""
                   />
                 </div>

@@ -69,31 +69,48 @@ const ProductComponent = (dataPlants: any) => {
     ],
   };
   return (
-    <div className="h-full w-full mt-24">
-      <nav className="flex justify-center mb-5">
-        <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
-          <li>
-            <Link href={routerName.DashBoard}>
-              <p>Trang chủ</p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.Products}>
-              <p>/ Sản phẩm </p>
-            </Link>
-          </li>
-          {/* <li>
-            <a href="#URL">Cây xanh</a>
-          </li> */}
-          {/* <li>Current Page</li> */}
-        </ul>
-      </nav>
+    <div className="h-full w-full">
+      <div className="w-full flex justify-center mb-14">
+        <div className="md:w-[100%]">
+          <div className="relative w-full h-[60vh]">
+            <img
+              className="w-full h-full object-cover"
+              src="/assets/danhmucsanpham_bg_1.jpg"
+              alt=""
+            />
+            <div className="absolute inset-0 bg-black opacity-20"></div>
+
+            <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
+              <div className="w-full flex justify-center items-center h-full ">
+                <div className="w-[86%]">
+                  <nav className="flex justify-center mb-5">
+                    <ul className="flex gap-2 w-full text-xs sm:text-base mb-5">
+                      <li>
+                        <Link href={routerName.DashBoard}>
+                          <p>Trang chủ</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={routerName.Products}>
+                          <p>/ Sản phẩm </p>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p>Danh mục sản phẩm</p>
+                  <p className="text-base  sm:w-[40%] ">
+                    Sự lựa chọn hoàn hảo từ danh mục sản phẩm hàng đầu.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-2">
         <div className="">
-          <p className="text-center font-semibold text-2xl sm:text-3xl">
-            Danh Mục Sản Phẩm
-          </p>
           <div className="flex justify-center items-center mb-7">
             <div className="w-[300px] flex justify-center items-center pl-1">
               <img
@@ -108,7 +125,10 @@ const ProductComponent = (dataPlants: any) => {
       {/* Line ngăng giữa */}
       <div className="w-full flex justify-center mb-5">
         <div className="flex md:w-[50%] justify-evenly gap-3 sm:gap-5 font-semibold">
-          <Link href={routerName.GreenTree} className=" active:border-[#014e37] hover:text-[#014e37]">
+          <Link
+            href={routerName.GreenTree}
+            className=" active:border-[#014e37] hover:text-[#014e37]"
+          >
             <div className="flex justify-center">
               <img src="/assets/icon-cayxanh.svg" alt="" />
             </div>
@@ -117,7 +137,10 @@ const ProductComponent = (dataPlants: any) => {
             </div>
           </Link>
 
-          <Link href={routerName.Decorativeplant} className=" active:border-[#014e37] hover:text-[#014e37]" >
+          <Link
+            href={routerName.Decorativeplant}
+            className=" active:border-[#014e37] hover:text-[#014e37]"
+          >
             <div className="flex justify-center">
               <img src="/assets/icon-caycanh.svg" alt="" />
             </div>
@@ -127,7 +150,10 @@ const ProductComponent = (dataPlants: any) => {
             {/* <button className="text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg border border-solid text-[#393939] border-[#E5E5E5] hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
             </button> */}
           </Link>
-          <Link href={routerName.PlantProtect} className=" hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
+          <Link
+            href={routerName.PlantProtect}
+            className=" hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]"
+          >
             <div className="flex justify-center">
               <img src="/assets/icon-thuoc.svg" alt="" />
             </div>
@@ -160,11 +186,11 @@ const ProductComponent = (dataPlants: any) => {
         <div className="flex w-full max-w-[90vw] h-full justify-center">
           <Slider arrows={false} {...settings} className="w-full">
             {dataPlants.props.filteredProducts.map((plantTypical: any) => (
-              <Card className="relative w-64 h-full border-solid border border-[#E5E5E5] rounded-lg overflow-hidden group cursor-pointer">
+              <Card className="relative w-64 h-full border-solid border border-[#E5E5E5] rounded-xl overflow-hidden group cursor-pointer ">
                 {/* Gradient Effect */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#014e37]/10 to-[#014e37]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
                 {/* Hover Content */}
-                <div className="absolute bottom-0 left-0 w-full bg-[#014e37] bg-opacity-70 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                <div className="absolute bottom-0 left-0 w-full bg-[#4E8D78] bg-opacity-70 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
                   <Typography
                     color="white"
                     className="text-sm pl-5 text-white flex-col"
@@ -178,9 +204,6 @@ const ProductComponent = (dataPlants: any) => {
                     Nguồn gốc:{plantTypical.origin}
                   </Typography>
 
-                  {/* <Typography color="white" className="text-sm pl-5 text-white">
-                    Chi tiết: {plantTypical.characteristics}
-                  </Typography> */}
                   <Link
                     href={`/products/${plantTypical.category}/${plantTypical.id}`}
                   >
@@ -211,7 +234,7 @@ const ProductComponent = (dataPlants: any) => {
                 <CardHeader
                   shadow={false}
                   floated={false}
-                  className="h-96 mb-4"
+                  className="h-96 m-0"
                 >
                   <img
                     src={plantTypical.images[2]}

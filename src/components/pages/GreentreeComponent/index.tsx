@@ -20,43 +20,48 @@ const GreenTreeComponent = (dataplants: any) => {
   // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
   // console.log("làm tròn", half);
   return (
-    <div className=" w-full mt-24">
-      <nav className="flex justify-center mb-5">
-        <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
-          <li>
-            <Link href={routerName.DashBoard}>
-              <p>Trang chủ</p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.Products}>
-              <p>/ Sản phẩm </p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.GreenTree}>
-              <p>/ Cây xanh </p>
-            </Link>
-          </li>
-          {/* <li>
-            <a href="#URL">Cây xanh</a>
-          </li> */}
-          {/* <li>Current Page</li> */}
-        </ul>
-      </nav>
+    <div className=" w-full ">
       <div className="w-full flex justify-center ">
-        <div className="md:w-[80%]">
-          <div className="relative w-full h-[70vh]">
+        <div className="md:w-[100%]">
+          <div className="relative w-full h-[60vh]">
             <img
-              className="w-full h-full object-cover rounded-2xl"
-              src="/assets/greentree_bg_1.jpg"
+              className="w-full h-full object-cover"
+              src="/assets/greentree_bg_2.jpg"
               alt=""
             />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div> */}
+            <div className="absolute inset-0 bg-black opacity-20"></div>
+
             <div className="absolute text-white text-4xl md:text-5xl top-0 right-0 w-full h-full">
-              <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[80%] text-center bg-gray-800 bg-opacity-40 p-1 rounded-2xl ">
-                  <p>CÂY XANH</p>
-                  <p>CÂY XANH CÔNG TRÌNH</p>
+              <div className="w-full flex items-center h-full ">
+                {/* <p>CÂY XANH CÔNG TRÌNH</p> */}
+                <div className="w-full flex justify-center">
+                  <div className="w-[86%]">
+                    <nav className="flex justify-center mb-5">
+                      <ul className="flex gap-2 w-full text-xs sm:text-base mb-5">
+                        <li>
+                          <Link href={routerName.DashBoard}>
+                            <p>Trang chủ</p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={routerName.Products}>
+                            <p>/ Sản phẩm </p>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={routerName.GreenTree}>
+                            <p>/ Cây xanh </p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                    <p>CÂY XANH CÔNG TRÌNH</p>
+                    <p className="text-base  sm:w-[40%] ">
+                      Khám phá vẻ đẹp tự nhiên cho khu vườn – Tạo dựng một không
+                      gian sống xanh mát và đầy năng lượng!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,7 +86,7 @@ const GreenTreeComponent = (dataplants: any) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div>
 
                   <div className="absolute bottom-0 content p-5 w-full">
-                  {/* <p className=" text-xl font-semibold text-white shadow-md bg-black bg-opacity-40 p-1 rounded-2xl mb-2 w-full text-center"> */}
+                    {/* <p className=" text-xl font-semibold text-white shadow-md bg-black bg-opacity-40 p-1 rounded-2xl mb-2 w-full text-center"> */}
                     <p className=" text-xl font-semibold text-white shadow-md p-1 rounded-2xl mb-2 w-full text-center">
                       {plant.name}
                     </p>

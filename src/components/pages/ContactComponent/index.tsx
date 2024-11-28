@@ -26,7 +26,11 @@ const ContactComponent = () => {
           </li> */}
           {/* <li>Current Page</li> */}
         </ul>
-      </nav>      <h1>Welcome to ContactComponent</h1>
+      </nav>      
+      <div className="ContactContainer ">
+        
+
+      </div>
    
     </div>
   );

@@ -38,34 +38,53 @@ const ProductDetailsComponent = (dataPlant: any) => {
     }
   }, []);
   return (
-    <div className="mt-24">
-      <nav className="flex justify-center mb-5 w-full">
-        <ul className="flex gap-1 w-[93%] text-xs sm:text-base">
-          <li>
-            <Link href={routerName.DashBoard}>
-              <p>Trang chủ /</p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.Products}>
-              <p>Sản phẩm /</p>
-            </Link>
-          </li>
-          {/* <li>
-            <Link href={routerName.GreenTree}>
-              <p>{plantDetails.categoryType} /</p>
-            </Link>
-          </li> */}
-          <li>
-            <a href="#URL">{plantDetails.name}</a>
-          </li>
-          {/* <li>Current Page</li> */}
-        </ul>
-      </nav>
-      <div className="w-full text-center text-3xl sm:text-4xl md:text-4xl font-semibold mb-3 text-">
-        <p>Thông tin chi tiết</p>
+    <div className="">
+      <div className="w-full flex justify-center ">
+        <div className="md:w-[100%]">
+          <div className="relative w-full h-[50vh]">
+            <img
+              className="w-full h-full object-cover"
+              src={plantDetails.images[1]}
+              alt=""
+            />
+            <div className="absolute inset-0 bg-black opacity-20"></div>
+
+            <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
+              <div className="w-full flex justify-center items-center h-full ">
+                <div className="w-[86%]">
+                  <nav className="flex justify-center mb-5 w-full">
+                    <ul className="flex gap-1 w-full text-xs sm:text-base">
+                      <li>
+                        <Link href={routerName.DashBoard}>
+                          <p>Trang chủ /</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={routerName.Products}>
+                          <p>Sản phẩm /</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <a href="#URL">{plantDetails.name}</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <p>{plantDetails.name}</p>
+                    {/* <div className="text-base  sm:w-[40%] ">
+                      <p>Tên gọi khác: {plantDetails.otherNames}</p>
+                      <p>Tên khoa học : {plantDetails.scientificName}</p>
+                      <p>Nguồn gốc : {plantDetails.origin}</p>
+                    </div> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-full h-full flex justify-center">
+      {/* <div className="w-full text-center text-3xl sm:text-4xl md:text-4xl font-semibold mb-3 text-">
+        <p>Thông tin chi tiết</p>
+      </div> */}
+      <div className="w-full h-full flex justify-center mt-10">
         <div className="w-[93%] h-full flex-col max-w-[1400px]">
           {/* Sản phẩm 1 */}
           <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10">
@@ -139,7 +158,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[2]}
                             alt="image_main_products"
                           />
-                            <img
+                          <img
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -148,7 +167,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[3]}
                             alt="image_main_products"
                           />
-                              <img
+                          <img
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -157,7 +176,6 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             src={plantDetails.images[4]}
                             alt="image_main_products"
                           />
-                          
                         </Carousel>
                       </div>
                     </div>

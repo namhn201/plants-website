@@ -20,43 +20,44 @@ const PlantProtectComponent = (dataplants: any) => {
   // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
   // console.log("làm tròn", half);
   return (
-    <div className=" w-full mt-24">
-      <nav className="flex justify-center mb-5">
-        <ul className="flex gap-2 w-[93%] text-xs sm:text-base">
-          <li>
-            <Link href={routerName.DashBoard}>
-              <p>Trang chủ</p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.Products}>
-              <p>/ Sản phẩm </p>
-            </Link>
-          </li>
-          <li>
-            <Link href={routerName.GreenTree}>
-              <p>/ Thuốc bảo vệ thực vật </p>
-            </Link>
-          </li>
-          {/* <li>
-            <a href="#URL">Cây xanh</a>
-          </li> */}
-          {/* <li>Current Page</li> */}
-        </ul>
-      </nav>
+    <div className=" w-full">
       <div className="w-full flex justify-center ">
-        <div className="md:w-[80%]">
-          <div className="relative w-full h-[70vh]">
+        <div className="md:w-[100%]">
+          <div className="relative w-full h-[60vh]">
             <img
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover"
               src="/assets/plantprotect_bg_1.jpg"
               alt=""
             />
+            <div className="absolute inset-0 bg-black opacity-20"></div>
+
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[80%] text-center bg-gray-800 bg-opacity-40 p-1 rounded-2xl mb-40">
+                <div className="w-[86%]">
+                  <nav className="flex justify-center mb-5">
+                    <ul className="flex gap-2 w-full text-xs sm:text-base">
+                      <li>
+                        <Link href={routerName.DashBoard}>
+                          <p>Trang chủ</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={routerName.Products}>
+                          <p>/ Sản phẩm </p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={routerName.GreenTree}>
+                          <p>/ Thuốc bảo vệ thực vật </p>
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
                   <p>Thuốc bảo vệ thực vật</p>
-                  {/* <p>CÂY XANH CÔNG TRÌNH</p> */}
+                  <p className="text-base  sm:w-[40%] ">
+                    Giải pháp bảo vệ cây trồng, nâng cao năng suất – An toàn cho
+                    môi trường.
+                  </p>
                 </div>
               </div>
             </div>
