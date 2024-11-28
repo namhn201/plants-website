@@ -349,7 +349,7 @@ const Header = () => {
     <Link href={routerName.DashBoard}>
       <img
         className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
-        src="/assets/LogoPlantPng_4.png"
+        src="/assets/LogoPlantPng_3.png"
         alt="LogoPlants"
       />
     </Link>
