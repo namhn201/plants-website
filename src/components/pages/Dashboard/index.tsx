@@ -122,7 +122,6 @@ const DashboardComponent = (decorativeplant: any) => {
         <div className="image_slider h-[100vh]">
           <Carousel
             // autoplay={true}
-
             loop={true}
             autoplayDelay={6000}
             className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
@@ -130,11 +129,13 @@ const DashboardComponent = (decorativeplant: any) => {
             {/* Image 1 */}
             <div className="relative w-full  h-full ">
               <Image
+                loading="eager"
                 layout="fill"
-                loading="lazy"
                 src="/assets/plant_slider_3.jpg"
                 alt="image 1"
                 className="h-full w-full object-cover "
+                // placeholder="blur"
+                // blurDataURL=""
               />
               <div className="absolute inset-0 bg-black opacity-30"></div>
 

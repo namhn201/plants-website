@@ -44,8 +44,8 @@ const ProductDetailsComponent = (dataPlant: any) => {
         <div className="w-[100%]">
           <div className="relative w-full h-[50vh]">
             <Image
+              loading="eager"
               layout="fill"
-              loading="lazy"
               className="w-full h-full object-cover"
               src={plantDetails.images[1]}
               alt=""

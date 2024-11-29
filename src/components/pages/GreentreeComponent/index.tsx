@@ -26,6 +26,7 @@ const GreenTreeComponent = (dataplants: any) => {
         <div className="md:w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
+              loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
               src="/assets/greentree_bg_2.jpg"
@@ -81,8 +82,7 @@ const GreenTreeComponent = (dataplants: any) => {
                   className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8"
                 >
                   <Image
-                      layout="fill"
-
+                    layout="fill"
                     loading="lazy"
                     className="w-full h-full object-cover rounded-2xl"
                     src={plant.images[2] ? plant.images[2] : plant.images[0]}

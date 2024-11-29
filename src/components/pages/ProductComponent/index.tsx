@@ -76,6 +76,7 @@ const ProductComponent = (dataPlants: any) => {
           <div className="relative w-full h-[60vh]">
             {/* <div className="w-full h-full"> */}
             <Image
+              loading="eager"
               sizes="w-full h-full"
               // loading="lazy"
               className="object-cover"

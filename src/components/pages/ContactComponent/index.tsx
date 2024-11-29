@@ -87,7 +87,7 @@ const ContactComponent = () => {
             >
               <Image
                 layout="fill"
-                loading="lazy"
+                loading="eager"
                 src="/assets/contact_bg_2.jpg "
                 className="rounded-t-full shadow-2xl object-cover h-full w-full"
                 alt=""

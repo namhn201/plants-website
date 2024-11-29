@@ -26,11 +26,12 @@ const PlantProtectComponent = (dataplants: any) => {
         <div className="md:w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
+              loading="eager"
               layout="fill"
-              loading="lazy"
               className="w-full h-full object-cover"
               src="/assets/plantprotect_bg_1.jpg"
               alt=""
+              placeholder="blur"
             />
             <div className="absolute inset-0 bg-black opacity-20"></div>
 

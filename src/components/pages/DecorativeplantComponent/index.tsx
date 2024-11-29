@@ -26,6 +26,7 @@ const DecorativeplantComponent = (dataplants: any) => {
         <div className="md:w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
+              loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
               src="/assets/decorativeplant_bg_1.jpg"
