@@ -79,7 +79,7 @@ const Header = () => {
     <div
       className={`${
         !isOpen ? "" : ""
-      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.3rem] `}
+      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.3rem] text-white  `}
       onClick={toggleMenu}
       onKeyDown={(e) => {
         if (e.key === "Esc" || e.key === " ") {
@@ -155,11 +155,11 @@ const Header = () => {
   const sideBar = () => (
     <div
       id="wrapper"
-      className={` md:hidden fixed left-0 top-0 z-20 flex h-[100dvh] w-[75%] max-w-[300px] transform flex-col rounded-[20px] bg-white px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
+      className={` md:hidden fixed left-0 top-0 z-20 flex h-[100dvh] w-[75%] max-w-[300px] transform flex-col rounded-[20px] bg-[#4E8D78] px-3 shadow-md transition-transform duration-500 ease-in-out md:left-auto md:gap-2 md:py-6
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
     >
-      <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem]  py-4 pl-4 shadow-xl shadow-blue-gray-900/5">
-        <div className="mb-2 py-4 pl-4 pr-2 flex justify-between ">
+      {/* <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] bg-[#3E7160] text-white  py-4 pl-4 shadow-xl shadow-blue-gray-900/5"> */}
+        <div className="mb-2 py-4 pl-4 pr-2 flex justify-between text-white  ">
           <Typography variant="h5" color="blue-gray">
             {Logo()}
           </Typography>
@@ -171,7 +171,7 @@ const Header = () => {
             X
           </button>
         </div>
-        <List className="min-w-[100px]">
+        <List className="min-w-[100px] text-white">
           <Accordion
             open={open === 1}
             icon={
@@ -328,7 +328,7 @@ const Header = () => {
             Log Out
           </ListItem> */}
         </List>
-      </Card>
+      {/* </Card> */}
     </div>
   );
   const Logo = () => (
