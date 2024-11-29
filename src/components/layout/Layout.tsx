@@ -26,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   //   };
   // }, []);
   return (
-    <div className="h-[100dvh] min-w-[250px] ${myFont.className}">
+    <div className="h-[100dvh] min-w-[250px] ">
       <Header />
       <section className=" relative Layout flex flex-1 flex-col items-center gap-x-10 sm:p-0 overflow-x-hidden overflow-y-hidden scroll-smooth">
         <div className="w-full z-10 ">{children}</div>

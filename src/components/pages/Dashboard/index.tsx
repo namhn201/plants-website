@@ -11,7 +11,6 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import FooterComponent from "@/components/layout/Footer";
@@ -115,23 +114,9 @@ const DashboardComponent = (decorativeplant: any) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [showHeader]);
-
-  // xử lý click ảnh
-  // const handleClickImg = () => {
-  //   router
-  // };
   return (
     <div className="h-full flex justify-center items-center">
       <div>
-        {/* <Breadcrumb /> */}
-        {/* <div
-        className={`transition-all duration-500 ${
-          showHeader ? "bg-[#fff]" : "bg-transparent"
-        } fixed top-0 left-0 w-full z-50`}
-        id="header"
-      >
-        <Header />
-      </div> */}
 
         {/* Slider */}
         <div className="image_slider h-[100vh]">
@@ -166,7 +151,7 @@ const DashboardComponent = (decorativeplant: any) => {
                     </p>
                   </div>
                   <Link href={routerName.Contact}>
-                    <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
+                    <Button className="bg-[#4E8D78] hover:bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
                       Liên hệ
                     </Button>
                   </Link>
@@ -197,7 +182,7 @@ const DashboardComponent = (decorativeplant: any) => {
                   phần bảo vệ môi trường.
                 </p>
                 <Link href={routerName.Contact}>
-                  <Button className="bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
+                  <Button className="bg-[#4E8D78] hover:bg-[#014e37] text-[10px] pt-1 h-[25px] w-[35%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[40%] lg:mt-4">
                     Liên hệ
                   </Button>
                 </Link>
@@ -339,7 +324,7 @@ const DashboardComponent = (decorativeplant: any) => {
                   </p>
                 </div>
                 <Link href={routerName.Products}>
-                  <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-full md:w-[80%] mt-5">
+                  <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#4E8D78] hover:bg-[#014e37] w-full md:w-[80%] mt-5">
                     Xem thêm các sản phẩm khác
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -476,7 +461,7 @@ const DashboardComponent = (decorativeplant: any) => {
                 </div>
                 <div className="w-full">
                   <Link href={routerName.Team}>
-                    <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#014e37] w-[100%] mt-5">
+                    <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#4E8D78] hover:bg-[#014e37] w-[100%] mt-5">
                       VỀ CÔNG TY NHÀ MÁY
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -527,7 +512,7 @@ const DashboardComponent = (decorativeplant: any) => {
                   </div>
                   <div className="md:w-[20%]">
                     <Link href={routerName.Contact}>
-                      <Button className=" w-full bg-[#014e37] ">Liên hệ</Button>
+                      <Button className=" w-full bg-[#4E8D78] hover:bg-[#014e37] ">Liên hệ</Button>
                     </Link>
                   </div>
                 </div>

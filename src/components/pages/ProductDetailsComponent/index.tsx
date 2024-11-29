@@ -70,7 +70,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                     </ul>
                   </nav>
                   <p>{plantDetails.name}</p>
-                    {/* <div className="text-base  sm:w-[40%] ">
+                  {/* <div className="text-base  sm:w-[40%] ">
                       <p>Tên gọi khác: {plantDetails.otherNames}</p>
                       <p>Tên khoa học : {plantDetails.scientificName}</p>
                       <p>Nguồn gốc : {plantDetails.origin}</p>
@@ -87,7 +87,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
       <div className="w-full h-full flex justify-center mt-10">
         <div className="w-[93%] h-full flex-col max-w-[1400px]">
           {/* Sản phẩm 1 */}
-          <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10">
+          <div className="w-full h-full flex justify-center bg-[#C3D2CE] rounded-2xl mb-10">
             <div className="w-full h-full p-5">
               <div className="w-full h-full flex justify-center">
                 <div className="w-full h-full lg:flex gap-5">
@@ -231,7 +231,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           <p>{plantDetails.usage}</p>
                         </div>
                         <Link href={routerName.Contact}>
-                          <Button className="bg-[#014e37] mt-5 w-full ">
+                          <Button className="bg-[#4E8D78] hover:bg-[#014e37] mt-5 w-full ">
                             Liên hệ
                           </Button>
                         </Link>

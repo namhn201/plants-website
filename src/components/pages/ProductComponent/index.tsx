@@ -167,7 +167,7 @@ const ProductComponent = (dataPlants: any) => {
       <div className="w-full flex justify-center mb-8 mt-8">
         <div className="">
           <div className="flex justify-center items-center mb-7">
-            <div className="w-[300px] flex justify-center items-center pl-1">
+            <div className="w-[300px] flex justify-center items-center">
               <img
                 className="rounded-full w-[full] rotate-180"
                 src="./assets/liner_flower.png"

@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const FooterComponent = () => {
   return (
-    <footer className="relative w-full bg-[#d9e5e1] pt-20">
+    <footer className="relative w-full bg-[#3E7160] pt-20">
       <div className="w-full p-4 sm:px-8 mx-auto max-w-7xl">
-        {/* //Subcrise Mail */}
+        {/* //Subcrise Mail
         <div className="flex justify-center items-center mb-5">
-          <p className=" font-semibold text-[28px] md:text-[34px]">
+          <p className=" font-semibold text-white text-[28px] md:text-[34px]">
             LIÊN HỆ MAIL VỚI CHÚNG TÔI
           </p>
-        </div>
-        <div className=" flex mb-20 w-full flex - justify-center items-center">
+        </div> */}
+        {/* <div className=" flex mb-20 w-full flex - justify-center items-center">
           <div className="w-full max-w-[45rem] min-w-[200px]">
             <div className="relative">
               <input
@@ -31,12 +31,12 @@ const FooterComponent = () => {
               </svg>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid justify-between grid-cols-1 gap-4 md:grid-cols-1">
           <div className="grid justify-between sm:grid-cols-4 gap-4 grid-cols-1">
-            <ul className="text-[#666867]">
-              <p className="block mb-1 text-base font-semibold  text-slate-800 text-black">
+            <ul className="text-white">
+              <p className="block mb-1 text-base font-semibold  text-slate-800">
                 Giới thiệu
               </p>
               <li>
@@ -64,8 +64,8 @@ const FooterComponent = () => {
                 </a>
               </li>
             </ul>
-            <ul className="text-[#666867]">
-              <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
+            <ul className="text-white">
+              <p className="block mb-1 text-base font-semibold text-slate-800 ">
                 Sản phẩm
               </p>
               <li>
@@ -93,8 +93,8 @@ const FooterComponent = () => {
                 </a>
               </li>
             </ul>
-            <ul className="text-[#666867]">
-              <p className="block mb-1 text-base font-semibold text-slate-800 text-black">
+            <ul className="text-white">
+              <p className="block mb-1 text-base font-semibold text-slate-800 ">
                 Công ty
               </p>
               <li>
@@ -130,12 +130,12 @@ const FooterComponent = () => {
                 </a>
               </li>
             </ul>
-            <ul className="text-[#666867]">
+            <ul className="text-white">
               <Link href={routerName.DashBoard}>
                 <div className="Logo cursor-pointer">
                   <img
                     className="bg-transparent"
-                    src="/assets/LogoPlantPng_4.png"
+                    src="/assets/LogoPlantPng_6.png"
                     alt=""
                   />
                 </div>
@@ -143,7 +143,7 @@ const FooterComponent = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 md:flex-row md:justify-between">
+        <div className="text-white flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 md:flex-row md:justify-between">
           <p className="block mb-4 text-sm text-center text-slate-500 md:mb-0">
             Copyright © 2024
             <a href="https://material-tailwind.com/">Material Tailwind</a>. All

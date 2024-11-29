@@ -95,21 +95,17 @@ const Header = () => {
   const headerBottom = () => {
     if (isOpen || !isScreen) return null;
     return (
-      <div className="header_bottom flex w-[100%] h-full ">
+      <div className="header_bottom flex w-[100%] h-full mt-5 ">
         <div className="flex h-full w-full">
           <div id="wrapper" className="w-full h-full">
             <div id="header" className="h-full ">
               <nav className="h-full">
                 <ul
                   id="main-menu"
-                  className="flex w-full justify-evenly h-full pt-[47px] text-xl font-semibold"
+                  className="flex w-full justify-evenly h-full text-lg font-semibold"
                 >
-                  {/* <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.DashBoard}>
-                      <p>Trang chủ</p>
-                    </Link>
-                  </li> */}
-                  <li className={` ${showHeader ? "text-black hover:text-[#014E37]": "text-white"} relative group h-full `}>
+            
+                  <li className={` text-white ${showHeader ? "  transition-transform transform hover:scale-105": "text-white"} relative group h-full `}>
                     <Link href={routerName.Team}>
                       <p className="cursor-pointer ">Giới thiệu</p>
                     </Link>
@@ -132,27 +128,17 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  {/* <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.Team}>
-                      <p>Cơ cấu tổ chức</p>
-                    </Link>
-                  </li> */}
-                  {/* <li className="text-[#090909] hover:text-[#014E37]">
-                    <Link href={routerName.History}>
-                      <p>Lịch sử hình thành</p>
-                    </Link>
-                  </li> */}
-                  <li className={`${showHeader ? "text-black hover:text-[#014E37]": "text-white"} `}>
+                  <li className={` text-white ${showHeader ? " transition-transform transform hover:scale-105": ""} `}>
                     <Link href={routerName.Products}>
                       <p>Sản phẩm</p>
                     </Link>
                   </li>
-                  <li className={`${showHeader ? "text-black hover:text-[#014E37]": "text-white"} `}>
+                  <li className={` text-white ${showHeader ? " transition-transform transform hover:scale-105": "text-white"} `}>
                     <Link href={routerName.Careers}>
                       <p>Tuyển dụng</p>
                     </Link>
                   </li>
-                  <li className={`${showHeader ? "text-black hover:text-[#014E37]": "text-white"} `}>
+                  <li className={`text-white ${showHeader ? " transition-transform transform hover:scale-105": "text-white"} `}>
                     <Link href={routerName.Contact}>
                       <p>Liên hệ</p>
                     </Link>
@@ -349,7 +335,7 @@ const Header = () => {
     <Link href={routerName.DashBoard}>
       <img
         className=" cursor-pointer absolute w-[110px] h-[50px] md:static md:h-full md:w-full"
-        src="/assets/LogoPlantPng_3.png"
+        src="/assets/LogoPlantPng_6.png"
         alt="LogoPlants"
       />
     </Link>
@@ -375,18 +361,16 @@ const Header = () => {
   return (
     <div
     className={`transition-all duration-500 ${
-      showHeader ? "bg-[#fff]" : "bg-transparent"
+      showHeader ? "bg-[#3E7160]" : "bg-transparent"
     } fixed top-0 left-0 w-full z-50`}
     id="header"
   >
      <header id="header" className="">
-     {/* <div className="header_main flex h-[90px] md:h-[100px] justify-center border-t border-solid border-[#F2F2F2] "> */}
-
-      <div className="header_main flex h-[90px] md:h-[100px] justify-center ">
-        <div className="header-top h-full w-[93%] ">
+      <div className="header_main flex justify-center">
+        <div className="header-top h-full w-[93%]  h-16 ">
           <div className="relative header_container h-full items-center justify-between flex">
             <div className="header_left w-[35%]">
-              <div className=" Logo flex  h-full max-w-[100px] min-w-[80px]  md:max-w-[140px]">
+              <div className=" Logo flex  h-full max-w-[100px] min-w-[80px] md:max-w-[140px]">
                 {!isScreen && renderMenuIcon()}
                 {Logo()}
               </div>
@@ -395,10 +379,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* <div className="header_bottom flex h-[52px] justify-center border-t border-b border-solid border-[#F2F2F2]"> */}
-      {/* {isOpen ? sideBar() : headerBottom()} */}
-
-      {/* </div> */}
       {sideBar()}
     </header>
   </div>
