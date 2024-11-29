@@ -367,7 +367,7 @@ const Header = () => {
   >
      <header id="header" className="">
       <div className="header_main flex justify-center">
-        <div className="header-top h-full w-[93%]  h-16 ">
+        <div className="header-top w-[93%]  h-16 ">
           <div className="relative header_container h-full items-center justify-between flex">
             <div className="header_left w-[35%]">
               <div className=" Logo flex  h-full max-w-[100px] min-w-[80px] md:max-w-[140px]">

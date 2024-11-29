@@ -4,27 +4,6 @@ import { useEffect, useState } from "react";
 
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  // const [showHeader, setShowHeader] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     console.log("Cuộn chưa")
-  //     // Kiểm tra vị trí cuộn trang
-  //     if (window.scrollY > 100) { // Điều chỉnh giá trị này tùy theo nhu cầu
-  //       setShowHeader(true); // Hiển thị header
-  //     } else {
-  //       setShowHeader(false); // Ẩn header
-  //     }
-  //   };
-
-  //   // Gắn sự kiện cuộn trang
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Dọn dẹp sự kiện khi component unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   return (
     <div className="h-[100dvh] min-w-[250px] ">
       <Header />
