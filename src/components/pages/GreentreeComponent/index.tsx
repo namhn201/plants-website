@@ -33,7 +33,7 @@ const GreenTreeComponent = (dataplants: any) => {
               alt=""
             />
             {/* <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div> */}
-            <div className="absolute inset-0 bg-bla ck opacity-20"></div>
+            <div className="absolute inset-0 bg-black opacity-20"></div>
 
             <div className="absolute text-white text-4xl md:text-5xl top-0 right-0 w-full h-full">
               <div className="w-full flex items-center h-full ">
