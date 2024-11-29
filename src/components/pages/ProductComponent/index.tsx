@@ -72,7 +72,7 @@ const ProductComponent = (dataPlants: any) => {
   return (
     <div className="h-full w-full">
       <div className="w-full flex justify-center mb-14">
-        <div className="md:w-[100%]">
+        <div className="w-[100%]">
           <div className="relative w-full h-[60vh]">
             {/* <div className="w-full h-full"> */}
             <Image

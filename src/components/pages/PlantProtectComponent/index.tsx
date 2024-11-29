@@ -23,7 +23,7 @@ const PlantProtectComponent = (dataplants: any) => {
   return (
     <div className=" w-full">
       <div className="w-full flex justify-center ">
-        <div className="md:w-[100%]">
+        <div className="w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
               loading="eager"
