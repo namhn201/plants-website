@@ -79,7 +79,7 @@ const Header = () => {
     <div
       className={`${
         !isOpen ? "" : ""
-      } my-2 cursor-pointer w-[30px] h-[30px] text-[1.3rem] text-white  `}
+      } my-[10px] cursor-pointer w-[30px] h-[30px] text-[1.3rem] text-white  `}
       onClick={toggleMenu}
       onKeyDown={(e) => {
         if (e.key === "Esc" || e.key === " ") {
