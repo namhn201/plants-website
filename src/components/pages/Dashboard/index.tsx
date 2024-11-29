@@ -11,9 +11,10 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import FooterComponent from "@/components/layout/Footer";
+import Image from "next/image";
 // import image from "";
 // const settings = {
 //   accessibility: true,
@@ -117,19 +118,21 @@ const DashboardComponent = (decorativeplant: any) => {
   return (
     <div className="h-full flex justify-center items-center">
       <div>
-
         {/* Slider */}
         <div className="image_slider h-[100vh]">
           <Carousel
             // autoplay={true}
+
             loop={true}
             autoplayDelay={6000}
             className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
           >
             {/* Image 1 */}
             <div className="relative w-full  h-full ">
-              <img
-                src="./assets/plant_slider_3.jpg"
+              <Image
+                layout="fill"
+                loading="lazy"
+                src="/assets/plant_slider_3.jpg"
                 alt="image 1"
                 className="h-full w-full object-cover "
               />
@@ -161,8 +164,10 @@ const DashboardComponent = (decorativeplant: any) => {
 
             {/* Image 2 */}
             <div className="relative h-full w-full">
-              <img
-                src="./assets/plant_slider_4.jpg"
+              <Image
+                layout="fill"
+                loading="lazy"
+                src="/assets/plant_slider_4.jpg"
                 alt="image 1"
                 className="h-full w-full object-cover"
               />
@@ -197,6 +202,7 @@ const DashboardComponent = (decorativeplant: any) => {
               {/* md:max-w-[550px] md:max-h-[300px] */}
               <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
                 <img
+                  loading="lazy"
                   className="h-full w-full object-cover rounded-md max-h-[300px]"
                   src="./assets/plant_menu_2.jpg"
                   alt=""
@@ -218,6 +224,7 @@ const DashboardComponent = (decorativeplant: any) => {
             <div className="w-full h-full js-show-on-scroll">
               <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
                 <img
+                  loading="lazy"
                   className="h-full w-full object-cover rounded-md max-h-[300px]"
                   src="./assets/plant_menu_1.jpg"
                   alt=""
@@ -255,6 +262,7 @@ const DashboardComponent = (decorativeplant: any) => {
             <div className="w-full h-full js-show-on-scroll ">
               <div className="relative px-3 md:px-0 h-full w-full">
                 <img
+                  loading="lazy"
                   className="h-full w-full object-cover rounded-md max-h-[300px]"
                   src="./assets/plant_menu_6.jpg"
                   alt=""
@@ -284,6 +292,7 @@ const DashboardComponent = (decorativeplant: any) => {
             <div className="flex justify-center items-center mb-7">
               <div className="w-[300px] flex justify-center items-center pl-1">
                 <img
+                  loading="lazy"
                   className="rounded-full w-[full]"
                   src="./assets/liner_flower.png"
                   alt=""
@@ -349,6 +358,7 @@ const DashboardComponent = (decorativeplant: any) => {
                 <div className="lg:flex justify-center gap-5 w-full h-full">
                   <div className="w-full h-full">
                     <img
+                      loading="lazy"
                       className="h-full w-full object-cover"
                       src="/assets/plant_bg_5.jpg"
                       alt=""
@@ -371,7 +381,8 @@ const DashboardComponent = (decorativeplant: any) => {
                     className="h-[370px]"
                   >
                     <Link href={`/products/${plant.category}/${plant.id}`}>
-                      <img
+                      <Image
+                        layout="fill"
                         // onClick={handleClickImg}
                         src={
                           plant.images[2] ? plant.images[2] : plant.images[0]
@@ -405,6 +416,7 @@ const DashboardComponent = (decorativeplant: any) => {
             <div className="flex justify-center items-center mb-7">
               <div className="w-[300px] flex justify-center items-center pl-1">
                 <img
+                  loading="lazy"
                   className="rounded-full w-[full]"
                   src="./assets/liner_flower.png"
                   alt=""
@@ -419,7 +431,12 @@ const DashboardComponent = (decorativeplant: any) => {
           <div className="w-[93%] lg:flex justify-center lg:justify-evenly gap-10">
             <div className=" lg:w-[50%] flex justify-center items-center mb-5 lg:mb-0">
               <div className="flex justify-center md:min-h-[500px] max-w-[800px] h-full ">
-                <img className=" w-full" src="./assets/plant_bg_2.jpg" alt="" />
+                <img
+                  loading="lazy"
+                  className=" w-full"
+                  src="./assets/plant_bg_2.jpg"
+                  alt=""
+                />
               </div>
             </div>
             <div className="lg:w-[50%] ">
@@ -489,6 +506,7 @@ const DashboardComponent = (decorativeplant: any) => {
           <div className="w-full h-full ">
             <div className="w-full h-full relative">
               <img
+                loading="lazy"
                 className="w-full h-full object-cover"
                 src="./assets/plant_bg_4.jpg"
                 alt=""
@@ -512,7 +530,9 @@ const DashboardComponent = (decorativeplant: any) => {
                   </div>
                   <div className="md:w-[20%]">
                     <Link href={routerName.Contact}>
-                      <Button className=" w-full bg-[#4E8D78] hover:bg-[#014e37] ">Liên hệ</Button>
+                      <Button className=" w-full bg-[#4E8D78] hover:bg-[#014e37] ">
+                        Liên hệ
+                      </Button>
                     </Link>
                   </div>
                 </div>

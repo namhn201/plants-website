@@ -3,6 +3,7 @@ import { routerName } from "@/constants/router.constant";
 import { Button, Carousel } from "@material-tailwind/react";
 import { AnyNaptrRecord } from "dns";
 import { div } from "framer-motion/client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -40,9 +41,11 @@ const ProductDetailsComponent = (dataPlant: any) => {
   return (
     <div className="">
       <div className="w-full flex justify-center ">
-        <div className="md:w-[100%]">
+        <div className="w-[100%]">
           <div className="relative w-full h-[50vh]">
-            <img
+            <Image
+              layout="fill"
+              loading="lazy"
               className="w-full h-full object-cover"
               src={plantDetails.images[1]}
               alt=""
@@ -105,8 +108,10 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           !plantDetails?.careInstructions ? "hidden" : ""
                         }`}
                       >
-                        <div className="ImageSide1 h-[45%] rounded-2xl hidden sm:block">
-                          <img
+                        <div className="relative ImageSide1 h-[45%] rounded-2xl hidden sm:block">
+                          <Image
+                            layout="fill"
+                            loading="lazy"
                             className="w-full h-full max-h-[300px] object-cover rounded-2xl pb-5"
                             src={plantDetails.images[0]}
                             alt="image_product_left"
@@ -150,6 +155,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                           }  h-full `}
                         >
                           <img
+                            loading="lazy"
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -159,6 +165,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             alt="image_main_products"
                           />
                           <img
+                            loading="lazy"
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -168,6 +175,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
                             alt="image_main_products"
                           />
                           <img
+                            loading="lazy"
                             className={`${
                               !plantDetails?.careInstructions
                                 ? "w-full sm:h-[700px] object-cover sm:object-fill"
@@ -184,8 +192,9 @@ const ProductDetailsComponent = (dataPlant: any) => {
                         !plantDetails?.careInstructions ? "hidden" : ""
                       }`}
                     >
-                      <div className="h-[380px]">
-                        <img
+                      <div className="relative w-full h-[380px]">
+                        <Image
+                          layout="fill"
                           className="w-full h-full object-cover rounded-2xl"
                           src={plantDetails.images[1]}
                           alt=""
@@ -264,6 +273,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
               <div className="flex justify-center items-center mb-7">
                 <div className="w-[300px] flex justify-center items-center pl-1">
                   <img
+                    loading="lazy"
                     className="rounded-full w-[full]"
                     src="./assets/liner_flower.png"
                     alt=""
@@ -273,138 +283,6 @@ const ProductDetailsComponent = (dataPlant: any) => {
             </div>
           </div>
           {/* Line ngăng giữa */}
-
-          {/* Sản Phẩm 2 */}
-          {/* <div className="w-full h-full flex justify-center bg-[#D9E5E1] rounded-2xl mb-10 js-show-on-scroll">
-          <div className="w-full h-full p-5">
-            <div className="w-full h-full flex justify-center">
-              <div className="w-full h-full lg:flex gap-5">
-                <div className="lg:w-[70%]  h-full">
-                  <div className="w-full h-full rounded-2xl flex gap-5 mb-5">
-                    <div className="w-[30%]  rounded-2xl">
-                      <div className="h-[30%] rounded-2xl">
-                        <img
-                          className="w-full h-full object-cover rounded-2xl pb-5"
-                          src="/assets/caychuongvang_side_1.jpg"
-                          alt="image_product_left"
-                        />
-                      </div>
-                      <div className="h-[70%] rounded-2xl">
-                        <div className="relative w-full h-full overflow-hidden ">
-                          <video
-                            className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover h-full w-full rounded-2xl"
-                            controls
-                            autoPlay
-                            muted
-                            loop
-                          >
-                            <source
-                              src="/assets/caychuongvangvideo.mp4"
-                              type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-[70%] h-full bg-green-300 rounded-2xl">
-                      <img
-                        className="w-full h-full object-cover rounded-2xl"
-                        src="/assets/caychuongvang.jpg"
-                        alt="image_main_products"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full h-full bg-brown-500 rounded-2xl flex-col">
-                    <div className="h-[380px]">
-                      <img
-                        className="w-full h-full object-cover rounded-2xl"
-                        src="/assets/caychuongvang_side_2.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0">
-                  <div className=" p-5 h-[20%] w-full border-b border-solid">
-                    <p className="font-semibold text-2xl">CÂY CHUÔNG VÀNG</p>
-                    <div className="mt-3 font-semibold">
-                      <p>
-                        Tên gọi khác : Cây hoa chuông vàng, cây hoàng yến
-                        chuông vàng, cây huỳnh liên
-                      </p>
-                      <p>Tên khoa học : Tabebuia argentea</p>
-                      <p>Nguồn gốc : Ấn Độ</p>
-                    </div>
-                  </div>
-                  <div className="w-full h-[80%] p-5">
-                    <div className="w-full h-full">
-                      <p className="font-semibold">ĐẶC TRƯNG</p>
-                      <hr className="mb-3" />
-
-                      <div className="mt-5">
-                        <p>
-                          Cây chuông vàng là loài thân gỗ nhỏ. Thân cây màu
-                          xám trắng; thân có lằn sọc. Chiều cao phổ biến của
-                          cây trưởng thành thường từ 5-8m. Nếu được chăm sóc
-                          tốt, có những cây có thể phát triển đến 15m Tốc độ
-                          sinh trưởng của cây khá nhanh; lại ít sâu bệnh. Loài
-                          cây này ưa sáng; có bộ rễ khỏe mạnh nên hấp thu tốt
-                          chất dinh dưỡng và nước từ đất. Ở nước ta, thời gian
-                          lý tưởng nhất để trồng cây Chuông Vàng là vào mùa
-                          xuân – đối với các tỉnh phía Bắc và bắt đầu mùa mưa
-                          (tháng tư) – đối với các tỉnh phía Nam.
-                        </p>
-                      </div>
-                      <p className="font-semibold mt-5">DANH MỤC</p>
-                      <hr className="mb-3" />
-                      <div>
-                        <p>Cây xanh</p>
-                      </div>
-                      <p className="font-semibold mt-5">CÔNG DỤNG</p>
-                      <hr className="mb-3" />
-
-                      <div>
-                        <p>...</p>
-                      </div>
-                      <Button className="bg-[#014e37] mt-5 w-full ">
-                        Liên hệ
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full] bg-[#EDEDED] rounded-2xl mt-5 p-10">
-              <p className="text-2xl mb-3 font-semibold">
-                HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY CHUÔNG VÀNG
-              </p>
-              <p>
-                Cây thích hợp với môi trường có ánh sáng (nhưng không quá
-                nắng). Chính vì vậy, người ta thường trồng hoa chuông đan xen
-                với những giống cây xanh khác. Về chế độ nước, bạn nên tưới
-                nước cho cây 1-2 lần/1 ngày. Lưu ý lượng nước vừa đủ, không
-                quá nhiều. Khi tưới cây, bạn chọn khoảng cách thích hợp để
-                phun nước. Tốt nhất nên phun nước cách xa hoa và lá cây chừng
-                10cm. Nếu phun nước quá gần, hoa chuông vàng có thể bị nát.
-              </p>
-              <p>
-                Trồng cây chuông vàng hơi phức tạp một chút. Đặc điểm của nó
-                là không sống được trong chậu (như các giống cây cảnh khác).
-                Bạn buộc phải trồng nó trên đất. Đấy là lý do tại sao: cây
-                chuông vàng có nhiều ở công viên, vỉa hè hay sân vườn biệt
-                thự. Có 2 cách nhân giống cây chuông vàng: bằng hạt hoặc giâm
-                cành. Khi cây còn nhỏ, phải che chắn kỹ càng. Trước khi trồng
-                cây xuống đất, phải đào hố trước 1 tuần. Công đoạn này không
-                mấy dễ dàng. Đất trồng phải có độ tơi xốp nhất định. Để cây
-                chuông vàng sinh trưởng tốt, người ta thường trộn các loại tro
-                trấu, đất mùn, phân xanh,… vào đất trồng.
-              </p>
-            </div>
-          </div>
-        </div> */}
         </div>
       </div>
     </div>

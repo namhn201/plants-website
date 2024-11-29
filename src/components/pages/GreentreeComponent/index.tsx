@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { div } from "framer-motion/client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -24,13 +25,14 @@ const GreenTreeComponent = (dataplants: any) => {
       <div className="w-full flex justify-center ">
         <div className="md:w-[100%]">
           <div className="relative w-full h-[60vh]">
-            <img
+            <Image
+              layout="fill"
               className="w-full h-full object-cover"
               src="/assets/greentree_bg_2.jpg"
               alt=""
             />
             {/* <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div> */}
-            <div className="absolute inset-0 bg-black opacity-20"></div>
+            <div className="absolute inset-0 bg-bla ck opacity-20"></div>
 
             <div className="absolute text-white text-4xl md:text-5xl top-0 right-0 w-full h-full">
               <div className="w-full flex items-center h-full ">
@@ -76,9 +78,12 @@ const GreenTreeComponent = (dataplants: any) => {
               (plant: any, index: any) => (
                 <div
                   key={index}
-                  className="relative product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8"
+                  className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8"
                 >
-                  <img
+                  <Image
+                      layout="fill"
+
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-2xl"
                     src={plant.images[2] ? plant.images[2] : plant.images[0]}
                     alt="Sản phẩm 1"

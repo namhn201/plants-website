@@ -12,6 +12,7 @@ import GreenTreeComponent from "../GreentreeComponent";
 import router from "next/router";
 import { routerName } from "@/constants/router.constant";
 import { useState } from "react";
+import Image from "next/image";
 
 const ProductComponent = (dataPlants: any) => {
   console.log(
@@ -73,11 +74,26 @@ const ProductComponent = (dataPlants: any) => {
       <div className="w-full flex justify-center mb-14">
         <div className="md:w-[100%]">
           <div className="relative w-full h-[60vh]">
-            <img
-              className="w-full h-full object-cover"
+            {/* <div className="w-full h-full"> */}
+            <Image
+              sizes="w-full h-full"
+              // loading="lazy"
+              className="object-cover"
               src="/assets/danhmucsanpham_bg_1.jpg"
-              alt=""
+              alt="Ảnh nền"
+              layout="fill"
             />
+            {/* </div> */}
+            {/* <div className="relative w-full h-64">
+              <Image
+                src="/assets/danhmucsanpham_bg_1.jpg"
+                alt="Ảnh nền"
+                layout="fill"
+                objectFit="cover"
+                className="object-cover"
+              />
+            </div> */}
+
             <div className="absolute inset-0 bg-black opacity-20"></div>
 
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
@@ -114,6 +130,7 @@ const ProductComponent = (dataPlants: any) => {
           <div className="flex justify-center items-center mb-7">
             <div className="w-[300px] flex justify-center items-center pl-1">
               <img
+                loading="lazy"
                 className="rounded-full w-[full]"
                 src="./assets/liner_flower.png"
                 alt=""
@@ -130,7 +147,7 @@ const ProductComponent = (dataPlants: any) => {
             className=" active:border-[#014e37] hover:text-[#014e37]"
           >
             <div className="flex justify-center">
-              <img src="/assets/icon-cayxanh.svg" alt="" />
+              <img loading="lazy" src="/assets/icon-cayxanh.svg" alt="" />
             </div>
             <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg  active:border-[#014e37] hover:text-[#014e37]">
               Cây Xanh
@@ -142,7 +159,7 @@ const ProductComponent = (dataPlants: any) => {
             className=" active:border-[#014e37] hover:text-[#014e37]"
           >
             <div className="flex justify-center">
-              <img src="/assets/icon-caycanh.svg" alt="" />
+              <img loading="lazy" src="/assets/icon-caycanh.svg" alt="" />
             </div>
             <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg  hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]">
               Cây Cảnh
@@ -155,7 +172,7 @@ const ProductComponent = (dataPlants: any) => {
             className=" hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]"
           >
             <div className="flex justify-center">
-              <img src="/assets/icon-thuoc.svg" alt="" />
+              <img loading="lazy" src="/assets/icon-thuoc.svg" alt="" />
             </div>
             <div className="text-center pt-3 text-sm sm:text-base w-20 sm:w-28 h-11 rounded-lg ">
               Thuốc trừ sâu
@@ -169,6 +186,7 @@ const ProductComponent = (dataPlants: any) => {
           <div className="flex justify-center items-center mb-7">
             <div className="w-[300px] flex justify-center items-center">
               <img
+                loading="lazy"
                 className="rounded-full w-[full] rotate-180"
                 src="./assets/liner_flower.png"
                 alt=""
@@ -231,12 +249,9 @@ const ProductComponent = (dataPlants: any) => {
                 </div>
 
                 {/* Card Header */}
-                <CardHeader
-                  shadow={false}
-                  floated={false}
-                  className="h-96 m-0"
-                >
-                  <img
+                <CardHeader shadow={false} floated={false} className="h-96 m-0">
+                  <Image
+                    layout="fill"
                     src={plantTypical.images[2]}
                     alt="card-image"
                     className="h-full w-full object-cover shadow-2xl shadow-blue-gray-800 relative z-0 rounded-lg transition-all duration-300 hover:scale-110"

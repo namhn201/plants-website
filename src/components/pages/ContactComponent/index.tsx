@@ -11,6 +11,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import useWindowSize from "@/hooks/common/useWindowSize";
+import Image from "next/image";
 
 const ContactComponent = () => {
   const { width } = useWindowSize();
@@ -33,7 +34,8 @@ const ContactComponent = () => {
             {/* Nội dung  */}
 
             <div className="relative text-white text-4xl md:text-6xl w-full h-[50vh] bg-[#3E7160]">
-              <img
+              <Image
+                layout="fill"
                 className={
                   isLargescreen ? "hidden" : "w-full h-full object-cover"
                 }
@@ -83,7 +85,9 @@ const ContactComponent = () => {
                   : "absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 bg-black md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
               }
             >
-              <img
+              <Image
+                layout="fill"
+                loading="lazy"
                 src="/assets/contact_bg_2.jpg "
                 className="rounded-t-full shadow-2xl object-cover h-full w-full"
                 alt=""
@@ -184,7 +188,9 @@ const ContactComponent = () => {
       <div className="w-full flex justify-center mt-36 mb-20">
         <div className="w-[93%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
-            <p className="text-2xl font-semibold mb-3">Gửi Thông Điệp Của Bạn</p>
+            <p className="text-2xl font-semibold mb-3">
+              Gửi Thông Điệp Của Bạn
+            </p>
             <p className="md:w-2/3 mb-5">
               Nếu bạn có bất kỳ câu hỏi, gợi ý hoặc muốn liên hệ với chúng tôi,
               hãy điền thông tin và nội dung vào mẫu dưới đây. Chúng tôi sẽ phản
