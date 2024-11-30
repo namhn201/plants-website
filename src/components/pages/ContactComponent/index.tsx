@@ -82,7 +82,7 @@ const ContactComponent = () => {
               className={
                 !isLargescreen
                   ? "hidden"
-                  : "absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 bg-black md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
+                  : "absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
               }
             >
               <Image
