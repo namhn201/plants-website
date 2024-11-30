@@ -85,9 +85,10 @@ const ContactComponent = () => {
                   : "absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
               }
             >
-              <Image
-                layout="fill"
-                loading="eager"
+              <img
+                // layout="fill"
+                // loading="eager"
+                loading="lazy"
                 src="/assets/contact_bg_2.jpg "
                 className="rounded-t-full shadow-2xl object-cover h-full w-full"
                 alt=""
