@@ -187,7 +187,7 @@ const ContactComponent = () => {
         </div>
       </div>
       <div className="w-full flex justify-center mt-36 mb-20">
-        <div className="w-[93%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
+        <div className="w-[90%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
             <p className="text-2xl font-semibold mb-3">
               Gửi Thông Điệp Của Bạn
