@@ -503,8 +503,8 @@ const DashboardComponent = (decorativeplant: any) => {
           </div>
         </div>
 
-        <div className="w-full h-[400px] mb-20">
-          <div className="w-full h-full max-w-[1600px]">
+        <div className="w-full h-[400px] mb-20 flex justify-center">
+          <div className="w-full h-full">
             <div className="w-full h-full relative">
               <img
                 loading="lazy"
@@ -538,6 +538,7 @@ const DashboardComponent = (decorativeplant: any) => {
                   </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
