@@ -54,7 +54,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
 
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[86%]">
+                <div className="w-[86%] max-w-[1600px]">
                   <nav className="flex justify-center mb-5 w-full">
                     <ul className="flex gap-1 w-full text-xs sm:text-base">
                       <li>

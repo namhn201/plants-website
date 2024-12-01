@@ -99,7 +99,7 @@ const ProductComponent = (dataPlants: any) => {
 
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[86%]">
+                <div className="w-[86%] max-w-[1600px]">
                   <nav className="flex justify-center mb-5">
                     <ul className="flex gap-2 w-full text-xs sm:text-base mb-5">
                       <li>
@@ -202,7 +202,7 @@ const ProductComponent = (dataPlants: any) => {
       {/* Line ngăng giữa */}
       {/* <div className="flex justify-center"> */}
       <div className="flex justify-center">
-        <div className="flex w-full max-w-[90vw] h-full justify-center">
+        <div className="flex w-full h-full justify-center max-w-[1400px]">
           <Slider arrows={false} {...settings} className="w-full">
             {dataPlants.props.filteredProducts.map((plantTypical: any) => (
               <Card className="relative w-64 h-full border-solid border border-[#E5E5E5] rounded-xl overflow-hidden group cursor-pointer ">

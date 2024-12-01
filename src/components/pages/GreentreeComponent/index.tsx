@@ -39,7 +39,7 @@ const GreenTreeComponent = (dataplants: any) => {
               <div className="w-full flex items-center h-full ">
                 {/* <p>CÂY XANH CÔNG TRÌNH</p> */}
                 <div className="w-full flex justify-center">
-                  <div className="w-[86%]">
+                  <div className="w-[86%] max-w-[1600px]">
                     <nav className="flex justify-center mb-5">
                       <ul className="flex gap-2 w-full text-xs sm:text-base mb-5">
                         <li>

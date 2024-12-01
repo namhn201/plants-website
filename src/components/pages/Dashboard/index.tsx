@@ -117,11 +117,11 @@ const DashboardComponent = (decorativeplant: any) => {
   }, [showHeader]);
   return (
     <div className="h-full flex justify-center items-center">
-      <div>
+      <div className="w-full">
         {/* Slider */}
         <div className="image_slider h-[100vh]">
           <Carousel
-            // autoplay={true}
+            autoplay={true}
             loop={true}
             autoplayDelay={6000}
             className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
@@ -304,7 +304,7 @@ const DashboardComponent = (decorativeplant: any) => {
         </div>
 
         <div className="w-full h-full flex justify-center mb-5">
-          <div className="w-[93%] md:flex justify-evenly h-full gap-4 js-show-on-scroll">
+          <div className="w-[93%] md:flex justify-evenly h-full gap-4 js-show-on-scroll max-w-[1600px]">
             <div className=" md:w-[50%] flex md:h-full py-6">
               <div className="flex flex-col justify-center w-[100%]">
                 <div className="flex justify-center md:justify-start text-4xl text-[#014e37] font-semibold mb-5 md:mb-10">
@@ -360,7 +360,7 @@ const DashboardComponent = (decorativeplant: any) => {
                   <div className="w-full h-full">
                     <img
                       loading="lazy"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover rounded-xl"
                       src="/assets/plant_bg_5.jpg"
                       alt=""
                     />
@@ -372,7 +372,7 @@ const DashboardComponent = (decorativeplant: any) => {
         </div>
 
         <div className=" flex justify-center mb-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-[93%] gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-[93%] gap-4 max-w-[1600px]">
             {plants.map((plant: any) => (
               <div className="mb-5">
                 <Card className="h-full border-solid border-0 border border-[#E5E5E5] rounded-lg w-full js-show-on-scroll">
@@ -429,12 +429,12 @@ const DashboardComponent = (decorativeplant: any) => {
         {/* Line ngăng giữa */}
 
         <div className="w-full flex justify-center mb-10">
-          <div className="w-[93%] lg:flex justify-center lg:justify-evenly gap-10">
+          <div className="w-[93%] lg:flex justify-center lg:justify-evenly gap-10 max-w-[1600px]">
             <div className=" lg:w-[50%] flex justify-center items-center mb-5 lg:mb-0">
               <div className="flex justify-center md:min-h-[500px] max-w-[800px] h-full ">
                 <img
                   loading="lazy"
-                  className=" w-full"
+                  className=" w-full rounded-xl"
                   src="./assets/plant_bg_2.jpg"
                   alt=""
                 />
@@ -504,7 +504,7 @@ const DashboardComponent = (decorativeplant: any) => {
         </div>
 
         <div className="w-full h-[400px] mb-20">
-          <div className="w-full h-full ">
+          <div className="w-full h-full max-w-[1600px]">
             <div className="w-full h-full relative">
               <img
                 loading="lazy"

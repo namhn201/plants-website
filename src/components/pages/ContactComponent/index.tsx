@@ -32,8 +32,7 @@ const ContactComponent = () => {
         <div className="w-[100%]">
           <div className="relative w-full h-full">
             {/* Nội dung  */}
-
-            <div className="relative text-white text-4xl md:text-6xl w-full h-[50vh] bg-[#3E7160]">
+            <div className="relative text-white text-4xl md:text-6xl w-full h-[50vh] bg-[#3E7160] flex justify-center">
               <Image
                 layout="fill"
                 className={
@@ -50,7 +49,7 @@ const ContactComponent = () => {
                     : "absolute inset-0 bg-black opacity-20"
                 }
               ></div>
-              <div className="absolute top-0 left-0 w-full flex justify-center items-center h-full ">
+              <div className="absolute top-0  w-full flex justify-center items-center h-full max-w-[1600px]">
                 <div className=" w-[86%]">
                   <nav className="flex justify-center mb-5">
                     <ul className="flex gap-2 w-full text-xs sm:text-base">
@@ -76,23 +75,23 @@ const ContactComponent = () => {
                     gian sống xanh mát và đầy năng lượng!
                   </p>
                 </div>
+                <div
+                  className={
+                    !isLargescreen
+                      ? "hidden"
+                      : "WINDOWIMAGE absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
+                  }
+                >
+                  <img
+                    // layout="fill"
+                    loading="eager"
+                    // loading="lazy"
+                    src="/assets/contact_bg_2.jpg "
+                    className="rounded-t-full shadow-2xl object-cover h-full w-full"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
-            <div
-              className={
-                !isLargescreen
-                  ? "hidden"
-                  : "absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
-              }
-            >
-              <img
-                // layout="fill"
-                loading="eager"
-                // loading="lazy"
-                src="/assets/contact_bg_2.jpg "
-                className="rounded-t-full shadow-2xl object-cover h-full w-full"
-                alt=""
-              />
             </div>
           </div>
         </div>
@@ -100,14 +99,14 @@ const ContactComponent = () => {
       <div className="info flex justify-center w-full mt-20">
         <div className="w-[93%] max-w-[1600px] pl-7 lg:pl-20">
           <div className="mb-6">
-            <p className="text-3xl font-semibold">Contact infomation</p>
+            <p className="text-3xl font-semibold">Thông tin liên hệ</p>
             <p className="w-[40%]">
               Đừng ngần ngại liên hệ để nhận tư vấn và hỗ trợ từ đội ngũ chuyên
               gia của chúng tôi.
             </p>
           </div>
           {/* 3 icon  */}
-          <div className="lg:flex w-1/2  xl:gap-16">
+          <div className="lg:flex w-1/2  xl:gap-16 mb-10">
             <div>
               <div className="lg:flex justify-center mb-3">
                 <div className="w-11 h-11 bg-[#527F71] text-white rounded-t-full flex justify-center items-center">
@@ -141,8 +140,32 @@ const ContactComponent = () => {
               <p>100, quan 1, TP.HCM</p>
             </div>
           </div>
+          <div className="lg:flex w-1/3 justify-evenly ml-5 xl:gap-16">
+            <div>
+              <div className="lg:flex justify-center mb-3">
+                <div className="w-11 h-11 bg-[#527F71] text-white rounded-t-full flex justify-center items-center">
+                  <div>
+                    <MapPinIcon className="w-8 h-8" />
+                  </div>
+                </div>
+              </div>
+
+              <p>102, quan 1, TP.HCM</p>
+            </div>
+            <div>
+              <div className="lg:flex justify-center mb-3">
+                <div className="w-11 h-11 bg-[#527F71] text-white rounded-t-full flex justify-center items-center">
+                  <div>
+                    <MapPinIcon className="w-8 h-8" />
+                  </div>
+                </div>
+              </div>
+
+              <p>101, quan 1, TP.HCM</p>
+            </div>
+          </div>
           {/* SOCIAL MEDIA */}
-          <div className="mt-5 mb-3">
+          <div className="mt-9 mb-3">
             <p className="text-2xl font-semibold">Social Media</p>
           </div>
           <div className="flex w-1/2 gap-5">
@@ -186,7 +209,7 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center mt-36 mb-20">
+      <div className="w-full flex justify-center mt-48 mb-20">
         <div className="w-[90%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
             <p className="text-2xl font-semibold mb-3">

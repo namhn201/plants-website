@@ -31,13 +31,12 @@ const PlantProtectComponent = (dataplants: any) => {
               className="w-full h-full object-cover"
               src="/assets/plantprotect_bg_1.jpg"
               alt=""
-              placeholder="blur"
             />
             <div className="absolute inset-0 bg-black opacity-20"></div>
 
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
               <div className="w-full flex justify-center items-center h-full ">
-                <div className="w-[86%]">
+                <div className="w-[86%] max-w-[1600px]">
                   <nav className="flex justify-center mb-5">
                     <ul className="flex gap-2 w-full text-xs sm:text-base">
                       <li>
