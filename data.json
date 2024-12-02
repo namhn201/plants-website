@@ -363,6 +363,154 @@
           }
         ]
       }
+    ],
+    "greenGardenHouse": {
+      "boardOfDirectors": [
+        {
+          "role": "Chủ tịch HĐQT",
+          "name": "Nguyễn Văn A",
+          "birthYear": 1970,
+          "position": "Chủ tịch HĐQT",
+          "contact": "email@greengarden.com",
+          "responsibilities": "Đưa ra quyết định chiến lược, định hướng phát triển lâu dài cho tập đoàn.",
+          "image": "/assets/chutichhdqt.jpg"
+
+        },
+        {
+          "role": "Phó Chủ tịch HĐQT",
+          "name": "Trần Thị B",
+          "birthYear": 1975,
+          "position": "Phó Chủ tịch HĐQT",
+          "contact": "phochu@greengarden.com",
+          "responsibilities": "Điều phối các hoạt động chiến lược, giúp giám sát và hỗ trợ quyết định chiến lược.",
+          "image": "/assets/phochutichhdqt.jpg",
+          "gender": "Female"
+        }
+      ],
+      "executiveTeam": [
+        {
+          "role": "Tổng Giám Đốc",
+          "name": "Lê Quang C",
+          "birthYear": 1980,
+          "position": "Tổng Giám Đốc Tập đoàn",
+          "contact": "ceo@greengarden.com",
+          "responsibilities": "Điều hành và quản lý toàn bộ hoạt động của tập đoàn.",
+          "image": "/assets/tonggiamdoctapdoan.jpg"
+        },
+        {
+          "role": "Phó Tổng Giám Đốc Kinh Doanh",
+          "name": "Phan Quốc D",
+          "birthYear": 1982,
+          "position": "Phó Tổng Giám Đốc Kinh Doanh",
+          "contact": "kinhdoanh@greengarden.com",
+          "responsibilities": "Chịu trách nhiệm về chiến lược kinh doanh, quản lý đội ngũ bán hàng và phát triển thị trường.",
+          "image": "/assets/photonggiamdockinhdoanh.jpg"
+  
+        },
+        {
+          "role": "Phó Tổng Giám Đốc Tài Chính",
+          "name": "Nguyễn Thị E",
+          "birthYear": 1985,
+          "position": "Phó Tổng Giám Đốc Tài Chính",
+          "contact": "taichinh@greengarden.com",
+          "responsibilities": "Quản lý tài chính của tập đoàn, giám sát ngân sách và báo cáo tài chính.",
+          "image": "/assets/photonggiamdoctaichinh.jpg"
+  
+        }
+      ],
+      "auditCommittee": [
+        {
+          "role": "Trưởng Ban Kiểm Soát",
+          "name": "Đặng Thị I",
+          "birthYear": 1972,
+          "position": "Trưởng Ban Kiểm Soát",
+          "contact": "kiemsoat@greengarden.com",
+          "responsibilities": "Giám sát tài chính và các hoạt động quản lý của tập đoàn, đảm bảo tính minh bạch.",
+          "image": "/assets/truongbankiemsoat.jpg"
+        },
+        {
+          "role": "Phó Trưởng Ban Kiểm Soát",
+          "name": "Phạm Thị K",
+          "birthYear": 1978,
+          "position": "Phó Trưởng Ban Kiểm Soát",
+          "contact": "phokiemsoat@greengarden.com",
+          "responsibilities": "Hỗ trợ Trưởng Ban trong việc giám sát và thực hiện kiểm tra tài chính.",
+          "image": "/assets/photruongbankiemsoat.jpg"
+        },
+        {
+          "role": "Thành viên Ban Kiểm Soát",
+          "name": "Nguyễn Văn L",
+          "birthYear": 1980,
+          "position": "Uỷ viên Ban Kiểm Soát",
+          "contact": "thanhvien@greengarden.com",
+          "responsibilities": "Thực hiện kiểm tra định kỳ và giám sát các hoạt động tài chính, đánh giá rủi ro.",
+          "image": "/assets/uyvienbankiemsoat.jpg"
+  
+        }
+      ]
+    },
+    "subsidiaries": [
+      { 
+        "role": "Tổng Giám Đốc", 
+        "name": "Lê Thị N", 
+        "birthYear": 1984, 
+        "position": "Tổng Giám Đốc", 
+        "contact": "tgdcaycanh@greengarden.com", 
+        "responsibilities": "Điều hành công ty con, quản lý các bộ phận sản xuất và phân phối.", 
+        "image": "/assets/tongigamdoccayxanh.jpg",
+        "companyName": "Cung Cấp Cây Xanh"
+      },
+      { 
+        "role": "Phó Tổng Giám Đốc", 
+        "name": "Nguyễn Quốc O", 
+        "birthYear": 1990, 
+        "position": "Phó Tổng Giám Đốc", 
+        "contact": "photgd@greengarden.com", 
+        "responsibilities": "Quản lý mảng sản xuất và tiếp thị sản phẩm cây cảnh.", 
+        "image": "/assets/photonggiamdoccayxanh.jpg",
+        "companyName": "Cung Cấp Cây Xanh"
+      },
+      { 
+        "role": "Tổng Giám Đốc", 
+        "name": "Phan Quang R", 
+        "birthYear": 1980, 
+        "position": "Tổng Giám Đốc", 
+        "contact": "tgthuoc@greengarden.com", 
+        "responsibilities": "Điều hành công ty con, chịu trách nhiệm về các hoạt động nghiên cứu và phát triển sản phẩm.", 
+        "image": "/assets/tonggiamdocthuoc.jpg",
+        "companyName": "Cung Cấp Thuốc"
+      },
+      { 
+        "role": "Phó Tổng Giám Đốc", 
+        "name": "Lê Ngọc S", 
+        "birthYear": 1986, 
+        "position": "Phó Tổng Giám Đốc", 
+        "contact": "photgdthuoc@greengarden.com", 
+        "responsibilities": "Quản lý các mảng nghiên cứu phát triển sản phẩm và thị trường thuốc.", 
+        "image": "/assets/photonggiamdocthuoc.jpg",
+        "companyName": "Cung Cấp Thuốc"
+      },
+      { 
+        "role": "Tổng Giám Đốc", 
+        "name": "Nguyễn Văn U", 
+        "birthYear": 1985, 
+        "position": "Tổng Giám Đốc", 
+        "contact": "tgdcanhkieng@greengarden.com", 
+        "responsibilities": "Điều hành công ty con, quản lý sản xuất và marketing sản phẩm cây cảnh kiểng.", 
+        "image": "/assets/tonggiamdoccaykieng.jpg",
+        "companyName": "Cung Cấp Cây Cảnh Kiểng"
+      },
+      { 
+        "role": "Phó Tổng Giám Đốc", 
+        "name": "Trần Thị V", 
+        "birthYear": 1990, 
+        "position": "Phó Tổng Giám Đốc", 
+        "contact": "photgdkieng@greengarden.com", 
+        "responsibilities": "Quản lý các hoạt động sản xuất và phân phối sản phẩm cây cảnh kiểng.", 
+        "image": "/assets/photonggiamdoccaykieng.jpg",
+        "companyName": "Cung Cấp Cây Cảnh Kiểng",
+        "gender": "Female"
+      }
     ]
   }
   
