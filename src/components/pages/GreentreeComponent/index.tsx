@@ -86,12 +86,12 @@ const GreenTreeComponent = (dataplants: any) => {
             {dataplants.props.data.plants[0].items.map(
               (plant: any, index: any) => (
                 <div
-                  data-aos="fade-up"
-                  data-aos-duration="700"
                   key={index}
                   className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8 shadow-[0_8px_24px_rgba(0,0,0,0.8)] rounded-2xl transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.9)]"
                 >
                   <Image
+                    data-aos="fade-up"
+                    data-aos-duration="700"
                     layout="fill"
                     loading="lazy"
                     className="w-full h-full object-cover rounded-2xl"
