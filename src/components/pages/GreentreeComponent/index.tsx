@@ -10,7 +10,7 @@ import {
 import { div } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,13 +20,16 @@ const GreenTreeComponent = (dataplants: any) => {
     "propssssssssss from GreenTreeComponent",
     dataplants.props.data.plants
   );
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      // easing: "ease-in-out",
-    });
-  }, []);
-  // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
-  // console.log("làm tròn", half);
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   return (
     <div className=" w-full ">
       <div className="w-full flex justify-center ">
@@ -39,6 +42,10 @@ const GreenTreeComponent = (dataplants: any) => {
               className="w-full h-full object-cover"
               src="/assets/greentree_bg_2.jpg"
               alt=""
+              onLoadingComplete={() => {
+                console.log('Ảnh đã tải xong');
+                setImageLoaded(true);
+              }}
             />
             {/* <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div> */}
             <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -86,12 +93,12 @@ const GreenTreeComponent = (dataplants: any) => {
             {dataplants.props.data.plants[0].items.map(
               (plant: any, index: any) => (
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="700"
                   key={index}
                   className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8 shadow-[0_8px_24px_rgba(0,0,0,0.8)] rounded-2xl transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.9)]"
                 >
                   <Image
-                    data-aos="fade-up"
-                    data-aos-duration="700"
                     layout="fill"
                     loading="lazy"
                     className="w-full h-full object-cover rounded-2xl"
