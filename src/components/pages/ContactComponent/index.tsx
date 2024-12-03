@@ -12,10 +12,14 @@ import {
 } from "@heroicons/react/24/outline";
 import useWindowSize from "@/hooks/common/useWindowSize";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactComponent = () => {
   const { width } = useWindowSize();
   const [isLargescreen, setLargescreen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     if (width > 768) {
       setLargescreen(true);
@@ -25,6 +29,15 @@ const ContactComponent = () => {
     }
     console.log("IS SMALL SCREEN", isLargescreen);
   }, [width]);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
 
   return (
     <div className="h-full">
@@ -76,19 +89,23 @@ const ContactComponent = () => {
                   </p>
                 </div>
                 <div
+                  data-aos="flip-right"
                   className={
                     !isLargescreen
                       ? "hidden"
                       : "WINDOWIMAGE absolute top-36 lg:top-28 right-4 lg:right-10 xl:right-32 md:h-[600px] md:w-[315px] lg:h-[750px] lg:w-[415px] rounded-t-full"
                   }
                 >
-                  <img
-                    // layout="fill"
+                  <Image
+                    layout="fill"
                     loading="eager"
-                    // loading="lazy"
-                    src="/assets/contact_bg_2.jpg "
+                    src="/assets/contact_bg_2.jpg"
                     className="rounded-t-full shadow-2xl object-cover h-full w-full"
                     alt=""
+                    onLoadingComplete={() => {
+                      console.log("Ảnh đã tải xong");
+                      setImageLoaded(true);
+                    }}
                   />
                 </div>
               </div>
@@ -96,7 +113,10 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
-      <div className="info flex justify-center w-full mt-20">
+      <div
+        data-aos="fade-right"
+        className="info flex justify-center w-full mt-20"
+      >
         <div className="w-[93%] max-w-[1600px] pl-7 lg:pl-20">
           <div className="mb-6">
             <p className="text-3xl font-semibold">Thông tin liên hệ</p>
@@ -209,7 +229,7 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center mt-48 mb-20">
+      <div data-aos="fade-up" className="w-full flex justify-center mt-32 mb-20">
         <div className="w-[90%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
             <p className="text-2xl font-semibold mb-3">

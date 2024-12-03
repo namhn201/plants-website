@@ -1,11 +1,13 @@
 import { routerName } from "@/constants/router.constant";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BODirectorsComponent from "@/components/pages/BODirectorsComponent";
 import BOSupervisorsComponent from "@/components/pages/BOSupervisorsComponent";
 import ECComponent from "@/components/pages/ECComponent";
 import SubsidiariesComponent from "@/components/pages/SubsidiariesComponent";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TeamComponent = (dataplants: any) => {
   console.log(
@@ -23,17 +25,32 @@ const TeamComponent = (dataplants: any) => {
     console.log("content", content);
     setActiveContent(content);
   };
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   return (
     <div className="">
       <div className="w-full flex justify-center ">
         <div className="w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
+              data-aos="zoom-out"
               loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
               src="/assets/greentree_bg_2.jpg"
               alt=""
+              onLoadingComplete={() => {
+                console.log("Ảnh đã tải xong");
+                setImageLoaded(true);
+              }}
             />
             {/* <div className="absolute inset-0 bg-gradient-to-t from-black opacity-80 via-black/5 rounded-2xl"></div> */}
             <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -73,7 +90,7 @@ const TeamComponent = (dataplants: any) => {
         <div className="md:w-[90%] md:flex md:justify-evenly gap-10 p-5 md:p-0">
           <div className="w-1/2 md:flex md:justify-end gap-10">
             <div
-              className="cursor-pointer whitespace-nowrap" 
+              className="cursor-pointer whitespace-nowrap"
               onClick={() => handleMenuClick("BODComponent")}
             >
               HỘI ĐỒNG QUẢN TRỊ

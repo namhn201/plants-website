@@ -5,7 +5,9 @@ import { AnyNaptrRecord } from "dns";
 import { div } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProductDetailsComponent = (dataPlant: any) => {
   if (!dataPlant) {
@@ -38,17 +40,32 @@ const ProductDetailsComponent = (dataPlant: any) => {
       });
     }
   }, []);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   return (
     <div className="">
       <div className="w-full flex justify-center ">
         <div className="w-[100%]">
           <div className="relative w-full h-[50vh]">
             <Image
+              data-aos="zoom-out"
               loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
               src={plantDetails.images[1]}
               alt=""
+              onLoadingComplete={() => {
+                console.log("Ảnh đã tải xong");
+                setImageLoaded(true);
+              }}
             />
             <div className="absolute inset-0 bg-black opacity-20"></div>
 
@@ -84,9 +101,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
           </div>
         </div>
       </div>
-      {/* <div className="w-full text-center text-3xl sm:text-4xl md:text-4xl font-semibold mb-3 text-">
-        <p>Thông tin chi tiết</p>
-      </div> */}
+
       <div className="w-full h-full flex justify-center mt-10">
         <div className="w-[93%] h-full flex-col max-w-[1400px]">
           {/* Sản phẩm 1 */}
@@ -210,37 +225,49 @@ const ProductDetailsComponent = (dataPlant: any) => {
                         : "lg:w-[30%] "
                     } lg:w-[30%]  rounded-3xl  p-3 flex flex-col bg-[#EDEDED] mt-5 lg:mt-0`}
                   >
-                    <div className=" p-5 h-[20%] w-full border-b border-solid">
+                    <div
+                      data-aos="fade-up"
+                      className=" p-5 h-[20%] w-full border-b border-solid"
+                    >
                       <p className="font-semibold text-2xl">
                         {plantDetails.name}
                       </p>
-                      <div className="mt-3 font-semibold">
+                      <div data-aos="fade-up" className="mt-3 font-semibold">
                         <p>Tên gọi khác: {plantDetails.otherNames}</p>
                         <p>Tên khoa học : {plantDetails.scientificName}</p>
                         <p>Nguồn gốc : {plantDetails.origin}</p>
                       </div>
                     </div>
                     <div className="w-full h-[80%] p-5">
-                      <div className="w-full h-full">
-                        <p className="font-semibold">ĐẶC TRƯNG</p>
+                      <div className="w-full h-full ">
+                        <p data-aos="fade-up" className="font-semibold">
+                          ĐẶC TRƯNG
+                        </p>
                         <hr className="mb-3" />
 
-                        <div className="mt-5">
+                        <div data-aos="fade-up" className="mt-5">
                           <p>{plantDetails.characteristics}</p>
                         </div>
-                        <p className="font-semibold mt-5">DANH MỤC</p>
+                        <p data-aos="fade-up" className="font-semibold mt-5">
+                          DANH MỤC
+                        </p>
                         <hr className="mb-3" />
-                        <div>
+                        <div data-aos="fade-up">
                           <p>{plantDetails.categoryType}</p>
                         </div>
-                        <p className="font-semibold mt-5">CÔNG DỤNG</p>
+                        <p data-aos="fade-up" className="font-semibold mt-5">
+                          CÔNG DỤNG
+                        </p>
                         <hr className="mb-3" />
 
-                        <div>
+                        <div data-aos="fade-up">
                           <p>{plantDetails.usage}</p>
                         </div>
                         <Link href={routerName.Contact}>
-                          <Button className="bg-[#4E8D78] hover:bg-[#014e37] mt-5 w-full ">
+                          <Button
+                            data-aos="fade-up"
+                            className="bg-[#4E8D78] hover:bg-[#014e37] mt-5 w-full "
+                          >
                             Liên hệ
                           </Button>
                         </Link>
@@ -255,11 +282,15 @@ const ProductDetailsComponent = (dataPlant: any) => {
                   !plantDetails?.careInstructions ? "hidden" : ""
                 }`}
               >
-                <p className="text-2xl mb-3 font-semibold ">
+                <p data-aos="fade-up" className="text-2xl mb-3 font-semibold ">
                   HƯỚNG DẪN CÁCH TRỒNG VÀ CHĂM SÓC CÂY BẰNG LĂNG
                 </p>
-                <p className="pl-1">- {plantDetails.careInstructions?.step1}</p>
-                <p className="pl-1">- {plantDetails.careInstructions?.step2}</p>
+                <p data-aos="fade-up" className="pl-1">
+                  - {plantDetails.careInstructions?.step1}
+                </p>
+                <p data-aos="fade-up" className="pl-1">
+                  - {plantDetails.careInstructions?.step2}
+                </p>
               </div>
             </div>
           </div>

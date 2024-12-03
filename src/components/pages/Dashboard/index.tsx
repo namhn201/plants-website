@@ -15,51 +15,8 @@ import { lazy, useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import FooterComponent from "@/components/layout/Footer";
 import Image from "next/image";
-// import image from "";
-// const settings = {
-//   accessibility: true,
-//   dots: true,
-//   infinite: false,
-//   speed: 500,
-//   slidesToShow: 5,
-//   slidesToScroll: 2,
-//   rows: 2,
-//   responsive: [
-//     {
-//       breakpoint: 1424,
-//       settings: {
-//         slidesToShow: 3, // Tùy chỉnh số lượng card hiển thị khi chiều rộng màn hình <= 1424px
-//         slidesToScroll: 2, // Số lượng card cuộn mỗi lần
-//         infinite: true,
-//         dots: true,
-//       },
-//     },
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 2,
-//         infinite: true,
-//         dots: true,
-//       },
-//     },
-//     {
-//       breakpoint: 700,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 1,
-//         initialSlide: 2,
-//       },
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//       },
-//     },
-//   ],
-// };
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DashboardComponent = (decorativeplant: any) => {
   console.log("Listening from DecorativeplantComponent");
@@ -70,36 +27,34 @@ const DashboardComponent = (decorativeplant: any) => {
   const [showHeader, setShowHeader] = useState(false);
   const plants = decorativeplant.props.decorativeplantCatagory;
   console.log("plants", plants);
-  // const titleImage_1 = "Text Reveal Animation 💫";
-  // const titleImage_2 = "Text Reveal Animation_2 💫";
 
-  useEffect(() => {
-    // Kiểm tra xem có phải đang chạy trên client-side không
-    if (typeof window !== "undefined") {
-      const callback = function (entries: any) {
-        entries.forEach((entry: any) => {
-          // console.log(entry);
 
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fadeIn");
-          } else {
-            entry.target.classList.remove("animate-fadeIn");
-          }
-        });
-      };
+  // useEffect(() => {
+  //   // Kiểm tra xem có phải đang chạy trên client-side không
+  //   if (typeof window !== "undefined") {
+  //     const callback = function (entries: any) {
+  //       entries.forEach((entry: any) => {
+  //         // console.log(entry);
 
-      const observer = new IntersectionObserver(callback);
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add("animate-fadeIn");
+  //         } else {
+  //           entry.target.classList.remove("animate-fadeIn");
+  //         }
+  //       });
+  //     };
 
-      const targets = document.querySelectorAll(".js-show-on-scroll");
-      targets.forEach(function (target) {
-        target.classList.add("opacity-0");
-        observer.observe(target);
-      });
-    }
-  }, []);
+  //     const observer = new IntersectionObserver(callback);
+
+  //     const targets = document.querySelectorAll(".js-show-on-scroll");
+  //     targets.forEach(function (target) {
+  //       target.classList.add("opacity-0");
+  //       observer.observe(target);
+  //     });
+  //   }
+  // }, []);
 
   //xử lý cuộn header
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -115,19 +70,28 @@ const DashboardComponent = (decorativeplant: any) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [showHeader]);
+  //Scroll effect
+  // const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-in-out",
+    });
+    AOS.refresh();
+  });
   return (
     <div className="h-full flex justify-center items-center">
       <div className="w-full">
         {/* Slider */}
         <div className="image_slider h-[100vh]">
           <Carousel
-            autoplay={true}
+            // autoplay={true}
             loop={true}
             autoplayDelay={6000}
             className="rounded-sm w-full max-w-full h-full overflow-y-hidden"
           >
             {/* Image 1 */}
-            <div className="relative w-full  h-full ">
+            <div className="relative w-full h-full">
               <Image
                 loading="eager"
                 layout="fill"
@@ -142,11 +106,19 @@ const DashboardComponent = (decorativeplant: any) => {
               {/* Nội dung chiếm một nửa chiều rộng bên phải */}
               <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center text-center">
                 <div className="w-[100%]">
-                  <div className=" text-xl sm:text-2xl md:text-4xl font-bold text-[#fff] mb-6 w-[100%]">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-duration="550"
+                    className=" text-xl sm:text-2xl md:text-4xl font-bold text-[#fff] mb-6 w-[100%]"
+                  >
                     <p className="w-full">NamHuynh Garden</p>
                     <p>Mang thiên nhiên vào từng không gian sống.</p>
                   </div>
-                  <div className="w-full flex justify-center">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-duration="550"
+                    className="w-full flex justify-center"
+                  >
                     <p className="sm:text-lg font-semibold text-[#fff] w-[80%] lg:block hidden">
                       NamHuynh Garden là doanh nghiệp với đam mê làm vườn,
                       chuyên cung cấp cây trồng trong nhà chất lượng cao, dễ
@@ -155,7 +127,10 @@ const DashboardComponent = (decorativeplant: any) => {
                     </p>
                   </div>
                   <Link href={routerName.Contact}>
-                    <Button className="bg-[#4E8D78] hover:bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4">
+                    <Button
+                      data-aos="fade-left"
+                      className="bg-[#4E8D78] hover:bg-[#014e37] text-[10px] pt-1 h-[25px] w-[30%] lg:text-[14px]  md:pt-1 lg:pt-3 lg:h-[2.6rem] lg:w-[30%] lg:mt-4"
+                    >
                       Liên hệ
                     </Button>
                   </Link>
@@ -176,9 +151,10 @@ const DashboardComponent = (decorativeplant: any) => {
 
               {/* Nội dung chiếm một nửa chiều rộng bên phải */}
               <div className="absolute top-0 right-0 w-full h-full text-black px-6 sm:p-6 flex flex-col justify-center h-[100%]">
-                <div className=" text-sm sm:text-xl md:text-3xl font-bold text-[#fff] mb-6 w-[60%]">
-                  {/* <p>Nature's Embrace, </p>
-                <p>Right at Home</p> */}
+                <div
+                  data-aos=""
+                  className=" text-sm sm:text-xl md:text-3xl font-bold text-[#fff] mb-6 w-[60%]"
+                >
                   <p className="">NamHuynh Garden</p>
                   <p>Cung cấp các loại cây cảnh</p>
                 </div>
@@ -199,8 +175,11 @@ const DashboardComponent = (decorativeplant: any) => {
         {/* 3 card image */}
         <div className="flex h-full w-full justify-center mb-4 md:h-[300px]">
           <div className="md:flex justify-center md:justify-evenly gap-3 w-[100%] h-full py-3 md:py-7 max-w-[1600px] ">
-            <div className="w-full h-full js-show-on-scroll ">
-              {/* md:max-w-[550px] md:max-h-[300px] */}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="550"
+              className="w-full h-full js-show-on-scroll "
+            >
               <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
                 <img
                   loading="lazy"
@@ -222,7 +201,12 @@ const DashboardComponent = (decorativeplant: any) => {
               </div>
             </div>
 
-            <div className="w-full h-full js-show-on-scroll">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-duration="550"
+              className="w-full h-full js-show-on-scroll"
+            >
               <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
                 <img
                   loading="lazy"
@@ -258,9 +242,13 @@ const DashboardComponent = (decorativeplant: any) => {
                 </div>
               </div>
             </div>
-            {/* <div className="relative px-3 md:px-0"> */}
 
-            <div className="w-full h-full js-show-on-scroll ">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="550"
+              className="w-full h-full js-show-on-scroll "
+            >
               <div className="relative px-3 md:px-0 h-full w-full">
                 <img
                   loading="lazy"
@@ -307,10 +295,20 @@ const DashboardComponent = (decorativeplant: any) => {
           <div className="w-[93%] md:flex justify-evenly h-full gap-4 js-show-on-scroll max-w-[1600px]">
             <div className=" md:w-[50%] flex md:h-full py-6">
               <div className="flex flex-col justify-center w-[100%]">
-                <div className="flex justify-center md:justify-start text-4xl text-[#014e37] font-semibold mb-5 md:mb-10">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="140"
+                  data-aos-duration="550"
+                  className="flex justify-center md:justify-start text-4xl text-[#014e37] font-semibold mb-5 md:mb-10"
+                >
                   CÂY CẢNH ĐỘT BIẾN
                 </div>
-                <div className="lg:w-[86%] font-medium text-lg">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="140"
+                  data-aos-duration="550"
+                  className="lg:w-[86%] font-medium text-lg "
+                >
                   <p className="w-full">
                     Cây đột biến là những loại cây mang vẻ đẹp độc nhất, được
                     tạo nên bởi sự thay đổi tự nhiên hoặc nhân tạo trong cấu
@@ -334,7 +332,10 @@ const DashboardComponent = (decorativeplant: any) => {
                   </p>
                 </div>
                 <Link href={routerName.Products}>
-                  <Button className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#4E8D78] hover:bg-[#014e37] w-full md:w-[80%] mt-5">
+                  <Button
+                    data-aos="fade-right"
+                    className="flex justify-center items-center gap-2 text-[#ffffff] bg-[#4E8D78] hover:bg-[#014e37] w-full md:w-[80%] mt-5"
+                  >
                     Xem thêm các sản phẩm khác
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -354,7 +355,12 @@ const DashboardComponent = (decorativeplant: any) => {
                 </Link>
               </div>
             </div>
-            <div className="md:w-[50%] ">
+            <div
+              data-aos-delay="140"
+              data-aos="fade-up"
+              data-aos-duration="550"
+              className="md:w-[50%] "
+            >
               <div className="flex justify-center items-center w-full sm:block w-full h-full">
                 <div className="lg:flex justify-center gap-5 w-full h-full">
                   <div className="w-full h-full">
@@ -371,7 +377,7 @@ const DashboardComponent = (decorativeplant: any) => {
           </div>
         </div>
 
-        <div className=" flex justify-center mb-5">
+        <div data-aos="fade-up" className=" flex justify-center mb-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-[93%] gap-4 max-w-[1600px]">
             {plants.map((plant: any) => (
               <div className="mb-5">
@@ -430,7 +436,12 @@ const DashboardComponent = (decorativeplant: any) => {
 
         <div className="w-full flex justify-center mb-10">
           <div className="w-[93%] lg:flex justify-center lg:justify-evenly gap-10 max-w-[1600px]">
-            <div className=" lg:w-[50%] flex justify-center items-center mb-5 lg:mb-0">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="140"
+              data-aos-duration="550"
+              className=" lg:w-[50%] flex justify-center items-center mb-5 lg:mb-0"
+            >
               <div className="flex justify-center md:min-h-[500px] max-w-[800px] h-full ">
                 <img
                   loading="lazy"
@@ -440,7 +451,7 @@ const DashboardComponent = (decorativeplant: any) => {
                 />
               </div>
             </div>
-            <div className="lg:w-[50%] ">
+            <div data-aos="fade-right" className="lg:w-[50%] ">
               <div className="flex flex-col w-[98%] xl:w-[100%]">
                 <div>
                   <h1 className="text-xl xl:text-3xl text-[#014e37] font-semibold mb-3">
@@ -503,7 +514,10 @@ const DashboardComponent = (decorativeplant: any) => {
           </div>
         </div>
 
-        <div className="w-full h-[400px] mb-20 flex justify-center">
+        <div
+          data-aos="fade-up"
+          className="w-full h-[400px] mb-20 flex justify-center"
+        >
           <div className="w-full h-full">
             <div className="w-full h-full relative">
               <img
@@ -538,7 +552,6 @@ const DashboardComponent = (decorativeplant: any) => {
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

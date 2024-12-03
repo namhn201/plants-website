@@ -10,7 +10,7 @@ import {
 import { div } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,11 +20,16 @@ const PlantProtectComponent = (dataplants: any) => {
     "propssssssssss from PlantProtectComponent",
     dataplants.props.data.plants[2]
   );
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      // easing: "ease-in-out",
-    });
-  }, []);
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
   // console.log("làm tròn", half);
   return (
@@ -39,6 +44,10 @@ const PlantProtectComponent = (dataplants: any) => {
               className="w-full h-full object-cover"
               src="/assets/plantprotect_bg_1.jpg"
               alt=""
+              onLoadingComplete={() => {
+                console.log('Ảnh đã tải xong');
+                setImageLoaded(true);
+              }}
             />
             <div className="absolute inset-0 bg-black opacity-20"></div>
 

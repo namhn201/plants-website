@@ -10,7 +10,9 @@ import {
 import { div } from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DecorativeplantComponent = (dataplants: any) => {
   console.log("Listening from DecorativeplantComponent");
@@ -18,19 +20,32 @@ const DecorativeplantComponent = (dataplants: any) => {
     "propssssssssss from DecorativeplantComponent ",
     dataplants.props.data.plants[1].items
   );
-  // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
-  // console.log("làm tròn", half);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   return (
     <div className=" w-full">
       <div className="w-full flex justify-center ">
         <div className="w-[100%]">
           <div className="relative w-full h-[60vh]">
             <Image
+              data-aos="zoom-out"
               loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
               src="/assets/decorativeplant_bg_1.jpg"
               alt=""
+              onLoadingComplete={() => {
+                console.log("Ảnh đã tải xong");
+                setImageLoaded(true);
+              }}
             />
             <div className="absolute inset-0 bg-black opacity-20"></div>
 
@@ -74,6 +89,7 @@ const DecorativeplantComponent = (dataplants: any) => {
             {dataplants.props.data.plants[1].items.map(
               (plant: any, index: any) => (
                 <div
+                  data-aos="fade-up"
                   key={index}
                   className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8 mb-8 shadow-[0_8px_24px_rgba(0,0,0,0.8)] rounded-2xl transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.9)]"
                 >

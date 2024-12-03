@@ -11,8 +11,10 @@ import Link from "next/link";
 import GreenTreeComponent from "../GreentreeComponent";
 import router from "next/router";
 import { routerName } from "@/constants/router.constant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProductComponent = (dataPlants: any) => {
   console.log(
@@ -69,6 +71,16 @@ const ProductComponent = (dataPlants: any) => {
       },
     ],
   };
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      AOS.init({
+        easing: "ease-in-out",
+      });
+      AOS.refresh();
+    }
+  }, [imageLoaded]);
   return (
     <div className="h-full w-full">
       <div className="w-full flex justify-center mb-14">
@@ -76,6 +88,7 @@ const ProductComponent = (dataPlants: any) => {
           <div className="relative w-full h-[60vh]">
             {/* <div className="w-full h-full"> */}
             <Image
+              data-aos="zoom-out"
               loading="eager"
               sizes="w-full h-full"
               // loading="lazy"
@@ -83,18 +96,11 @@ const ProductComponent = (dataPlants: any) => {
               src="/assets/danhmucsanpham_bg_1.jpg"
               alt="Ảnh nền"
               layout="fill"
+              onLoadingComplete={() => {
+                console.log("Ảnh đã tải xong");
+                setImageLoaded(true);
+              }}
             />
-            {/* </div> */}
-            {/* <div className="relative w-full h-64">
-              <Image
-                src="/assets/danhmucsanpham_bg_1.jpg"
-                alt="Ảnh nền"
-                layout="fill"
-                objectFit="cover"
-                className="object-cover"
-              />
-            </div> */}
-
             <div className="absolute inset-0 bg-black opacity-20"></div>
 
             <div className="absolute text-white text-4xl md:text-6xl top-0 right-0 w-full h-full">
@@ -144,6 +150,7 @@ const ProductComponent = (dataPlants: any) => {
       <div className="w-full flex justify-center mb-5">
         <div className="flex md:w-[50%] justify-evenly gap-3 sm:gap-5 font-semibold">
           <Link
+            data-aos="fade-right"
             href={routerName.GreenTree}
             className=" active:border-[#014e37] hover:text-[#014e37]"
           >
@@ -154,8 +161,8 @@ const ProductComponent = (dataPlants: any) => {
               Cây Xanh
             </div>
           </Link>
-
           <Link
+            data-aos="fade-up"
             href={routerName.Decorativeplant}
             className=" active:border-[#014e37] hover:text-[#014e37]"
           >
@@ -169,6 +176,7 @@ const ProductComponent = (dataPlants: any) => {
             </button> */}
           </Link>
           <Link
+            data-aos="fade-left"
             href={routerName.PlantProtect}
             className=" hover:border-[#014e37] active:border-[#014e37] hover:text-[#014e37]"
           >
@@ -201,7 +209,11 @@ const ProductComponent = (dataPlants: any) => {
       </div>
       {/* Line ngăng giữa */}
       {/* <div className="flex justify-center"> */}
-      <div className="flex justify-center">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="550"
+        className="flex justify-center"
+      >
         <div className="flex w-full h-full justify-center max-w-[1400px]">
           <Slider arrows={false} {...settings} className="w-full">
             {dataPlants.props.filteredProducts.map((plantTypical: any) => (

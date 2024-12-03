@@ -1,4 +1,7 @@
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const BODirectorsComponent = (data: any) => {
   console.log("Props from BODirectorsComponent ", data.props);
@@ -6,7 +9,12 @@ const BODirectorsComponent = (data: any) => {
   // const [topDirector, ...bottomDirectors] = boardOfDirectors;
   console.log("topDirector", topDirector);
   console.log("bottomDirectors", bottomDirectors);
-
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-in-out",
+    });
+    AOS.refresh();
+  });
   return (
     <div className="w-full max-w-[1600px]">
       <p className="text-center text-3xl">HỘI ĐỘNG QUẢN TRỊ</p>
@@ -14,7 +22,10 @@ const BODirectorsComponent = (data: any) => {
       {/* TOp */}
       <div className="w-full grid grid-cols-1 justify-items-center my-10">
         {/* //Card */}
-        <div className="Top w-[640px] h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center">
+        <div
+          data-aos="fade-up"
+          className="Top w-[640px] h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center"
+        >
           <div className=" bg-white w-[90%] h-[81%] rounded-2xl flex">
             <div className="w-1/2 pl-4">
               <div className="relative w-[230px] h-[223px] mt-4">
@@ -30,8 +41,8 @@ const BODirectorsComponent = (data: any) => {
             <div className="w-1/2 h-[80%]">
               <div className="content mt-6 flex justify-start h-full text-xl">
                 <div>
-                <p>{topDirector.gender === "Female" ? "Bà:" : "Ông:"}</p>
-                <p className="font-bold">{topDirector.name}</p>
+                  <p>{topDirector.gender === "Female" ? "Bà:" : "Ông:"}</p>
+                  <p className="font-bold">{topDirector.name}</p>
                   <p>Năm sinh: {topDirector.birthYear}</p>
                   {/* <p>Chức vụ</p> */}
                   <p className="w-full font-bold">{topDirector.position}</p>
@@ -46,6 +57,7 @@ const BODirectorsComponent = (data: any) => {
       <div className="grid grid-cols-1 xl:grid-cols-2 w-full  justify-items-center mb-10">
         {bottomDirectors.map((member: any, index: any) => (
           <div
+            data-aos="fade-up"
             key={index}
             className="Top w-[640px] h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
           >
