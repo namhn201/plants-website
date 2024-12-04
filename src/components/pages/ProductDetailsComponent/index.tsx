@@ -106,7 +106,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
           >
             <div className="bg-[#EDEDED] lg:w-[40%] rounded-2xl mb-7 lg:mb-0">
               <Carousel
-                // autoplay={true}
+                autoplay={true}
                 loop={true}
                 autoplayDelay={6000}
                 className="w-full h-full rounded-2xl"
