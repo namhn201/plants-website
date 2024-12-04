@@ -26,12 +26,13 @@ const PlantProtectComponent = (dataplants: any) => {
     if (imageLoaded) {
       AOS.init({
         easing: "ease-in-out",
+        duration: 550
+
       });
       AOS.refresh();
     }
   }, [imageLoaded]);
-  // const half = Math.ceil(dataplants.props.data.plants.length / 2); // Làm tròn lên để chia đều
-  // console.log("làm tròn", half);
+
   return (
     <div className=" w-full">
       <div className="w-full flex justify-center ">

@@ -26,6 +26,8 @@ const DecorativeplantComponent = (dataplants: any) => {
     if (imageLoaded) {
       AOS.init({
         easing: "ease-in-out",
+        duration: 550
+
       });
       AOS.refresh();
     }
