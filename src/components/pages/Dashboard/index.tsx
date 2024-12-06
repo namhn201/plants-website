@@ -11,7 +11,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import { lazy, useEffect, useState } from "react";
+import { lazy, useEffect, useRef, useState } from "react";
 import Header from "@/components/layout/Header";
 import FooterComponent from "@/components/layout/Footer";
 import Image from "next/image";
@@ -79,8 +79,32 @@ const DashboardComponent = (decorativeplant: any) => {
     });
     AOS.refresh();
   });
+  //Scroll smooth
+  // const scrollRef = useRef(null);
+
+  // useEffect(() => {
+  //   console.log("Locomotive outside");
+
+  //   const initializeLocomotiveScroll = async () => {
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     if (scrollRef.current) {
+  //       // Kiểm tra xem scrollRef.current có phải là null không
+  //       const scroll = new LocomotiveScroll({
+  //         el: scrollRef.current,
+  //         smooth: true,
+  //       });
+  //       console.log("Locomotive Scroll initialized");
+
+  //       return () => {
+  //         scroll.destroy();
+  //       };
+  //     }
+  //   };
+
+  //   initializeLocomotiveScroll(); // Gọi hàm bất đồng bộ
+  // }, []);
   return (
-    <div className="h-full flex justify-center items-center">
+    <div className="h-full flex justify-center items-center ">
       <div className="w-full">
         {/* Slider */}
         <div className="image_slider h-[100vh]">
@@ -173,105 +197,105 @@ const DashboardComponent = (decorativeplant: any) => {
           </Carousel>
         </div>
         {/* 3 card image */}
-        <div className="flex h-full w-full justify-center mb-4 md:h-[300px]">
-          <div className="md:flex justify-center md:justify-evenly gap-3 w-[100%] h-full py-3 md:py-7 max-w-[1600px] ">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="550"
-              className="w-full h-full js-show-on-scroll "
-            >
-              <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
-                <img
-                  loading="lazy"
-                  className="h-full w-full object-cover rounded-md max-h-[300px]"
-                  src="./assets/plant_menu_2.jpg"
-                  alt=""
-                />
-                <div className="absolute inset-0 bg-white bg-opacity-25"></div>
-                <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-                  <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
-                    Cung cấp các loại cây xanh
-                  </p>
-                  <Link href={routerName.GreenTree}>
-                    <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                      XEM THÊM
-                    </button>
-                  </Link>
+          <div className="flex h-full w-full justify-center mb-4 md:h-[300px] scroll-content ">
+            <div className="md:flex justify-center md:justify-evenly gap-3 w-[100%] h-full py-3 md:py-7 max-w-[1600px] ">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="550"
+                className="w-full h-full js-show-on-scroll "
+              >
+                <div className="relative pb-3 px-3 md:pb-0 md:px-0 w-full h-full">
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover rounded-md max-h-[300px]"
+                    src="./assets/plant_menu_2.jpg"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-white bg-opacity-25"></div>
+                  <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
+                    <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
+                      Cung cấp các loại cây xanh
+                    </p>
+                    <Link href={routerName.GreenTree}>
+                      <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        XEM THÊM
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div
-              data-aos="fade-up"
-              data-aos-delay="150"
-              data-aos-duration="550"
-              className="w-full h-full js-show-on-scroll"
-            >
-              <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
-                <img
-                  loading="lazy"
-                  className="h-full w-full object-cover rounded-md max-h-[300px]"
-                  src="./assets/plant_menu_1.jpg"
-                  alt=""
-                />
-                <div className="absolute inset-0 bg-white bg-opacity-25"></div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="550"
+                className="w-full h-full js-show-on-scroll"
+              >
+                <div className="relative pb-3 px-3 md:pb-0 md:px-0 h-full w-full">
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover rounded-md max-h-[300px]"
+                    src="./assets/plant_menu_1.jpg"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-white bg-opacity-25"></div>
 
-                <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-                  {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
-                  aa
-                </h1> */}
-                  <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
-                    Cung cấp nhiều loại cây cảnh khác
-                  </p>
-                  {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
-                  {/* <Button
-                  variant="outlined"
-                  className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37]  md:mt-2 hover:bg-[#014E37] hover:text-white"
-                  size="sm"
-                >
-                  Xem thêm
-                </Button> */}
-                  <Link href={routerName.Decorativeplant}>
-                    <button
-                      className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                      type="button"
-                    >
-                      XEM THÊM
-                    </button>
-                  </Link>
+                  <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
+                    {/* <h1 className="overflow-hidden text-2xl font-bold leading-6 text-black">
+                    aa
+                  </h1> */}
+                    <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
+                      Cung cấp nhiều loại cây cảnh khác
+                    </p>
+                    {/* <Button className="bg-[#014e37]">Shop Now</Button> */}
+                    {/* <Button
+                    variant="outlined"
+                    className="text-[#014E37] text-[9px] md:text-[12px] border-[#014E37]  md:mt-2 hover:bg-[#014E37] hover:text-white"
+                    size="sm"
+                  >
+                    Xem thêm
+                  </Button> */}
+                    <Link href={routerName.Decorativeplant}>
+                      <button
+                        className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button"
+                      >
+                        XEM THÊM
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="550"
-              className="w-full h-full js-show-on-scroll "
-            >
-              <div className="relative px-3 md:px-0 h-full w-full">
-                <img
-                  loading="lazy"
-                  className="h-full w-full object-cover rounded-md max-h-[300px]"
-                  src="./assets/plant_menu_6.jpg"
-                  alt=""
-                />
-                <div className="absolute inset-0 bg-white bg-opacity-25"></div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="550"
+                className="w-full h-full js-show-on-scroll "
+              >
+                <div className="relative px-3 md:px-0 h-full w-full">
+                  <img
+                    loading="lazy"
+                    className="h-full w-full object-cover rounded-md max-h-[300px]"
+                    src="./assets/plant_menu_6.jpg"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-white bg-opacity-25"></div>
 
-                <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
-                  <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
-                    Và các loại Thuốc bảo vệ thực vật
-                  </p>
-                  <Link href={routerName.PlantProtect}>
-                    <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                      XEM THÊM
-                    </button>
-                  </Link>
+                  <div className="absolute pl-3 top-0 left-1 w-1/2 h-full text-black flex flex-col justify-center items-center">
+                    <p className=" text-[14px] sm:text-[20px] font-bold text-center pb-1">
+                      Và các loại Thuốc bảo vệ thực vật
+                    </p>
+                    <Link href={routerName.PlantProtect}>
+                      <button className=" font-sans font-semibold text-[9px] md:text-[12px] border-[#014E37] text-[#014E37] rounded-lg border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#014E37] focus:bg-slate-800 focus:border-slate-800 0 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                        XEM THÊM
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         {/* {Quản cáo sản phẩm } */}
         <div className="w-full flex justify-center ">
           <div className="">
@@ -516,7 +540,7 @@ const DashboardComponent = (decorativeplant: any) => {
 
         <div
           data-aos="fade-up"
-          className="w-full h-[400px] mb-20 flex justify-center"
+          className="w-full h-[400px] mb-20 flex justify-center bg-blue-gray-800"
         >
           <div className="w-full h-full">
             <div className="w-full h-full relative">
