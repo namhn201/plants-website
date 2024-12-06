@@ -27,7 +27,7 @@ const HistoryComponent = () => {
               loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
-              src="/assets/greentree_bg_2.jpg"
+              src="/assets/lichsuhinhthanh.jpg"
               alt=""
               onLoadingComplete={() => {
                 console.log("Ảnh đã tải xong");
