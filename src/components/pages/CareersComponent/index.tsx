@@ -29,7 +29,7 @@ const CareersComponent = () => {
               loading="eager"
               layout="fill"
               className="w-full h-full object-cover"
-              src="/assets/lichsuhinhthanh.jpg"
+              src="/assets/tuyendung.jpg"
               alt=""
               onLoadingComplete={() => {
                 console.log("Ảnh đã tải xong");
@@ -59,7 +59,7 @@ const CareersComponent = () => {
                       </ul>
                     </nav>
                     <p>Tuyển dụng</p>
-                    <p className="text-base sm:w-[40%] ">
+                    <p className="pl-2 text-base sm:w-[40%] ">
                       Gieo mầm, nuôi dưỡng tương lai – Cùng chúng tôi phát triển
                       không gian xanh.
                     </p>
@@ -137,55 +137,17 @@ const CareersComponent = () => {
             </div>
           </div>
           <div className=" lg:w-2/3 rounded-xl shadow-lg">
-            <div className="lg:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
+            <div className="cursor-pointer 2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
               <p className="px-10 text-2xl font-semibold">
                 Tập đoàn NamHuynhGarden
               </p>
-              <p className="px-10 text-lg font-semibold">
+              <p className=" px-10 text-lg font-semibold">
                 Chuyên Viên Truyền Thông và Marketing
               </p>
-              <div className="px-16 text-lg">
+              <div className="w-[90%] pl-16 text-lg">
                 <p>
                   + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanh.
-                </p>
-                <p>
-                  + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
-                </p>
-              </div>
-              <p className="text-end px-5">11-11-2024</p>
-              {/* <div className="w-[68%] flex justify-end">
-                <button
-                  className="flex items-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  type="button"
-                >
-                  Ứng tuyển
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4 ml-1.5"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div> */}
-            </div>
-            <div className="lg:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
-              <p className="px-10 text-2xl font-semibold">
-                Tập đoàn NamHuynhGarden
-              </p>
-              <p className="px-10 text-lg font-semibold">
-                Chuyên Viên Truyền Thông và Marketing
-              </p>
-              <div className="px-16 text-lg">
-                <p>
-                  + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanh.
+                  pháp xanhhhhhhh.
                 </p>
                 <p>
                   + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
@@ -193,17 +155,35 @@ const CareersComponent = () => {
               </div>
               <p className="text-end px-5">11-11-2024</p>
             </div>
-            <div className="lg:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
+            <div className="cursor-pointer  2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
               <p className="px-10 text-2xl font-semibold">
                 Tập đoàn NamHuynhGarden
               </p>
-              <p className="px-10 text-lg font-semibold">
+              <p className=" px-10 text-lg font-semibold">
                 Chuyên Viên Truyền Thông và Marketing
               </p>
-              <div className="px-16 text-lg">
+              <div className="w-[90%] pl-16 text-lg">
                 <p>
                   + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanh.
+                  pháp xanhhhhhhh.
+                </p>
+                <p>
+                  + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
+                </p>
+              </div>
+              <p className="text-end px-5">11-11-2024</p>
+            </div>
+            <div className="cursor-pointer  2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
+              <p className="px-10 text-2xl font-semibold">
+                Tập đoàn NamHuynhGarden
+              </p>
+              <p className=" px-10 text-lg font-semibold">
+                Chuyên Viên Truyền Thông và Marketing
+              </p>
+              <div className="w-[90%] pl-16 text-lg">
+                <p>
+                  + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
+                  pháp xanhhhhhhh.
                 </p>
                 <p>
                   + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
@@ -221,25 +201,30 @@ const CareersComponent = () => {
       </div>
       <div className="w-full flex justify-center mb-10 h-full">
         <div className="w-[93%] max-w-[1600px]">
+          {/* //Step1 */}
           <div className="w-full flex flex-col-reverse  lg:flex-row lg:h-[32rem] bg-white">
             <div className="lg:w-1/2 bg-transparent">
-              <div className=" p-16 h-full ">
-                <p className="text-3xl">Ứng tuyển</p>
-                <p className="text-xl pl-6">
-                  + Các ứng viên quan tâm có thể ứng tuyền thông qua trang tuyển
-                  dụng bằng gmail
-                </p>
-                <p className="text-xl pl-6">
-                  + Gửi hồ sơ ứng viên hoặc Sơ yếu lý lịch (CV) có đầy đủ thông
-                  tin cá nhân, quá trình học tập, kinh nghiệm làm việc, mục tiêu
-                  nghề nghiệp và sở thích cá nhân tới Bộ phận Tuyển dụng theo
-                  các hướng dẫn được nêu trong các tin đăng tuyển dụng.
-                </p>
+              <div data-aos="fade-up" className=" p-6 sm:p-16 h-full ">
+                <p className="text-3xl">Đăng Tuyển Dụng và Nhận Hồ Sơ</p>
+                <ul className="px-10 py-5 list-disc">
+                  <li>
+                    Công bố thông tin tuyển dụng trên website, mạng xã hội, và
+                    các trang việc làm uy tín.
+                  </li>
+                  <li>
+                    Ứng viên có thể nộp hồ sơ trực tuyến qua form trên website
+                    hoặc gửi email tuyển dụng.
+                  </li>
+                  <li>
+                    Sàng lọc hồ sơ ban đầu dựa trên các tiêu chí cơ bản như kinh
+                    nghiệm, trình độ, kỹ năng.
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="lg:w-1/2 p-10 bg-transparent">
+            <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full  "
+                className="object-cover w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step1.jpg"
@@ -248,10 +233,10 @@ const CareersComponent = () => {
             </div>
           </div>
           {/* //Step2 */}
-          <div className="w-full flex flex-col-reverse lg:flex-row lg:h-[32rem] bg-[#f2f4f4]">
-            <div className="lg:w-1/2 p-10 bg-transparent">
+          <div className="w-full flex flex-col lg:flex-row lg:h-[32rem] bg-[#f2f4f4]">
+            <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full shadow-lg "
+                className="object-cover w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step2.jpg"
@@ -259,19 +244,117 @@ const CareersComponent = () => {
               />
             </div>
             <div className="lg:w-1/2 bg-transparent">
-              <div className=" p-16 h-full">
-                <p className="text-3xl">Ứng tuyển</p>
-                <p className="text-xl pl-6">
-                  + Các ứng viên quan tâm có thể ứng tuyền thông qua trang tuyển
-                  dụng bằng gmail
-                </p>
-                <p className="text-xl pl-6">
-                  + Gửi hồ sơ ứng viên hoặc Sơ yếu lý lịch (CV) có đầy đủ thông
-                  tin cá nhân, quá trình học tập, kinh nghiệm làm việc, mục tiêu
-                  nghề nghiệp và sở thích cá nhân tới Bộ phận Tuyển dụng theo
-                  các hướng dẫn được nêu trong các tin đăng tuyển dụng.
-                </p>
+              <div data-aos="fade-up" className="p-6 sm:p-16 h-full">
+                <p className="text-3xl">Tiếp Nhận và Sàng Lọc Hồ Sơ</p>
+                <ul className="px-10 py-5 list-disc">
+                  <li>
+                    Nhận và kiểm tra hồ sơ ứng viên để xác minh các thông tin cơ
+                    bản.
+                  </li>
+                  <li>
+                    Sàng lọc hồ sơ dựa trên các tiêu chí đã đặt ra, loại bỏ
+                    những hồ sơ không đáp ứng yêu cầu tối thiểu.
+                  </li>
+                  <li>
+                    Sàng lọc hồ sơ dựa trên các tiêu chí đã đặt ra, loại bỏ
+                    những hồ sơ không đáp ứng yêu cầu tối thiểu.
+                  </li>
+                </ul>
               </div>
+            </div>
+          </div>
+          {/* //Step3 */}
+          <div className="w-full flex flex-col-reverse  lg:flex-row lg:h-[32rem] bg-white">
+            <div className="lg:w-1/2 bg-transparent">
+              <div data-aos="fade-up" className=" p-6 sm:p-16 h-full ">
+                <p className="text-3xl">Đánh Giá Năng Lực Chuyên Môn</p>
+                <ul className="px-10 py-5 list-disc">
+                  <li>
+                    Hình thức: Bài kiểm tra chuyên môn hoặc thử thách thực tế.
+                  </li>
+                  <li>
+                    Bài kiểm tra chuyên môn: Câu hỏi trắc nghiệm, viết luận,
+                    hoặc các bài tập lý thuyết để đánh giá kiến thức và kỹ năng
+                    chuyên môn.
+                  </li>
+                  <li>
+                    Thử thách thực tế (nếu có): Đề bài mô phỏng tình huống thực
+                    tế hoặc dự án để ứng viên áp dụng kiến thức và kỹ năng giải
+                    quyết vấn đề.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
+              <Image
+                className="object-cover w-full h-full rounded-xl "
+                width={800}
+                height={690}
+                src="/assets/step3.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          {/* //Step4 */}
+          <div className="w-full flex flex-col lg:flex-row lg:h-[32rem] bg-[#f2f4f4]">
+            <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
+              <Image
+                className="object-cover w-full h-full rounded-xl "
+                width={800}
+                height={690}
+                src="/assets/step4.jpg"
+                alt=""
+              />
+            </div>
+            <div className="lg:w-1/2 bg-transparent">
+              <div data-aos="fade-up" className=" p-6 sm:p-16 h-full">
+                <p className="text-3xl">Phỏng vấn</p>
+                <ul className="px-10 py-5 list-disc">
+                  <li>
+                    Phỏng vấn là buổi gặp gỡ chính thức giữa ứng viên và Công ty
+                    để đánh giá sự phù hợp của ứng viên với công việc. Công ty
+                    sẽ xem xét các yếu tố như khả năng giao tiếp, làm việc nhóm
+                    hoặc độc lập, tổ chức công việc, tư duy và giải quyết vấn
+                    đề, đồng thời kiểm tra thông tin trong hồ sơ (học vấn, kinh
+                    nghiệm, kỹ năng). Ứng viên cũng có thể đặt câu hỏi về công
+                    ty. Tùy từng vị trí, có thể có nhiều vòng phỏng vấn. Kết quả
+                    sẽ được thông báo trong vòng 10 ngày sau buổi phỏng vấn.
+                  </li>
+                  <li>Thỏa thuận hợp đồng</li>
+                  <li>
+                    Hình thức: Phỏng vấn trực tiếp, qua điện thoại hoặc video
+                    call.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* //Step5 */}
+          <div className="w-full flex flex-col-reverse  lg:flex-row lg:h-[32rem] bg-white">
+            <div className="lg:w-1/2 bg-transparent">
+              <div data-aos="fade-up" className=" p-6 sm:p-16 h-full ">
+                <p className="text-3xl"> Thông Báo Kết Quả</p>
+                <ul className="px-10 py-5 list-disc">
+                  <li>
+                    Gửi thư mời nhận việc cho ứng viên trúng tuyển và thư cảm ơn
+                    cho các ứng viên không đạt.
+                  </li>
+                  <li>
+                    Tổ chức buổi định hướng (orientation) để giới thiệu về công
+                    ty, chính sách, quy trình làm việc và phân công người cố vấn
+                    cho nhân sự mới
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
+              <Image
+                className="object-cover w-full h-full rounded-xl "
+                width={800}
+                height={690}
+                src="/assets/step5.jpg"
+                alt=""
+              />
             </div>
           </div>
         </div>

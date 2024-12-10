@@ -188,7 +188,7 @@ const ContactComponent = () => {
           </div>
           {/* SOCIAL MEDIA */}
           <div className="mt-9 mb-3">
-            <p className="text-2xl font-semibold">Social Media</p>
+            <p className="text-2xl font-semibold">Mạng xã hộis</p>
           </div>
           <div className="flex w-1/2 gap-5">
             <button className="w-10 h-10 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-xl shadow-gray-200 group transition-all duration-300">
