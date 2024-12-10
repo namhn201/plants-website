@@ -16,7 +16,7 @@ const BOSupervisorsComponent = (data: any) => {
   });
   return (
     <div className="w-full max-w-[1600px]">
-      <p className="text-center text-3xl">BAN KIẾM SOÁT</p>
+      <p className="text-center text-3xl">BAN KIỂM SOÁT</p>
 
       {/* TOp */}
       <div className="w-full grid grid-cols-1 justify-items-center my-10">

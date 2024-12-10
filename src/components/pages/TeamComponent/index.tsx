@@ -88,8 +88,8 @@ const TeamComponent = (dataplants: any) => {
         </div>
       </div>
       <div className="Navbar_bottom w-full flex justify-start h-full lg:h-10 items-center bg-[#C3D2CE] my-5">
-        <div className="md:w-[80%] md:flex md:justify-evenly gap-10 p-5 md:p-0">
-          <div className="w-1/2 md:flex md:justify-end gap-10">
+        {/* <div className="md:w-[100%] md:flex md:justify-evenly p-5 gap-10 md:p-0">
+          <div className="w-[40%] md:flex justify-end gap-10">
             <div
               className="cursor-pointer whitespace-nowrap"
               onClick={() => handleMenuClick("BODComponent")}
@@ -103,7 +103,7 @@ const TeamComponent = (dataplants: any) => {
               BAN KIỂM SOÁT
             </div>
           </div>
-          <div className="w-1/2 lg:flex justify-start gap-10 ">
+          <div className="w-[60%] lg:flex gap-10">
             <div
               className="cursor-pointer whitespace-nowrap"
               onClick={() => handleMenuClick("ECComponent")}
@@ -116,7 +116,76 @@ const TeamComponent = (dataplants: any) => {
             >
               BAN ĐIỀU HÀNH CÔNG TY THÀNH VIÊN
             </div>
-            <div className="cursor-pointer whitespace-nowrap" onClick={() => handleMenuClick("OrgchartComponent")}>SƠ ĐỒ TỔ CHỨC</div>
+            <div
+              className="cursor-pointer whitespace-nowrap"
+              onClick={() => handleMenuClick("OrgchartComponent")}
+            >
+              SƠ ĐỒ TỔ CHỨC
+            </div>
+          </div>
+        </div> */}
+        {/* <div className="grid grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-4">
+          <div
+            className="cursor-pointer whitespace-nowrap"
+            onClick={() => handleMenuClick("BODComponent")}
+          >
+            HỘI ĐỒNG QUẢN TRỊ
+          </div>
+          <div
+            className="cursor-pointer whitespace-nowrap"
+            onClick={() => handleMenuClick("BOSComponent")}
+          >
+            BAN KIỂM SOÁT
+          </div>
+          <div
+            className="cursor-pointer whitespace-nowrap"
+            onClick={() => handleMenuClick("ECComponent")}
+          >
+            BAN ĐIỀU HÀNH
+          </div>
+          <div
+            className="cursor-pointer whitespace-nowrap"
+            onClick={() => handleMenuClick("SubsidiariesComponent")}
+          >
+            BAN ĐIỀU HÀNH CÔNG TY THÀNH VIÊN
+          </div>
+          <div
+            className="cursor-pointer whitespace-nowrap"
+            onClick={() => handleMenuClick("OrgchartComponent")}
+          >
+            SƠ ĐỒ TỔ CHỨC
+          </div>
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-full min-w-0">
+          <div
+            onClick={() => handleMenuClick("BODComponent")}
+            className="cursor-pointer whitespace-nowrap text-center"
+          >
+            HỘI ĐỒNG QUẢN TRỊ
+          </div>
+          <div
+            onClick={() => handleMenuClick("BOSComponent")}
+            className="cursor-pointer whitespace-nowrap text-center"
+          >
+            BAN KIỂM SOÁT
+          </div>
+          <div
+            onClick={() => handleMenuClick("ECComponent")}
+            className="cursor-pointer whitespace-nowrap text-center"
+          >
+            BAN ĐIỀU HÀNH
+          </div>
+          <div
+            onClick={() => handleMenuClick("SubsidiariesComponent")}
+            className="cursor-pointer whitespace-nowrap text-center"
+          >
+            BĐH CÔNG TY THÀNH VIÊN
+          </div>
+          <div
+            onClick={() => handleMenuClick("OrgchartComponent")}
+            className="cursor-pointer whitespace-nowrap text-center"
+          >
+            SƠ ĐỒ TỔ CHỨC
           </div>
         </div>
       </div>
@@ -133,9 +202,7 @@ const TeamComponent = (dataplants: any) => {
         {activeContent === "SubsidiariesComponent" && (
           <SubsidiariesComponent props={subsidiaries} />
         )}
-          {activeContent === "OrgchartComponent" && (
-          <OrgchartComponent  />
-        )}
+        {activeContent === "OrgchartComponent" && <OrgchartComponent />}
       </div>
     </div>
   );

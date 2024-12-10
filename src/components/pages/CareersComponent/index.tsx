@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Input } from "@material-tailwind/react";
+import { Input, Select, Option } from "@material-tailwind/react";
 
 const CareersComponent = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -78,20 +78,18 @@ const CareersComponent = () => {
               <Input color="teal" size="lg" label="Chức danh" />
             </div>
             <div className="m-5 mt-6 ">
-              <Input
-                className="rounded-lg"
-                size="lg"
-                color="teal"
-                label="Công ty"
-              />
+            <Select size="lg" label="Địa điểm">
+                <Option>Tập Đoàn NamhuynhGarden</Option>
+                <Option>Công ty TNHH Cung cấp Cây cảnh</Option>
+                <Option>Công ty TNHH Cung cấp Cây kiểng</Option>
+                <Option>Công ty TNHH Cung cấp Thuốc bảo vệ thực vật</Option>
+              </Select>
             </div>
             <div className="m-5 mt-6 ">
-              <Input
-                className="rounded-lg"
-                size="lg"
-                color="teal"
-                label="Địa điểm"
-              />
+              <Select size="lg" label="Địa điểm">
+                <Option>TP HỒ CHÍ MINH</Option>
+                <Option>HÀ NỘI</Option>
+              </Select>
             </div>
             <div className=" m-5">
               <div className="w-[100%] flex mb-5">
@@ -99,7 +97,7 @@ const CareersComponent = () => {
                   className="flex w-full items-center justify-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
-                  Ứng tuyển
+                  Áp dụng
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -120,18 +118,6 @@ const CareersComponent = () => {
                   type="button"
                 >
                   Huỷ
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4 ml-1.5"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
                 </button>
               </div>
             </div>
