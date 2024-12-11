@@ -511,6 +511,208 @@
         "companyName": "Cung Cấp Cây Cảnh Kiểng",
         "gender": "Female"
       }
+    ],
+    "positions": [
+      {
+        "company": "Tập Đoàn NamhuynhGarden",
+        "location": "TP HỒ CHÍ MINH",
+        "roles": [
+          {
+            "title": "Chuyên Viên Truyền Thông và Marketing",
+            "responsibilities": [
+              "Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải pháp xanh.",
+              "Phối hợp với các công ty con để tăng nhận diện thương hiệu."
+            ],
+            "requirements": [
+              "Tốt nghiệp đại học ngành Marketing hoặc tương đương.",
+              "Có kinh nghiệm ít nhất 2 năm trong lĩnh vực truyền thông."
+            ],
+            "benefits": [
+              "Lương cạnh tranh.",
+              "Bảo hiểm đầy đủ và các chính sách phúc lợi hấp dẫn."
+            ],
+            "address": "123 Đường ABC, Quận 1, TP HCM",
+            "deadline": "2024-12-31"
+          },
+          {
+            "title": "Quản Lý Dự Án Bền Vững",
+            "responsibilities": [
+              "Quản lý và triển khai các dự án phủ xanh đô thị hoặc xây dựng hệ sinh thái bền vững.",
+              "Làm việc với các đối tác và chính quyền địa phương."
+            ],
+            "requirements": [
+              "Kinh nghiệm quản lý dự án từ 3 năm trở lên.",
+              "Hiểu biết về các tiêu chuẩn bền vững và môi trường."
+            ],
+            "benefits": [
+              "Môi trường làm việc năng động.",
+              "Cơ hội thăng tiến rõ ràng."
+            ],
+            "address": "456 Đường DEF, Quận 3, TP HCM",
+            "deadline": "2024-12-31"
+          }
+        ]
+      },
+      {
+        "company": "Công ty TNHH Cung cấp Cây kiểng",
+        "location": "HÀ NỘI",
+        "roles": [
+          {
+            "title": "Nhân Viên Kinh Doanh Dự Án Cây Xanh",
+            "responsibilities": [
+              "Tìm kiếm và đàm phán hợp đồng với các chủ đầu tư xây dựng, khu đô thị.",
+              "Đề xuất giải pháp phủ xanh công trình quy mô lớn."
+            ],
+            "requirements": [
+              "Kỹ năng giao tiếp và đàm phán tốt.",
+              "Có kinh nghiệm trong lĩnh vực kinh doanh dự án."
+            ],
+            "benefits": [
+              "Hoa hồng cao trên mỗi dự án.",
+              "Được đào tạo chuyên sâu về sản phẩm."
+            ],
+            "address": "789 Đường GHI, Quận Cầu Giấy, Hà Nội",
+            "deadline": "2024-12-31"
+          },
+          {
+            "title": "Kỹ Sư Cảnh Quan",
+            "responsibilities": [
+              "Thiết kế và triển khai các dự án cảnh quan.",
+              "Phối hợp với đội thi công và giám sát công trình."
+            ],
+            "requirements": [
+              "Tốt nghiệp ngành Kiến trúc Cảnh quan hoặc tương đương.",
+              "Thành thạo các phần mềm thiết kế chuyên dụng."
+            ],
+            "benefits": [
+              "Mức lương hấp dẫn theo năng lực.",
+              "Hỗ trợ chi phí đi lại và công tác."
+            ],
+            "address": "101 Đường JKL, Quận Hoàn Kiếm, Hà Nội",
+            "deadline": "2024-12-31"
+          }
+        ]
+      },
+      {
+        "company": "Công ty TNHH Cung cấp Cây cảnh",
+        "location": "TP HỒ CHÍ MINH",
+        "roles": [
+          {
+            "title": "Nhân Viên Bán Hàng Cây Cảnh Cao Cấp",
+            "responsibilities": [
+              "Tư vấn khách hàng mua cây cảnh trang trí, bonsai.",
+              "Đảm bảo dịch vụ chăm sóc khách hàng sau bán."
+            ],
+            "requirements": [
+              "Kỹ năng giao tiếp tốt.",
+              "Yêu thích cây cảnh và có kiến thức về bonsai là lợi thế."
+            ],
+            "benefits": [
+              "Lương cơ bản cộng hoa hồng.",
+              "Chế độ thưởng doanh số hấp dẫn."
+            ],
+            "address": "102 Đường MNO, Quận Bình Thạnh, TP HCM",
+            "deadline": "2024-12-31"
+          },
+          {
+            "title": "Chuyên Viên Sáng Tạo Vườn Trang Trí",
+            "responsibilities": [
+              "Thiết kế và thi công các khu vườn trang trí trong nhà hoặc sân vườn.",
+              "Làm việc chặt chẽ với khách hàng để hiện thực hóa ý tưởng."
+            ],
+            "requirements": [
+              "Kinh nghiệm thiết kế cảnh quan từ 1-2 năm.",
+              "Kỹ năng sáng tạo và thẩm mỹ tốt."
+            ],
+            "benefits": [
+              "Lương thỏa thuận theo năng lực.",
+              "Chính sách thưởng dự án."
+            ],
+            "address": "103 Đường PQR, Quận Phú Nhuận, TP HCM",
+            "deadline": "2024-12-31"
+          }
+        ]
+      },
+      {
+        "company": "Công ty TNHH Cung cấp Thuốc bảo vệ thực vật",
+        "location": "HÀ NỘI",
+        "roles": [
+          {
+            "title": "Chuyên Viên Nghiên Cứu Sản Phẩm Hữu Cơ",
+            "responsibilities": [
+              "Phát triển các loại thuốc trừ sâu, cỏ dại thân thiện với môi trường.",
+              "Thử nghiệm và đảm bảo chất lượng sản phẩm."
+            ],
+            "requirements": [
+              "Tốt nghiệp ngành Hóa học hoặc Nông nghiệp.",
+              "Kỹ năng phân tích và thí nghiệm tốt."
+            ],
+            "benefits": [
+              "Cơ hội nghiên cứu và phát triển sản phẩm mới.",
+              "Môi trường làm việc sáng tạo."
+            ],
+            "address": "104 Đường STU, Quận Đống Đa, Hà Nội",
+            "deadline": "2024-12-31"
+          },
+          {
+            "title": "Nhân Viên Tư Vấn Sử Dụng Sản Phẩm",
+            "responsibilities": [
+              "Đào tạo khách hàng về cách sử dụng sản phẩm an toàn và hiệu quả.",
+              "Hỗ trợ kỹ thuật tại các trang trại hoặc khu vực trồng cây lớn."
+            ],
+            "requirements": [
+              "Kinh nghiệm tư vấn kỹ thuật nông nghiệp.",
+              "Sẵn sàng đi công tác xa."
+            ],
+            "benefits": [
+              "Phụ cấp công tác và di chuyển.",
+              "Chính sách thưởng hiệu quả công việc."
+            ],
+            "address": "105 Đường VWX, Quận Hai Bà Trưng, Hà Nội",
+            "deadline": "2024-12-31"
+          }
+        ]
+      },
+      {
+        "company": "Hỗ Trợ Chung",
+        "location": "TP HỒ CHÍ MINH",
+        "roles": [
+          {
+            "title": "Nhân Viên Nhân Sự (HR)",
+            "responsibilities": [
+              "Tuyển dụng, đào tạo, và quản lý phúc lợi nhân viên toàn tập đoàn.",
+              "Xây dựng môi trường làm việc xanh và thân thiện."
+            ],
+            "requirements": [
+              "Kinh nghiệm ít nhất 2 năm trong lĩnh vực nhân sự.",
+              "Kỹ năng tổ chức và quản lý thời gian tốt."
+            ],
+            "benefits": [
+              "Lương cơ bản cạnh tranh.",
+              "Chính sách phúc lợi đầy đủ."
+            ],
+            "address": "106 Đường YZ, Quận Tân Bình, TP HCM",
+            "deadline": "2024-12-31"
+          },
+          {
+            "title": "Chuyên Viên Phát Triển Kinh Doanh Quốc Tế",
+            "responsibilities": [
+              "Phụ trách phát triển mạng lưới đối tác toàn cầu.",
+              "Triển khai xuất khẩu cây xanh hoặc công nghệ bảo vệ môi trường."
+            ],
+            "requirements": [
+              "Kỹ năng ngoại ngữ xuất sắc (ưu tiên tiếng Anh).",
+              "Kinh nghiệm làm việc trong lĩnh vực xuất nhập khẩu hoặc phát triển kinh doanh quốc tế."
+            ],
+            "benefits": [
+              "Cơ hội đi công tác và làm việc quốc tế.",
+              "Mức lương và thưởng hấp dẫn."
+            ],
+            "address": "107 Đường ABCD, Quận 7, TP HCM",
+            "deadline": "2024-12-31"
+          }
+        ]
+      }
     ]
   }
   

@@ -6,9 +6,63 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Input, Select, Option } from "@material-tailwind/react";
+import { Form } from "antd";
+import { useForm, Controller } from "react-hook-form";
 
-const CareersComponent = () => {
+const CareersComponent = (data: any) => {
+  console.log("data form CareersComponent client", data.props.careers);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [careersData, setCareersData] = useState<any[]>([]);
+  const [filterData, setFilterData] = useState<any[]>([]);
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
+  const [careersDetailsPopup, setCareersDetailsPopup] = useState<any>({
+    company: "",
+    location: "",
+    roles: [],
+  });
+
+  const [roleDetailsPopup, setRoleDetailsPopup] = useState<any>({
+    title: "",
+    responsibilities: [],
+    deadline: "",
+  });
+
+  const handleOpenPopup = (careersDetails: any, roleDetails: any) => {
+    console.log("handleOpenPopup CareersDetails", careersDetails);
+    console.log("handleOpenPopup ROLE", roleDetails);
+    setCareersDetailsPopup(careersDetails);
+    setRoleDetailsPopup(roleDetails);
+    setIsOpenPopup((prevState) => !prevState);
+    console.log(
+      "After setState CareersDetailsPopup",
+      careersDetailsPopup.company
+    );
+    console.log("After setState RoleDetailsPopup", roleDetailsPopup);
+  };
+  const handleClosePopup = () => {
+    setIsOpenPopup(false);
+  };
+
+  useEffect(() => {
+    if (data.props.careers) {
+      setCareersData(data.props.careers);
+      setFilterData(data.props.careers);
+    }
+  }, [data.props.careers]);
+  console.log("careersData", careersData);
+  console.log("setFilterData", filterData);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    control,
+    reset,
+    setValue,
+    formState: { errors },
+  } = useForm();
+  // setValue("company", "");
+  // setValue("location", "");
 
   useEffect(() => {
     if (imageLoaded) {
@@ -19,6 +73,86 @@ const CareersComponent = () => {
       AOS.refresh();
     }
   }, [imageLoaded]);
+  const onSubmit = (formData: any) => {
+    try {
+      console.log("Form data submitted", formData);
+      const filteredCareers = careersData
+        .map((career: any) => {
+          //SEARCH CHỨC VỤ
+          if (formData.position) {
+            const filteredRoles = career.roles.filter((role: any) => {
+              return role.title?.includes(formData.position);
+            });
+            if (filteredRoles.length > 0) {
+              return { ...career, roles: filteredRoles };
+            }
+          }
+          //SEARCH COMPANY
+          if (formData.company) {
+            const companyMatch = career.company?.includes(formData.company);
+            console.log("Company Match: ", career.company, ":", companyMatch);
+            if (companyMatch) {
+              console.log("Công ty match với nhau: ", career);
+              return { ...career };
+            }
+          }
+          //SEARCH Location
+          if (formData.location) {
+            const locationMatch = career.location?.includes(formData.location);
+            console.log("Location Match: ", career.company, ":", locationMatch);
+            if (locationMatch) {
+              console.log("Địa chỉ match với nhau: ", career);
+              return { ...career };
+            }
+          }
+          return null;
+        })
+        .filter((career: any) => career !== null);
+
+      console.log("Filtered Careers:", filteredCareers);
+      setFilterData(filteredCareers);
+    } catch (error) {
+      console.error("An error occurred while searching:", error);
+    }
+  };
+
+  // const onFinish = (values: any) => console.log("Form values: ", values);
+  // const onSubmit = (formData: any) => console.log("SUBMIT", formData);
+  // const onSubmit = (formData: any) => {
+  //   console.log("Form data submitted", formData);
+  //   const filteredCareers = careersData.filter((career: any) => {
+  //     return career.roles.filter((role: any) => {
+  //       console.log("career form filteredCareers ", career);
+  //       console.log("role form filteredCareers ", role);
+
+  //       // Log giá trị của career.position và formData.position trước khi so sánh
+  //       console.log("role.position:", role.title);
+  //       console.log("formDataSUbmit.position:", formData.position);
+
+  //       const positionMatch =
+  //       (role.title?.includes(formData.position) || !formData.position);
+  //       console.log("Position match:", positionMatch);
+
+  //       const companyMatch =
+  //         career.company === formData.company || !formData.company;
+  //       console.log("Company match:", companyMatch);
+
+  //       const locationMatch =
+  //         career.location === formData.location || !formData.location;
+  //       console.log("Location match:", locationMatch);
+
+  //       // Trả về kết quả của filter dựa trên tất cả các điều kiện
+  //       return positionMatch && companyMatch && locationMatch;
+  //     });
+  //   });
+  //   console.log("filteredCareersfilteredCareersfilteredCareers",filteredCareers)
+
+  //   setFilterData(filteredCareers);
+  // };
+  const handleReset = () => {
+    setFilterData(data.props.careers);
+    reset();
+  };
   return (
     <div className="w-full">
       <div className="w-full flex justify-center mb-10 ">
@@ -74,109 +208,104 @@ const CareersComponent = () => {
         <div className="w-[93%] max-w-[1600px] lg:flex gap-6">
           <div className="lg:w-1/3 rounded-xl shadow-lg pb-3 ">
             <p className="text-2xl font-semibold m-6">Thông tin tìm kiếm</p>
-            <div className="m-5 mt-6">
-              <Input color="teal" size="lg" label="Chức danh" />
-            </div>
-            <div className="m-5 mt-6 ">
-            <Select size="lg" label="Địa điểm">
-                <Option>Tập Đoàn NamhuynhGarden</Option>
-                <Option>Công ty TNHH Cung cấp Cây cảnh</Option>
-                <Option>Công ty TNHH Cung cấp Cây kiểng</Option>
-                <Option>Công ty TNHH Cung cấp Thuốc bảo vệ thực vật</Option>
-              </Select>
-            </div>
-            <div className="m-5 mt-6 ">
-              <Select size="lg" label="Địa điểm">
-                <Option>TP HỒ CHÍ MINH</Option>
-                <Option>HÀ NỘI</Option>
-              </Select>
-            </div>
-            <div className=" m-5">
-              <div className="w-[100%] flex mb-5">
-                <button
-                  className="flex w-full items-center justify-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  type="button"
-                >
-                  Áp dụng
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4 ml-1.5"
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="m-5 mt-6">
+                <Input
+                  {...register("position")}
+                  color="teal"
+                  size="lg"
+                  label="Chức danh"
+                />
+              </div>
+              <div className="m-5 mt-6 ">
+                <Controller
+                  name="company"
+                  control={control}
+                  // rules={{ required: "Chọn địa điểm là bắt buộc" }}
+                  render={({ field }) => (
+                    <Select {...field} color="teal" size="lg" label="Địa điểm">
+                      <Option value="Tập Đoàn NamhuynhGarden">
+                        Tập Đoàn NamhuynhGarden
+                      </Option>
+                      <Option value="Công ty TNHH Cung cấp Cây cảnh">
+                        Công ty TNHH Cung cấp Cây cảnh
+                      </Option>
+                      <Option value="Công ty TNHH Cung cấp Cây kiểng">
+                        Công ty TNHH Cung cấp Cây kiểng
+                      </Option>
+                      <Option value="Công ty TNHH Cung cấp Thuốc bảo vệ thực vật">
+                        Công ty TNHH Cung cấp Thuốc bảo vệ thực vật
+                      </Option>
+                    </Select>
+                  )}
+                />
+              </div>
+              <div className="m-5 mt-6 ">
+                <Controller
+                  name="location"
+                  control={control}
+                  // rules={{ required: "Chọn địa điểm là bắt buộc" }}
+                  render={({ field }) => (
+                    <Select {...field} color="teal" size="lg" label="Địa điểm">
+                      <Option value="TP HỒ CHÍ MINH">TP HỒ CHÍ MINH</Option>
+                      <Option value="HÀ NỘI">HÀ NỘI</Option>
+                    </Select>
+                  )}
+                />
+              </div>
+              <div className=" m-5">
+                <div className="w-[100%] flex mb-5">
+                  <button
+                    onClick={handleSubmit(onSubmit)}
+                    className="flex w-full items-center justify-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-[#3E7160] focus:border-slate-800 active:border-slate-800 active:text-white active:bg-[#3E7160] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </button>
+                    Áp dụng
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-4 h-4 ml-1.5"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="w-[100%] flex ">
+                  <button
+                    onClick={handleReset}
+                    className="flex w-full items-center justify-center rounded-md border border-[#B3B3B3] border-slate-300 py-2 px-4 text-center text-[#B3B3B3] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#D13238] hover:border-slate-800 focus:text-white focus:bg-[#D13238] focus:border-slate-800 active:border-slate-800 active:text-white active:bg-[#D13238] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                  >
+                    Huỷ
+                  </button>
+                </div>
               </div>
-              <div className="w-[100%] flex ">
-                <button
-                  className="flex w-full items-center justify-center rounded-md border border-[#B3B3B3] border-slate-300 py-2 px-4 text-center text-[#B3B3B3] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#D13238] hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  type="button"
-                >
-                  Huỷ
-                </button>
-              </div>
-            </div>
+            </form>
           </div>
-          <div className=" lg:w-2/3 rounded-xl shadow-lg">
-            <div className="cursor-pointer 2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
-              <p className="px-10 text-2xl font-semibold">
-                Tập đoàn NamHuynhGarden
-              </p>
-              <p className=" px-10 text-lg font-semibold">
-                Chuyên Viên Truyền Thông và Marketing
-              </p>
-              <div className="w-[90%] pl-16 text-lg">
-                <p>
-                  + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanhhhhhhh.
-                </p>
-                <p>
-                  + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
-                </p>
-              </div>
-              <p className="text-end px-5">11-11-2024</p>
-            </div>
-            <div className="cursor-pointer  2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
-              <p className="px-10 text-2xl font-semibold">
-                Tập đoàn NamHuynhGarden
-              </p>
-              <p className=" px-10 text-lg font-semibold">
-                Chuyên Viên Truyền Thông và Marketing
-              </p>
-              <div className="w-[90%] pl-16 text-lg">
-                <p>
-                  + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanhhhhhhh.
-                </p>
-                <p>
-                  + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
-                </p>
-              </div>
-              <p className="text-end px-5">11-11-2024</p>
-            </div>
-            <div className="cursor-pointer  2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 ">
-              <p className="px-10 text-2xl font-semibold">
-                Tập đoàn NamHuynhGarden
-              </p>
-              <p className=" px-10 text-lg font-semibold">
-                Chuyên Viên Truyền Thông và Marketing
-              </p>
-              <div className="w-[90%] pl-16 text-lg">
-                <p>
-                  + Lên kế hoạch và thực hiện các chiến dịch quảng bá về giải
-                  pháp xanhhhhhhh.
-                </p>
-                <p>
-                  + Phối hợp với các công ty con để tăng nhận diện thương hiệu.
-                </p>
-              </div>
-              <p className="text-end px-5">11-11-2024</p>
-            </div>
+          <div className=" lg:w-2/3 rounded-xl shadow-lg lg:h-[750px] overflow-auto">
+            {filterData.map((data: any) => {
+              return data.roles.map((role: any) => (
+                <div
+                  onClick={() => {
+                    handleOpenPopup(data, role);
+                  }}
+                  className="cursor-pointer 2xl:h-56 shadow-xl bg-white m-5 rounded-lg py-10 hover:border-b-[12px] sm:hover:border-b-0 sm:hover:border-l-[12px] border-[#3E7160] transition-all duration-300 "
+                >
+                  <p className="px-10 text-2xl font-semibold">{data.company}</p>
+                  <p className=" px-10 text-lg font-semibold">{role.title}</p>
+                  <div className="w-[80%] pl-16 text-lg">
+                    <p>{role.responsibilities[0]}</p>
+                    <p>{role.responsibilities[1]}</p>
+                  </div>
+                  <p className="text-end px-5">{role.deadline}</p>
+                </div>
+              ));
+            })}
           </div>
         </div>
       </div>
@@ -210,7 +339,7 @@ const CareersComponent = () => {
             </div>
             <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full rounded-xl "
+                className=" w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step1.jpg"
@@ -222,7 +351,7 @@ const CareersComponent = () => {
           <div className="w-full flex flex-col lg:flex-row lg:h-[32rem] bg-[#f2f4f4]">
             <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full rounded-xl "
+                className=" w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step2.jpg"
@@ -273,7 +402,7 @@ const CareersComponent = () => {
             </div>
             <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full rounded-xl "
+                className=" w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step3.jpg"
@@ -285,7 +414,7 @@ const CareersComponent = () => {
           <div className="w-full flex flex-col lg:flex-row lg:h-[32rem] bg-[#f2f4f4]">
             <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full rounded-xl "
+                className=" w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step4.jpg"
@@ -295,7 +424,7 @@ const CareersComponent = () => {
             <div className="lg:w-1/2 bg-transparent">
               <div data-aos="fade-up" className=" p-6 sm:p-16 h-full">
                 <p className="text-3xl">Phỏng vấn</p>
-                <ul className="px-10 py-5 list-disc">
+                <ul className="px-4 sm:px-10 py-5 list-disc">
                   <li>
                     Phỏng vấn là buổi gặp gỡ chính thức giữa ứng viên và Công ty
                     để đánh giá sự phù hợp của ứng viên với công việc. Công ty
@@ -335,7 +464,7 @@ const CareersComponent = () => {
             </div>
             <div className="lg:w-1/2 p-3 sm:p-10 bg-transparent">
               <Image
-                className="object-cover w-full h-full rounded-xl "
+                className=" w-full h-full rounded-xl "
                 width={800}
                 height={690}
                 src="/assets/step5.jpg"
@@ -344,6 +473,92 @@ const CareersComponent = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className={
+          isOpenPopup
+            ? "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50"
+            : ""
+        }
+      >
+        {isOpenPopup && (
+          <div className="absolute top-[12%] left-4 right-4  h-[82vh] md:h-[80vh] bg-white rounded-xl overflow-auto">
+            <button
+              onClick={handleClosePopup}
+              className="absolute top-2 right-2 bg-gray-300 text-black rounded-full p-2"
+            >
+              X
+            </button>
+            <div className="w-full flex justify-center">
+              <div className="w-[93%]">
+                <div className="text-center pt-5">
+                  {/* <p className="text-3xl">{careersDetailsPopup.company}</p> */}
+                  <p className="text-lg">Vị trí tuyển dụng</p>
+                  <p className="text-3xl text-[#3E7160]">
+                    {roleDetailsPopup.title}
+                  </p>
+                  <p>{roleDetailsPopup.address}</p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 mt-3">
+                  <div className="">
+                    <p>Số lượng cần tuyển: 1</p>
+                    <p>Loại hình công việc: Toàn thờI gian</p>
+                    <p>Đơn vị quản lý: {careersDetailsPopup.company}</p>
+                  </div>
+                  <div className="">
+                    <p>Mức lương: Thoả thuận</p>
+                    <p>Hạn nộp hồ sơ: {roleDetailsPopup.deadline}</p>
+                  </div>
+                </div>
+                <div className="w-full">
+                  <div className="">
+                    <p className="text-xl">Chi tiết công việc</p>
+                    <ul className="px-4 sm:px-10 py-5 list-disc">
+                      <li>{roleDetailsPopup.responsibilities[0]}</li>
+                      <li>{roleDetailsPopup.responsibilities[1]}</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <p className="text-xl">Yêu cầu công việc</p>
+                    <ul className="px-4 sm:px-10 py-5 list-disc">
+                      <li>{roleDetailsPopup.requirements[0]}</li>
+                      <li>{roleDetailsPopup.requirements[1]}</li>
+                    </ul>
+                  </div>
+                  <div className="">
+                    <p className="text-xl">Phúc lợi</p>
+                    <ul className="px-4 sm:px-10 py-5 list-disc">
+                      <li>{roleDetailsPopup.benefits[0]}</li>
+                      <li>{roleDetailsPopup.benefits[1]}</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    onClick={handleSubmit(onSubmit)}
+                    className="mb-5 flex w-full items-center justify-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-[#3E7160] focus:border-slate-800 active:border-slate-800 active:text-white active:bg-[#3E7160] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                  >
+                    Ứng tuyển
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-4 h-4 ml-1.5"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* Nội dung popup ở đây */}
+          </div>
+        )}
       </div>
     </div>
   );
