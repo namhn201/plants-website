@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
     // const handleComplete = () => setIsLoading(false);
     const handleComplete = () => {
       setTimeout(() => setIsLoading(false), 1000); // Hiển thị ít nhất 500ms
-      setTimeout(() =>       AOS.refresh(), 1050); // Hiển thị ít nhất 500ms
+      setTimeout(() =>       AOS.refresh(), 1100); // Hiển thị ít nhất 500ms
 
     };
 
