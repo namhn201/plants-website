@@ -12,13 +12,20 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Loader from "@/components/loader";
+import AOS from "aos"; // Import AOS nếu chưa có
+
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const handleStart = () => setIsLoading(true);
-    const handleComplete = () => setIsLoading(false);
+    // const handleComplete = () => setIsLoading(false);
+    const handleComplete = () => {
+      setTimeout(() => setIsLoading(false), 500); // Hiển thị ít nhất 500ms
+      setTimeout(() =>       AOS.refresh(), 600); // Hiển thị ít nhất 500ms
+
+    };
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
