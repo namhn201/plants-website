@@ -22,8 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
     const handleStart = () => setIsLoading(true);
     // const handleComplete = () => setIsLoading(false);
     const handleComplete = () => {
-      setTimeout(() => setIsLoading(false), 1000); // Hiển thị ít nhất 500ms
-      setTimeout(() =>       AOS.refresh(), 1100); // Hiển thị ít nhất 500ms
+      setTimeout(() => setIsLoading(false), 3000); // Hiển thị ít nhất 500ms
+      setTimeout(() =>       AOS.refresh(), 4000); // Hiển thị ít nhất 500ms
 
     };
 
