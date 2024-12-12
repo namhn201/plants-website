@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Input, Select, Option } from "@material-tailwind/react";
-import { Form } from "antd";
+// import { Form } from "antd";
 import { useForm, Controller } from "react-hook-form";
 
 const CareersComponent = (data: any) => {

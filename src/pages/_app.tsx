@@ -22,8 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
     const handleStart = () => setIsLoading(true);
     // const handleComplete = () => setIsLoading(false);
     const handleComplete = () => {
-      setTimeout(() => setIsLoading(false), 500); // Hiển thị ít nhất 500ms
-      setTimeout(() =>       AOS.refresh(), 600); // Hiển thị ít nhất 500ms
+      setTimeout(() => setIsLoading(false), 1000); // Hiển thị ít nhất 500ms
+      setTimeout(() =>       AOS.refresh(), 1050); // Hiển thị ít nhất 500ms
 
     };
 
@@ -42,7 +42,6 @@ export default function App({ Component, pageProps }: AppProps) {
     // <ThemeProvider>
     <main className={`${myFont.className} scroll-container `}>
       {isLoading && <Loader />}
-
       <Component {...pageProps} />
     </main>
 

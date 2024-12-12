@@ -362,7 +362,7 @@ const Header = () => {
     <div
     className={`transition-all duration-500 ${
       showHeader ? "bg-[#3E7160]" : "bg-transparent"
-    } fixed top-0 left-0 w-full z-50`}
+    } fixed top-0 left-0 w-full z-40`}
     id="header"
   >
      <header id="header" className="">
