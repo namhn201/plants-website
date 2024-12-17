@@ -122,7 +122,7 @@ const ContactComponent = () => {
         <div className="w-[93%] max-w-[1600px] pl-7 lg:pl-20">
           <div className="mb-6">
             <p className="text-3xl font-semibold">Thông tin liên hệ</p>
-            <p className="w-[40%]">
+            <p className="md:w-[40%]">
               Đừng ngần ngại liên hệ để nhận tư vấn và hỗ trợ từ đội ngũ chuyên
               gia của chúng tôi.
             </p>
@@ -162,7 +162,7 @@ const ContactComponent = () => {
               <p>100, quan 1, TP.HCM</p>
             </div>
           </div>
-          <div className="lg:flex w-1/3 justify-evenly ml-5 xl:gap-16">
+          <div className="lg:flex w-1/3 justify-evenly lg:ml-5 xl:gap-16">
             <div>
               <div className="lg:flex justify-center mb-3">
                 <div className="w-11 h-11 bg-[#527F71] text-white rounded-t-full flex justify-center items-center">
@@ -188,7 +188,7 @@ const ContactComponent = () => {
           </div>
           {/* SOCIAL MEDIA */}
           <div className="mt-9 mb-3">
-            <p className="text-2xl font-semibold">Mạng xã hộis</p>
+            <p className="text-2xl font-semibold">Mạng xã hội</p>
           </div>
           <div className="flex w-1/2 gap-5">
             <button className="w-10 h-10 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-xl shadow-gray-200 group transition-all duration-300">

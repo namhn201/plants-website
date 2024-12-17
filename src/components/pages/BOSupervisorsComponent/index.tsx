@@ -23,29 +23,31 @@ const BOSupervisorsComponent = (data: any) => {
         {/* //Card */}
         <div
           data-aos="fade-up"
-          className="Top w-[640px] h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center"
+          className="Top min-w-[300px] w-full  h-[212px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center"
         >
           <div className=" bg-white w-[90%] h-[81%] rounded-2xl flex">
             <div className="w-1/2 pl-4">
-              <div className="relative w-[230px] h-[223px] mt-4">
+              <div className="relative w-full h-[140px]  sm:w-[230px] sm:h-[223px] mt-4">
                 <Image
                   loading="eager"
                   layout="fill"
-                  className="rounded-2xl"
+                  className="rounded-2xl object-cover"
                   src={topDirector.image}
                   alt={topDirector.name}
                 />
               </div>
             </div>
-            <div className="w-1/2 h-[80%]">
+            <div className="w-1/2 h-[80%] pl-1">
               <div className="content mt-6 flex justify-start h-full text-xl">
                 <div>
                   <p>{topDirector.gender === "Female" ? "Bà:" : "Ông:"}</p>
-                  <p className="font-bold">{topDirector.name}</p>
-                  <p>Năm sinh: {topDirector.birthYear}</p>
-                  {/* <p>Chức vụ</p> */}
-                  <p className="w-full font-bold">{topDirector.position}</p>
-                  <p>{topDirector.contact}</p>
+                  <p className="text-base sm:text-xl font-bold">
+                    {topDirector.name}
+                  </p>
+                  <p className="text-base sm:text-lg">Năm sinh: 1988</p>
+                  <p className="text-lg sm:text-xl w-full ">
+                    {topDirector.position}
+                  </p>
                 </div>
               </div>
             </div>
@@ -58,28 +60,32 @@ const BOSupervisorsComponent = (data: any) => {
           <div
             data-aos="fade-up"
             key={index}
-            className="Top w-[640px] h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
+            className="min-w-[300px] w-full  h-[212px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
           >
             <div className=" bg-white w-[90%] h-[81%] rounded-2xl flex">
               <div className="w-1/2 pl-4">
-                <div className="relative w-[230px] h-[223px] mt-4">
+                <div className="relative w-full h-[140px]  sm:w-[230px] sm:h-[223px] mt-4">
                   <Image
                     loading="eager"
                     layout="fill"
-                    className="rounded-2xl"
+                    className="rounded-2xl w-full h-full object-cover"
                     src={member.image}
                     alt={member.name}
                   />
                 </div>
               </div>
-              <div className="w-1/2 h-[80%]">
+              <div className="w-1/2 h-full sm:h-[80%] pl-1">
                 <div className="content mt-6 flex justify-start h-full text-xl w-full">
                   <div className="w-full">
                     <p>{member.gender === "Female" ? "Bà:" : "Ông:"}</p>
-                    <p className="font-bold">{member.name}</p>
-                    <p className="text-lg">Năm sinh: 1988</p>
-                    <p className="w-full ">{member.position}</p>
-                    <p className="text-lg">{member.contact}</p>
+                    <p className="text-base sm:text-xl font-bold">
+                      {member.name}
+                    </p>
+                    <p className="text-base sm:text-lg">Năm sinh: 1988</p>
+                    <p className="text-lg sm:text-xl w-full ">
+                      {member.position}
+                    </p>
+                    {/* <p className="text-[0.8rem] sm:text-lg">{member.contact}</p> */}
                   </div>
                 </div>
               </div>

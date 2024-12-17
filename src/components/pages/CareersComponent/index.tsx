@@ -81,7 +81,7 @@ const CareersComponent = (data: any) => {
           //SEARCH CHỨC VỤ
           if (formData.position) {
             const filteredRoles = career.roles.filter((role: any) => {
-              return role.title?.includes(formData.position);
+              return role.title?.toLowerCase().includes(formData.position);
             });
             if (filteredRoles.length > 0) {
               return { ...career, roles: filteredRoles };
@@ -89,7 +89,7 @@ const CareersComponent = (data: any) => {
           }
           //SEARCH COMPANY
           if (formData.company) {
-            const companyMatch = career.company?.includes(formData.company);
+            const companyMatch = career.company?.toLowerCase().includes(formData.company);
             console.log("Company Match: ", career.company, ":", companyMatch);
             if (companyMatch) {
               console.log("Công ty match với nhau: ", career);
@@ -98,7 +98,7 @@ const CareersComponent = (data: any) => {
           }
           //SEARCH Location
           if (formData.location) {
-            const locationMatch = career.location?.includes(formData.location);
+            const locationMatch = career.location?.toLowerCase().includes(formData.location);
             console.log("Location Match: ", career.company, ":", locationMatch);
             if (locationMatch) {
               console.log("Địa chỉ match với nhau: ", career);
