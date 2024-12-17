@@ -19,15 +19,15 @@ const BOSupervisorsComponent = (data: any) => {
       <p className="text-center text-3xl">BAN KIỂM SOÁT</p>
 
       {/* TOp */}
-      <div className="w-full grid grid-cols-1 justify-items-center my-10">
+      <div className="w-full grid grid-cols-1 justify-items-center sm:my-10">
         {/* //Card */}
         <div
           data-aos="fade-up"
-          className="Top min-w-[300px] w-full  h-[212px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center"
+          className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
         >
-          <div className=" bg-white w-[90%] h-[81%] rounded-2xl flex">
-            <div className="w-1/2 pl-4">
-              <div className="relative w-full h-[140px]  sm:w-[230px] sm:h-[223px] mt-4">
+          <div className=" bg-white w-[90%] h-[91%] sm:h-[81%] rounded-2xl sm:flex">
+            <div className="sm:w-1/2 px-12 sm:pl-4">
+              <div className="relative w-full h-[230px]  sm:w-[230px] sm:h-[223px] mt-4">
                 <Image
                   loading="eager"
                   layout="fill"
@@ -37,7 +37,7 @@ const BOSupervisorsComponent = (data: any) => {
                 />
               </div>
             </div>
-            <div className="w-1/2 h-[80%] pl-1">
+            <div className="sm:w-1/2 sm:h-[80%] px-5 sm:p-0">
               <div className="content mt-6 flex justify-start h-full text-xl">
                 <div>
                   <p>{topDirector.gender === "Female" ? "Bà:" : "Ông:"}</p>
@@ -47,6 +47,9 @@ const BOSupervisorsComponent = (data: any) => {
                   <p className="text-base sm:text-lg">Năm sinh: 1988</p>
                   <p className="text-lg sm:text-xl w-full ">
                     {topDirector.position}
+                  </p>
+                  <p className="text-base sm:text-lg">
+                    {topDirector.contact}
                   </p>
                 </div>
               </div>
@@ -60,11 +63,11 @@ const BOSupervisorsComponent = (data: any) => {
           <div
             data-aos="fade-up"
             key={index}
-            className="min-w-[300px] w-full  h-[212px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
-          >
-            <div className=" bg-white w-[90%] h-[81%] rounded-2xl flex">
-              <div className="w-1/2 pl-4">
-                <div className="relative w-full h-[140px]  sm:w-[230px] sm:h-[223px] mt-4">
+            className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
+            >
+            <div className=" bg-white w-[90%] h-[91%] rounded-2xl sm:flex">
+              <div className="sm:w-1/2 px-12 sm:pl-4">
+                <div className="relative w-full h-[230px]  sm:w-[230px] sm:h-[223px] mt-4">
                   <Image
                     loading="eager"
                     layout="fill"
@@ -74,7 +77,7 @@ const BOSupervisorsComponent = (data: any) => {
                   />
                 </div>
               </div>
-              <div className="w-1/2 h-full sm:h-[80%] pl-1">
+              <div className="sm:w-1/2 sm:h-[80%] px-5 sm:p-0">
                 <div className="content mt-6 flex justify-start h-full text-xl w-full">
                   <div className="w-full">
                     <p>{member.gender === "Female" ? "Bà:" : "Ông:"}</p>
@@ -85,7 +88,7 @@ const BOSupervisorsComponent = (data: any) => {
                     <p className="text-lg sm:text-xl w-full ">
                       {member.position}
                     </p>
-                    {/* <p className="text-[0.8rem] sm:text-lg">{member.contact}</p> */}
+                    <p className="text-base sm:text-lg">{member.contact}</p>
                   </div>
                 </div>
               </div>
