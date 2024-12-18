@@ -55,7 +55,7 @@ const ProductDetailsComponent = (dataPlant: any) => {
     <div>
       <div className="w-full flex justify-center ">
         <div className="w-[100%]">
-          <div className="relative w-full h-[50vh]">
+          <div className="relative w-full h-[50vh] max-h-[1000px]">
             <Image
               data-aos="zoom-out"
               loading="eager"

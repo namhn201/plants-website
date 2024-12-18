@@ -47,7 +47,7 @@ const ContactComponent = () => {
         <div className="w-[100%]">
           <div className="relative w-full h-full">
             {/* Nội dung  */}
-            <div className="relative text-white text-4xl md:text-6xl w-full h-[50vh] bg-[#3E7160] flex justify-center">
+            <div className="relative text-white text-4xl md:text-6xl w-full h-[50vh] max-h-[600px] bg-[#3E7160] flex justify-center">
               <Image
                 layout="fill"
                 className={

@@ -34,7 +34,7 @@ const GreenTreeComponent = (dataplants: any) => {
     <div className=" w-full ">
       <div className="w-full flex justify-center ">
         <div className="w-[100%]">
-          <div className="relative w-full h-[60vh]">
+          <div className="relative w-full h-[60vh] max-h-[1000px]">
             <Image
               data-aos="zoom-out"
               loading="eager"

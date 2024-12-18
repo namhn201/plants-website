@@ -85,7 +85,7 @@ const ProductComponent = (dataPlants: any) => {
     <div className="h-full w-full">
       <div className="w-full flex justify-center mb-14">
         <div className="w-[100%]">
-          <div className="relative w-full h-[60vh]">
+          <div className="relative w-full h-[60vh] max-h-[1000px]">
             {/* <div className="w-full h-full"> */}
             <Image
               data-aos="zoom-out"
