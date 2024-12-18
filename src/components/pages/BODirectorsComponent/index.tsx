@@ -24,7 +24,7 @@ const BODirectorsComponent = (data: any) => {
         {/* //Card */}
         <div
           data-aos="fade-up"
-          className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
+          className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[280px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
           >
           <div className=" bg-white w-[90%] h-[91%] rounded-2xl sm:flex">
             <div className="sm:w-1/2 px-12 sm:pl-4">
@@ -61,7 +61,7 @@ const BODirectorsComponent = (data: any) => {
           <div
             data-aos="fade-up"
             key={index}
-            className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[315px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
+            className="min-w-[300px] w-full h-[480px] sm:w-[640px] sm:h-[280px] bg-[#C3D2CE] rounded-2xl flex justify-center items-center mb-10"
             >
             <div className=" bg-white w-[90%] h-[91%] rounded-2xl sm:flex">
               <div className="sm:w-1/2 px-12 sm:pl-4">
