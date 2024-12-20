@@ -70,8 +70,7 @@ const DashboardComponent = (decorativeplant: any) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [showHeader]);
-  //Scroll effect
-  // const [imageLoaded, setImageLoaded] = useState(false);
+
 
   useEffect(() => {
     AOS.init({

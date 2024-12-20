@@ -14,11 +14,13 @@ import useWindowSize from "@/hooks/common/useWindowSize";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useForm, Controller } from "react-hook-form";
 
 const ContactComponent = () => {
   const { width } = useWindowSize();
   const [isLargescreen, setLargescreen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
 
   useEffect(() => {
     if (width > 768) {
@@ -34,12 +36,25 @@ const ContactComponent = () => {
     if (imageLoaded) {
       AOS.init({
         easing: "ease-in-out",
-        duration: 550
-
+        duration: 550,
       });
       AOS.refresh();
     }
   }, [imageLoaded]);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    control,
+    reset,
+    setValue,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (formData: any) => {
+    setIsOpenPopup(true);
+    console.log("formData", formData);
+  };
 
   return (
     <div className="h-full">
@@ -231,7 +246,10 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
-      <div data-aos="fade-up" className="w-full flex justify-center mt-32 mb-20">
+      <div
+        data-aos="fade-up"
+        className="w-full flex justify-center mt-32 mb-20"
+      >
         <div className="w-[90%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
             <p className="text-2xl font-semibold mb-3">
@@ -242,27 +260,98 @@ const ContactComponent = () => {
               hãy điền thông tin và nội dung vào mẫu dưới đây. Chúng tôi sẽ phản
               hồi lại bạn trong thời gian sớm nhất có thể."
             </p>
-            <input
-              type="text"
-              placeholder="Email"
-              className="bg-[#EDEDED] w-[100%] h-12 rounded-3xl p-5 outline-none mb-5"
-            />
-            <input
-              type="text"
-              placeholder="Tên"
-              className="bg-[#EDEDED] w-[100%] h-12 rounded-3xl p-5 outline-none mb-5"
-            />
-            <textarea
-              name=""
-              id="message"
-              rows={5}
-              className="bg-[#EDEDED] w-full rounded-3xl p-5"
-            ></textarea>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                {...register("email")}
+                type="text"
+                placeholder="Email"
+                className="bg-[#EDEDED] w-[100%] h-12 rounded-3xl p-5 outline-none mb-4"
+              />
+              <input
+                {...register("name")}
+                type="text"
+                placeholder="Tên"
+                className="bg-[#EDEDED] w-[100%] h-12 rounded-3xl p-5 outline-none mb-4"
+              />
+              <Controller
+                name="content"
+                control={control}
+                // rules={{ required: "Chọn địa điểm là bắt buộc" }}
+                render={({ field }) => (
+                  <textarea
+                    {...field}
+                    name=""
+                    id="message"
+                    rows={5}
+                    className="bg-[#EDEDED] w-full rounded-3xl p-5 mb-3"
+                  ></textarea>
+                )}
+              />
+
+              <button
+                className="flex w-full items-center justify-center rounded-md border border-[#3E7160] border-slate-300 py-2 px-4 text-center text-[#3E7160] text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-[#3E7160] hover:border-slate-800 focus:text-white focus:bg-[#3E7160] focus:border-slate-800 active:border-slate-800 active:text-white active:bg-[#3E7160] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                // type="button"
+              >
+                Liên hệ
+              </button>
+            </form>
+
             {/* <textarea id="message" rows={5} className="bg-[#EDEDED] block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-3xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
              */}
           </div>
         </div>
       </div>
+      <div
+        onClick={() => setIsOpenPopup(false)} 
+        className={
+          isOpenPopup
+            ? "fixed top-0 flex justify-center items-center w-full h-full"
+            : "hidden"
+        }
+      >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="bg-white shadow-2xl p-5 rounded-xl mx-4 "
+        >
+          <div className="success-animation">
+            <svg
+              className="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 52 52"
+            >
+              <circle
+                className="checkmark__circle"
+                cx="26"
+                cy="26"
+                r="25"
+                fill="none"
+              />
+              <path
+                className="checkmark__check"
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <p className="pt-7 text-xl sm:text-2xl">
+            Chúng tôi rất vui khi nhận được phản hồi từ bạn
+          </p>
+        </div>
+      </div>
+      {/* <div className="loader-alert">
+        <div className="loader-alert-icon loader-alert-success animate">
+          <span className="loader-alert-line loader-alert-tip animateTip"></span>
+          <span className="loader-alert-line loader-alert-long animateLong"></span>
+          <div className="loader-alert-placeholder"></div>
+          <div className="loader-alert-fix"></div>
+        </div>
+        <div className="loader-alert-icon loader-alert-error animate">
+          <span className="loader-alert-line loader-alert-tip2 animateTip2"></span>
+          <span className="loader-alert-line loader-alert-tip3 animateTip3"></span>
+          <div className="loader-alert-placeholder"></div>
+          <div className="loader-alert-fix"></div>
+        </div>
+      </div> */}
     </div>
   );
 };

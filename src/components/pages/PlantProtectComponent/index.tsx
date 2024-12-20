@@ -95,7 +95,7 @@ const PlantProtectComponent = (dataplants: any) => {
                   data-aos="fade-up"
                   data-aos-duration="700"
                   key={index}
-                  className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px] mb-8 mb-8 shadow-[0_8px_24px_rgba(0,0,0,0.8)] rounded-2xl transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.9)]"
+                  className="relative w-full product-card sm:max-w-[280px] h-[540px] lg:max-w-[430px] lg:h-[640px]  mb-8 shadow-2xl rounded-2xl transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.9)]"
                 >
                   <Image
                     layout="fill"

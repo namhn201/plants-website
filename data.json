@@ -373,8 +373,29 @@
           "position": "Chủ tịch HĐQT",
           "contact": "email@greengarden.com",
           "responsibilities": "Đưa ra quyết định chiến lược, định hướng phát triển lâu dài cho tập đoàn.",
-          "image": "/assets/chutichhdqt.jpg"
-
+          "image": "/assets/chutichhdqt.jpg",
+          "careerProgress": [
+            {
+                "year": 1992,
+                "position": "Nhân viên tài chính",
+                "company": "Công ty Tài chính ABC"
+            },
+            {
+                "year": 2000,
+                "position": "Trưởng phòng Tài chính",
+                "company": "Công ty Đầu tư XYZ"
+            },
+            {
+                "year": 2010,
+                "position": "Phó Chủ tịch HĐQT",
+                "company": "Green Garden House"
+            },
+            {
+                "year": 2015,
+                "position": "Chủ tịch HĐQT",
+                "company": "Green Garden House"
+            }
+        ]
         },
         {
           "role": "Phó Chủ tịch HĐQT",
@@ -384,7 +405,29 @@
           "contact": "phochu@greengarden.com",
           "responsibilities": "Điều phối các hoạt động chiến lược, giúp giám sát và hỗ trợ quyết định chiến lược.",
           "image": "/assets/phochutichhdqt.jpg",
-          "gender": "Female"
+          "gender": "Female",
+          "careerProgress": [
+            {
+                "year": 1998,
+                "position": "Nhân viên Nhân sự",
+                "company": "Công ty ABC"
+            },
+            {
+                "year": 2005,
+                "position": "Trưởng phòng Nhân sự",
+                "company": "Công ty ABC"
+            },
+            {
+                "year": 2012,
+                "position": "Giám đốc điều hành",
+                "company": "Tập đoàn XYZ"
+            },
+            {
+                "year": 2018,
+                "position": "Phó Chủ tịch HĐQT",
+                "company": "Green Garden House"
+            }
+        ]
         }
       ],
       "executiveTeam": [
@@ -395,7 +438,29 @@
           "position": "Tổng Giám Đốc Tập đoàn",
           "contact": "ceo@greengarden.com",
           "responsibilities": "Điều hành và quản lý toàn bộ hoạt động của tập đoàn.",
-          "image": "/assets/tonggiamdoctapdoan.jpg"
+          "image": "/assets/tonggiamdoctapdoan.jpg",
+          "careerProgress": [
+            {
+                "year": 2002,
+                "position": "Nhân viên Kinh doanh",
+                "company": "Công ty DEF"
+            },
+            {
+                "year": 2008,
+                "position": "Trưởng phòng Kinh doanh",
+                "company": "Công ty DEF"
+            },
+            {
+                "year": 2015,
+                "position": "Phó Giám Đốc Kinh doanh",
+                "company": "Tập đoàn DEF"
+            },
+            {
+                "year": 2019,
+                "position": "Tổng Giám Đốc",
+                "company": "Green Garden House"
+            }
+        ]
         },
         {
           "role": "Phó Tổng Giám Đốc Kinh Doanh",
@@ -404,7 +469,29 @@
           "position": "Phó Tổng Giám Đốc Kinh Doanh",
           "contact": "kinhdoanh@greengarden.com",
           "responsibilities": "Chịu trách nhiệm về chiến lược kinh doanh, quản lý đội ngũ bán hàng và phát triển thị trường.",
-          "image": "/assets/photonggiamdockinhdoanh.jpg"
+          "image": "/assets/photonggiamdockinhdoanh.jpg",
+          "careerProgress": [
+            {
+                "year": 2004,
+                "position": "Nhân viên Bán hàng",
+                "company": "Công ty GHI"
+            },
+            {
+                "year": 2010,
+                "position": "Quản lý Kinh doanh khu vực",
+                "company": "Công ty GHI"
+            },
+            {
+                "year": 2016,
+                "position": "Giám đốc Kinh doanh",
+                "company": "Tập đoàn GHI"
+            },
+            {
+                "year": 2020,
+                "position": "Phó Tổng Giám Đốc Kinh Doanh",
+                "company": "Green Garden House"
+            }
+        ]
   
         },
         {
@@ -414,7 +501,29 @@
           "position": "Phó Tổng Giám Đốc Tài Chính",
           "contact": "taichinh@greengarden.com",
           "responsibilities": "Quản lý tài chính của tập đoàn, giám sát ngân sách và báo cáo tài chính.",
-          "image": "/assets/photonggiamdoctaichinh.jpg"
+          "image": "/assets/photonggiamdoctaichinh.jpg",
+          "careerProgress": [
+            {
+                "year": 1995,
+                "position": "Nhân viên Kế toán",
+                "company": "Công ty JKL"
+            },
+            {
+                "year": 2002,
+                "position": "Trưởng phòng Kế toán",
+                "company": "Công ty JKL"
+            },
+            {
+                "year": 2010,
+                "position": "Phó Ban Kiểm Soát",
+                "company": "Tập đoàn MNO"
+            },
+            {
+                "year": 2016,
+                "position": "Trưởng Ban Kiểm Soát",
+                "company": "Green Garden House"
+            }
+        ]
   
         }
       ],
@@ -426,7 +535,29 @@
           "position": "Trưởng Ban Kiểm Soát",
           "contact": "kiemsoat@greengarden.com",
           "responsibilities": "Giám sát tài chính và các hoạt động quản lý của tập đoàn, đảm bảo tính minh bạch.",
-          "image": "/assets/truongbankiemsoat.jpg"
+          "image": "/assets/truongbankiemsoat.jpg",
+          "careerProgress": [
+            {
+                "year": 1995,
+                "position": "Nhân viên Kiểm toán",
+                "company": "Công ty JKL"
+            },
+            {
+                "year": 2002,
+                "position": "Trưởng phòng Kiểm toán",
+                "company": "Công ty JKL"
+            },
+            {
+                "year": 2010,
+                "position": "Phó Ban Kiểm Soát",
+                "company": "Tập đoàn MNO"
+            },
+            {
+                "year": 2016,
+                "position": "Trưởng Ban Kiểm Soát",
+                "company": "Green Garden House"
+            }
+        ]
         },
         {
           "role": "Phó Trưởng Ban Kiểm Soát",
@@ -435,7 +566,29 @@
           "position": "Phó Trưởng Ban Kiểm Soát",
           "contact": "phokiemsoat@greengarden.com",
           "responsibilities": "Hỗ trợ Trưởng Ban trong việc giám sát và thực hiện kiểm tra tài chính.",
-          "image": "/assets/photruongbankiemsoat.jpg"
+          "image": "/assets/photruongbankiemsoat.jpg",
+          "careerProgress": [
+            {
+                "year": 2000,
+                "position": "Nhân viên Kế toán",
+                "company": "Công ty GHI"
+            },
+            {
+                "year": 2006,
+                "position": "Trưởng phòng Kế toán",
+                "company": "Công ty GHI"
+            },
+            {
+                "year": 2013,
+                "position": "Giám sát Tài chính",
+                "company": "Tập đoàn XYZ"
+            },
+            {
+                "year": 2018,
+                "position": "Phó Trưởng Ban Kiểm Soát",
+                "company": "Green Garden House"
+            }
+        ]
         },
         {
           "role": "Thành viên Ban Kiểm Soát",
@@ -444,7 +597,29 @@
           "position": "Uỷ viên Ban Kiểm Soát",
           "contact": "thanhvien@greengarden.com",
           "responsibilities": "Thực hiện kiểm tra định kỳ và giám sát các hoạt động tài chính, đánh giá rủi ro.",
-          "image": "/assets/uyvienbankiemsoat.jpg"
+          "image": "/assets/uyvienbankiemsoat.jpg",
+          "careerProgress": [
+            {
+                "year": 2005,
+                "position": "Nhân viên Kế toán",
+                "company": "Công ty DEF"
+            },
+            {
+                "year": 2010,
+                "position": "Kiểm toán viên",
+                "company": "Tập đoàn PQR"
+            },
+            {
+                "year": 2015,
+                "position": "Trưởng nhóm Kiểm toán",
+                "company": "Tập đoàn PQR"
+            },
+            {
+                "year": 2020,
+                "position": "Uỷ viên Ban Kiểm Soát",
+                "company": "Green Garden House"
+            }
+        ]
   
         }
       ]
@@ -458,7 +633,30 @@
         "contact": "tgdcaycanh@greengarden.com", 
         "responsibilities": "Điều hành công ty con, quản lý các bộ phận sản xuất và phân phối.", 
         "image": "/assets/tongigamdoccayxanh.jpg",
-        "companyName": "Cung Cấp Cây Xanh"
+        "companyName": "Cung Cấp Cây Xanh",
+        "careerProgress": [
+          {
+              "year": 2008,
+              "position": "Nhân viên bán hàng",
+              "company": "Công ty A"
+          },
+          {
+              "year": 2012,
+              "position": "Trưởng phòng Bán hàng",
+              "company": "Công ty A"
+          },
+          {
+              "year": 2015,
+              "position": "Giám đốc Kinh doanh",
+              "company": "Công ty B"
+          },
+          {
+              "year": 2020,
+              "position": "Tổng Giám Đốc",
+              "company": "Cung Cấp Cây Xanh"
+          }
+      ]
+       
       },
       { 
         "role": "Phó Tổng Giám Đốc", 
@@ -468,7 +666,29 @@
         "contact": "photgd@greengarden.com", 
         "responsibilities": "Quản lý mảng sản xuất và tiếp thị sản phẩm cây cảnh.", 
         "image": "/assets/photonggiamdoccayxanh.jpg",
-        "companyName": "Cung Cấp Cây Xanh"
+        "companyName": "Cung Cấp Cây Xanh",
+        "careerProgress": [
+          {
+              "year": 2010,
+              "position": "Nhân viên Marketing",
+              "company": "Công ty X"
+          },
+          {
+              "year": 2013,
+              "position": "Trưởng phòng Marketing",
+              "company": "Công ty X"
+          },
+          {
+              "year": 2017,
+              "position": "Giám đốc Marketing",
+              "company": "Công ty Y"
+          },
+          {
+              "year": 2021,
+              "position": "Phó Tổng Giám Đốc",
+              "company": "Cung Cấp Cây Xanh"
+          }
+      ]
       },
       { 
         "role": "Tổng Giám Đốc", 
@@ -478,7 +698,29 @@
         "contact": "tgthuoc@greengarden.com", 
         "responsibilities": "Điều hành công ty con, chịu trách nhiệm về các hoạt động nghiên cứu và phát triển sản phẩm.", 
         "image": "/assets/tonggiamdocthuoc.jpg",
-        "companyName": "Cung Cấp Thuốc"
+        "companyName": "Cung Cấp Thuốc",
+        "careerProgress": [
+          {
+              "year": 2006,
+              "position": "Nhân viên Nghiên cứu",
+              "company": "Công ty H"
+          },
+          {
+              "year": 2011,
+              "position": "Quản lý dự án R&D",
+              "company": "Công ty H"
+          },
+          {
+              "year": 2015,
+              "position": "Giám đốc R&D",
+              "company": "Công ty I"
+          },
+          {
+              "year": 2020,
+              "position": "Tổng Giám Đốc",
+              "company": "Cung Cấp Thuốc"
+          }
+      ]
       },
       { 
         "role": "Phó Tổng Giám Đốc", 
@@ -488,7 +730,29 @@
         "contact": "photgdthuoc@greengarden.com", 
         "responsibilities": "Quản lý các mảng nghiên cứu phát triển sản phẩm và thị trường thuốc.", 
         "image": "/assets/photonggiamdocthuoc.jpg",
-        "companyName": "Cung Cấp Thuốc"
+        "companyName": "Cung Cấp Thuốc",
+        "careerProgress": [
+          {
+              "year": 2009,
+              "position": "Nhân viên Kinh doanh",
+              "company": "Công ty F"
+          },
+          {
+              "year": 2012,
+              "position": "Quản lý Marketing",
+              "company": "Công ty F"
+          },
+          {
+              "year": 2016,
+              "position": "Giám đốc Marketing",
+              "company": "Công ty G"
+          },
+          {
+              "year": 2021,
+              "position": "Phó Tổng Giám Đốc",
+              "company": "Cung Cấp Thuốc"
+          }
+      ]
       },
       { 
         "role": "Tổng Giám Đốc", 
@@ -498,7 +762,29 @@
         "contact": "tgdcanhkieng@greengarden.com", 
         "responsibilities": "Điều hành công ty con, quản lý sản xuất và marketing sản phẩm cây cảnh kiểng.", 
         "image": "/assets/tonggiamdoccaykieng.jpg",
-        "companyName": "Cung Cấp Cây Cảnh Kiểng"
+        "companyName": "Cung Cấp Cây Cảnh Kiểng",
+        "careerProgress": [
+          {
+              "year": 2007,
+              "position": "Nhân viên Bán hàng",
+              "company": "Công ty J"
+          },
+          {
+              "year": 2012,
+              "position": "Trưởng phòng Bán hàng",
+              "company": "Công ty K"
+          },
+          {
+              "year": 2015,
+              "position": "Giám đốc Kinh doanh",
+              "company": "Công ty L"
+          },
+          {
+              "year": 2019,
+              "position": "Tổng Giám Đốc",
+              "company": "Cung Cấp Cây Cảnh Kiểng"
+          }
+      ]
       },
       { 
         "role": "Phó Tổng Giám Đốc", 
@@ -509,7 +795,29 @@
         "responsibilities": "Quản lý các hoạt động sản xuất và phân phối sản phẩm cây cảnh kiểng.", 
         "image": "/assets/photonggiamdoccaykieng.jpg",
         "companyName": "Cung Cấp Cây Cảnh Kiểng",
-        "gender": "Female"
+        "gender": "Female",
+        "careerProgress": [
+          {
+              "year": 2012,
+              "position": "Nhân viên Bán hàng",
+              "company": "Công ty M"
+          },
+          {
+              "year": 2015,
+              "position": "Trưởng phòng Kinh doanh",
+              "company": "Công ty M"
+          },
+          {
+              "year": 2018,
+              "position": "Giám đốc Kinh doanh",
+              "company": "Công ty N"
+          },
+          {
+              "year": 2022,
+              "position": "Phó Tổng Giám Đốc",
+              "company": "Cung Cấp Cây Cảnh Kiểng"
+          }
+      ]
       }
     ],
     "positions": [
