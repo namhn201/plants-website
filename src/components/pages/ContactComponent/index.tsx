@@ -248,7 +248,7 @@ const ContactComponent = () => {
       </div>
       <div
         data-aos="fade-up"
-        className="w-full flex justify-center mt-32 mb-20"
+        className="w-full flex justify-center mt-20 mb-20"
       >
         <div className="w-[90%] max-w-[1600px] h-full bg-[#C3D2CE] rounded-2xl p-7 sm:p-16">
           <div className="bg-[#FFFFFF] rounded-2xl p-10">
@@ -302,7 +302,7 @@ const ContactComponent = () => {
         </div>
       </div>
       <div
-        onClick={() => setIsOpenPopup(false)} 
+        onClick={() => setIsOpenPopup(false)}
         className={
           isOpenPopup
             ? "fixed top-0 flex justify-center items-center w-full h-full"
@@ -338,20 +338,17 @@ const ContactComponent = () => {
           </p>
         </div>
       </div>
-      {/* <div className="loader-alert">
-        <div className="loader-alert-icon loader-alert-success animate">
-          <span className="loader-alert-line loader-alert-tip animateTip"></span>
-          <span className="loader-alert-line loader-alert-long animateLong"></span>
-          <div className="loader-alert-placeholder"></div>
-          <div className="loader-alert-fix"></div>
-        </div>
-        <div className="loader-alert-icon loader-alert-error animate">
-          <span className="loader-alert-line loader-alert-tip2 animateTip2"></span>
-          <span className="loader-alert-line loader-alert-tip3 animateTip3"></span>
-          <div className="loader-alert-placeholder"></div>
-          <div className="loader-alert-fix"></div>
-        </div>
-      </div> */}
+      <div className="w-full h-[450px] mt-6 rounded-lg overflow-hidden border border-gray-300 shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.045530479298!2d106.61721827586905!3d10.807824858612152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be5ae3a5367%3A0xa5e6d2008e971100!2zMzQxYSDEkC4gTMOqIFRy4buNbmcgVOG6pW4sIFPGoW4gS-G7sywgVMOibiBQaMO6LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1733393511981!5m2!1svi!2s"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          className="w-full h-full"
+        ></iframe>
+      </div>
     </div>
   );
 };
